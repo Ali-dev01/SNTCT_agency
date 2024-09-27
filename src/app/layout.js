@@ -1,5 +1,8 @@
-import "./globals.css";
 import { Poppins } from "next/font/google";
+import { ThemeProvider } from "@mui/material";
+
+import "./globals.css";
+import theme from "@/theme";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
@@ -11,7 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <ThemeProvider theme={theme}>
+        <body className={poppins.className}>{children}</body>
+      </ThemeProvider>
     </html>
   );
 }
