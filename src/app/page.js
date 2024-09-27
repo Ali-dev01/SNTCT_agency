@@ -10,12 +10,13 @@ const Home = () => {
       <Typography variant="h2">Explore Our Top Services</Typography>
       <Box sx={styles.boxStyle}></Box>
       <Box mt={3}>
-        <CustomButton />
+        <CustomButton text="Book a Meeting" variant="contained" />
         <GradientHeading
           text="Strategies for Sustainable Growth"
           variant="h2"
           weight={700}
         />
+        <CustomButton text="Book a Meeting" variant="outlined" />
       </Box>
     </Box>
   );
