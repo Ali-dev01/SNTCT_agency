@@ -21,17 +21,6 @@ const theme = createTheme({
       main: "linear-gradient(90deg, rgba(24,56,199,1) 0%, rgba(25,57,200,1) 1%, rgba(10,157,227,1) 100%)",
       light: "linear-gradient(90deg, rgba(80,128,199,1) 0%, rgba(112,207,255,1) 100%)",
     },
-    grey: {
-      100: "#f7f7f5",
-      200: "#f5f5f3",
-      300: "#f1f1ee",
-      400: "#edede9",
-      500: "#ebebe7",
-      600: "#d3d3cf",
-      700: "#757573",
-      800: "#5e5e5c",
-      900: "#464645",
-    },
     background: {
       default: "#f7fafc",
     },
@@ -58,6 +47,7 @@ const theme = createTheme({
     },
     h5: {
       fontSize: "24px",
+      fontWeight: 700,
       lineHeight: "normal",
     },
     body1: {

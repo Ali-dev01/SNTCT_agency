@@ -3,26 +3,28 @@ import DarkArrowUp from "@/icons/DarkArrowUp";
 import { Box, Button } from "@mui/material";
 
 const CustomButton = (props) => {
-  const { text, variant, isIcon } = props;
+  const { text, variant, showIcon } = props;
 
   return (
     <Button
       variant={variant}
       sx={(theme) => ({
-        ...styles.buttonBase(theme), // Base styles for all buttons
+        ...styles.buttonBase(showIcon), // Base styles for all buttons
         ...(variant === "contained" && styles.containedButton(theme)),
         ...(variant === "outlined" && styles.outlinedButton(theme)),
       })}
       endIcon={
-        <Box
-          sx={(theme) => ({
-            ...styles.iconBase(theme),
-            ...(variant === "contained" && styles.containedIcon(theme)),
-            ...(variant === "outlined" && styles.outlinedIcon(theme)),
-          })}
-        >
-          {variant === "contained" ? <ArrowUp /> : <DarkArrowUp />}{" "}
-        </Box>
+        showIcon && (
+          <Box
+            sx={(theme) => ({
+              ...styles.iconBase(theme),
+              ...(variant === "contained" && styles.containedIcon(theme)),
+              ...(variant === "outlined" && styles.outlinedIcon(theme)),
+            })}
+          >
+            {variant === "contained" ? <ArrowUp /> : <DarkArrowUp />}
+          </Box>
+        )
       }
     >
       {text}
@@ -33,12 +35,14 @@ const CustomButton = (props) => {
 export default CustomButton;
 
 const styles = {
-  buttonBase: (theme) => ({
+  buttonBase: (showIcon) => ({
     p: "10px 24px",
-    pr: "14px",
+    pr: showIcon ? "14px" : "24px",
     boxShadow: "none",
     textTransform: "none",
     borderRadius: "35px",
+    fontSize: "18px",
+    fontWeight: 700,
     transition: "background 0.4s ease, transform 0.6s ease",
   }),
 
