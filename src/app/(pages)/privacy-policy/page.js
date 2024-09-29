@@ -1,4 +1,10 @@
+import PrivacyPolicy from "@/views/privacy-policy";
+
 const Privacy = () => {
-  return <div>Privacy</div>;
+  return (
+    <>
+      <PrivacyPolicy />
+    </>
+  );
 };
 export default Privacy;

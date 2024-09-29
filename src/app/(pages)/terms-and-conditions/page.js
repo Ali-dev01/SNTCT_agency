@@ -1,4 +1,10 @@
+import TermsConditions from "@/views/terms-conditions";
+
 const TermsAndConditions = () => {
-  return <div>TermsAndConditions</div>;
+  return (
+    <>
+      <TermsConditions />
+    </>
+  );
 };
 export default TermsAndConditions;
