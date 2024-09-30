@@ -1,13 +1,20 @@
 "use client";
 
-import Link from "next/link";
-import Grid from "@mui/material/Grid2";
 import GradientHeading from "@/components/GradientHeading";
-import { Box, Container, MenuItem, Select, Typography } from "@mui/material";
-import { InputLabel, TextField } from "@mui/material";
+import {
+  Box,
+  Container,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
+} from "@mui/material";
+import Grid from "@mui/material/Grid2";
+import Link from "next/link";
 
-import { contactInfo } from "./data";
 import CustomButton from "@/components/CustomButton";
+import { contactInfo } from "./data";
 
 const Contact = () => {
   return (
@@ -34,8 +41,8 @@ const Contact = () => {
                 flexWrap: "wrap",
               }}
             >
-              {contactInfo.map((data) => (
-                <Box>
+              {contactInfo.map((data, i) => (
+                <Box key={i}>
                   <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
                     <Box sx={styles.iconStyle}>{data.icon}</Box>
                     <Typography variant="h5" color="#3E5F82" fontWeight={700}>

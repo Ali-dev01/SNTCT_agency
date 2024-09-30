@@ -9,7 +9,7 @@ const TermsConditions = () => {
         <GradientHeading text="Terms and Conditions" variant="h1" weight={700} />
         <Box mt={2} sx={{ mx: { lg: 16, md: 10, xs: 0 } }}>
           <Typography variant="body1" color="#00336B">
-            Welcome to SNTCT. We're dedicated to providing you with exceptional digital
+            Welcome to SNTCT. We are dedicated to providing you with exceptional digital
             services, tailored to elevate your brand in the digital world. Our Terms and
             Conditions outline the guidelines and legal agreements for using our website
             and services. By accessing SNTCT’s website and utilizing our services, you
