@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { Box } from "@mui/material";
 import MenuIcon from "@/icons/MenuIcon";
+import { Box } from "@mui/material";
+import { useState } from "react";
 
-import Logo from "@/icons/Logo";
 import CustomButton from "@/components/CustomButton";
+import Logo from "@/icons/Logo";
 import Sidebar from "../sidebar";
 
 const Header = () => {
@@ -42,6 +42,7 @@ const styles = {
     background: "#FFFFFFA3",
     borderRadius: "60px",
     boxShadow: "0px 6px 4px 0px #15120E0A",
+    zIndex: 2,
   },
   headerContent: {
     p: "14px 16px",

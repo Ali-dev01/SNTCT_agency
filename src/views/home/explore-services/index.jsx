@@ -8,188 +8,191 @@ import { useEffect, useRef, useState } from "react";
 
 // Services data array
 const services = [
-    {
-        iconSrc: "/images/S.png",
-        title: "Social Media",
-        subtitle: "Marketing",
-        iconWidth: 87,
-        mainImageSrc: "/images/social-media.png",
-    },
-    {
-        iconSrc: "/images/W.png",
-        title: "Website",
-        subtitle: "Development",
-        iconWidth: 150,
-        mainImageSrc: "/images/website-development.png",
-    },
-    {
-        iconSrc: "/images/S.png",
-        title: "Search Engine",
-        subtitle: "Optimization",
-        iconWidth: 87,
-        mainImageSrc: "/images/seo.png",
-    },
-    {
-        iconSrc: "/images/U.png",
-        title: "UI/UX",
-        subtitle: "Design",
-        iconWidth: 90,
-        mainImageSrc: "/images/ui-ux-design.png",
-    },
-    {
-        iconSrc: "/images/G.png",
-        title: "Graphic",
-        subtitle: "Design",
-        iconWidth: 116,
-        mainImageSrc: "/images/graphic-design.png",
-    },
-    {
-        iconSrc: "/images/G.png",
-        title: "Google",
-        subtitle: "Ads",
-        iconWidth: 116,
-        mainImageSrc: "/images/google-ads.png",
-    },
-    {
-        iconSrc: "/images/S.png",
-        title: "Social Media",
-        subtitle: "Marketing",
-        iconWidth: 87,
-        mainImageSrc: "/images/social-media.png",
-    },
-    {
-        iconSrc: "/images/W.png",
-        title: "Website",
-        subtitle: "Development",
-        iconWidth: 150,
-        mainImageSrc: "/images/website-development.png",
-    },
-    {
-        iconSrc: "/images/S.png",
-        title: "Search Engine",
-        subtitle: "Optimization",
-        iconWidth: 87,
-        mainImageSrc: "/images/seo.png",
-    },
-    {
-        iconSrc: "/images/U.png",
-        title: "UI/UX",
-        subtitle: "Design",
-        iconWidth: 90,
-        mainImageSrc: "/images/ui-ux-design.png",
-    },
-    {
-        iconSrc: "/images/G.png",
-        title: "Graphic",
-        subtitle: "Design",
-        iconWidth: 116,
-        mainImageSrc: "/images/graphic-design.png",
-    },
-    {
-        iconSrc: "/images/G.png",
-        title: "Google",
-        subtitle: "Ads",
-        iconWidth: 116,
-        mainImageSrc: "/images/google-ads.png",
-    },
+  {
+    iconSrc: "/images/S.png",
+    title: "Social Media",
+    subtitle: "Marketing",
+    iconWidth: 87,
+    mainImageSrc: "/images/social-media.png",
+  },
+  {
+    iconSrc: "/images/W.png",
+    title: "Website",
+    subtitle: "Development",
+    iconWidth: 150,
+    mainImageSrc: "/images/website-development.png",
+  },
+  {
+    iconSrc: "/images/S.png",
+    title: "Search Engine",
+    subtitle: "Optimization",
+    iconWidth: 87,
+    mainImageSrc: "/images/seo.png",
+  },
+  {
+    iconSrc: "/images/U.png",
+    title: "UI/UX",
+    subtitle: "Design",
+    iconWidth: 90,
+    mainImageSrc: "/images/ui-ux-design.png",
+  },
+  {
+    iconSrc: "/images/G.png",
+    title: "Graphic",
+    subtitle: "Design",
+    iconWidth: 116,
+    mainImageSrc: "/images/graphic-design.png",
+  },
+  {
+    iconSrc: "/images/G.png",
+    title: "Google",
+    subtitle: "Ads",
+    iconWidth: 116,
+    mainImageSrc: "/images/google-ads.png",
+  },
+  {
+    iconSrc: "/images/S.png",
+    title: "Social Media",
+    subtitle: "Marketing",
+    iconWidth: 87,
+    mainImageSrc: "/images/social-media.png",
+  },
+  {
+    iconSrc: "/images/W.png",
+    title: "Website",
+    subtitle: "Development",
+    iconWidth: 150,
+    mainImageSrc: "/images/website-development.png",
+  },
+  {
+    iconSrc: "/images/S.png",
+    title: "Search Engine",
+    subtitle: "Optimization",
+    iconWidth: 87,
+    mainImageSrc: "/images/seo.png",
+  },
+  {
+    iconSrc: "/images/U.png",
+    title: "UI/UX",
+    subtitle: "Design",
+    iconWidth: 90,
+    mainImageSrc: "/images/ui-ux-design.png",
+  },
+  {
+    iconSrc: "/images/G.png",
+    title: "Graphic",
+    subtitle: "Design",
+    iconWidth: 116,
+    mainImageSrc: "/images/graphic-design.png",
+  },
+  {
+    iconSrc: "/images/G.png",
+    title: "Google",
+    subtitle: "Ads",
+    iconWidth: 116,
+    mainImageSrc: "/images/google-ads.png",
+  },
 ];
 
-
 export default function ExploreServices() {
-    const [isScrolledDown, setIsScrolledDown] = useState(false);
-    const scrollContainerRef = useRef(null);
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
+  const scrollContainerRef = useRef(null);
 
-    // Detect scroll direction to rotate the arrow
-    useEffect(() => {
-        const handleScroll = () => {
-            if (scrollContainerRef.current) {
-                const isScrolled = scrollContainerRef.current.scrollTop > 0;
-                setIsScrolledDown(isScrolled);
-            }
-        };
-        const container = scrollContainerRef.current;
-        if (container) {
-            container.addEventListener("scroll", handleScroll);
-        }
+  // Detect scroll direction to rotate the arrow
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollContainerRef.current) {
+        const isScrolled = scrollContainerRef.current.scrollTop > 0;
+        setIsScrolledDown(isScrolled);
+      }
+    };
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+    }
 
-        return () => {
-            if (container) {
-                container.removeEventListener("scroll", handleScroll);
-            }
-        };
-    }, []);
-    return (
-        <Container>
-            <Box sx={{ textAlign: 'center', py: { md: '40px', xs: '20px' } }}>
-                <GradientHeading text="Explore Our Top Services" variant="h2" weight={700} sx={styles.heading} />
-                <Typography
-                    variant="body1"
-                    sx={styles.bodyText}
-                >
-                    We design and develop user centered digital products,<br />
-                    ecommerce and Web based best solutions.
-                </Typography>
-                <Box
-                    sx={{
-                        transform: isScrolledDown ? "rotate(180deg)" : "rotate(0deg)",
-                        transition: "transform 0.3s ease",
-                    }}
-                >
-                    <ArrowDownSection />
-                </Box>
-            </Box>
-            <Box ref={scrollContainerRef} sx={styles.scrollContainer}>
-                <Box sx={{ ...styles.blurOverlay, ...styles.blurTop }} />
-                <Grid container spacing={4}>
-                    {services.map((service, index) => (
-                        <Grid key={index} size={{ xs: 12, sm: 6 }}>
-                            <ServicesCard
-                                iconSrc={service.iconSrc}
-                                iconWidth={service.iconWidth}
-                                title={service.title}
-                                subtitle={service.subtitle}
-                                mainImageSrc={service.mainImageSrc}
-
-                            />
-                        </Grid>
-                    ))}
-                </Grid>
-                <Box sx={{ ...styles.blurOverlay, ...styles.blurBottom }} />
-            </Box>
-        </Container >
-    );
+    return () => {
+      if (container) {
+        container.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+  return (
+    <Container maxWidth="lg">
+      <Box sx={{ textAlign: "center", py: { md: "40px", xs: "20px" } }}>
+        <GradientHeading
+          text="Explore Our Top Services"
+          variant="h2"
+          weight={700}
+          sx={styles.heading}
+        />
+        <Typography variant="body1" sx={styles.bodyText}>
+          We design and develop user centered digital products,
+          <br />
+          ecommerce and Web based best solutions.
+        </Typography>
+        <Box
+          sx={{
+            transform: isScrolledDown ? "rotate(180deg)" : "rotate(0deg)",
+            transition: "transform 0.3s ease",
+          }}
+        >
+          <ArrowDownSection />
+        </Box>
+      </Box>
+      <Box ref={scrollContainerRef} sx={styles.scrollContainer}>
+        <Box sx={{ ...styles.blurOverlay, ...styles.blurTop }} />
+        <Grid container spacing={4}>
+          {services.map((service, index) => (
+            <Grid key={index} size={{ xs: 12, sm: 6 }}>
+              <ServicesCard
+                iconSrc={service.iconSrc}
+                iconWidth={service.iconWidth}
+                title={service.title}
+                subtitle={service.subtitle}
+                mainImageSrc={service.mainImageSrc}
+              />
+            </Grid>
+          ))}
+        </Grid>
+        <Box sx={{ ...styles.blurOverlay, ...styles.blurBottom }} />
+      </Box>
+    </Container>
+  );
 }
 
 const styles = {
-    heading: {
-        lineHeight: "52.2px",
-        pb: '20px'
-    },
-    bodyText: {
-        color: theme.palette.primary.dark,
-        lineHeight: "30px",
-        pb: '30px'
-    },
-    scrollContainer: {
-        position: 'relative',
-        flexGrow: 1,
-        height: "600px",
-        overflow: "auto", // Ensure the scroll stays within bounds
-    },
-    blurOverlay: {
-        position: 'sticky',
-        left: 0,
-        right: 0,
-        height: { md: '30px', xs: '20px' }, // Adjust height of the blur as needed
-        pointerEvents: 'none',
-        zIndex: 3, // Ensure blur stays above the content
-    },
-    blurTop: {
-        top: 0,
-        background: 'linear-gradient(180deg, rgba(230, 242, 255, 1) 0%, rgba(230, 242, 255, 0) 100%)',
-    },
-    blurBottom: {
-        bottom: 0,
-        background: 'linear-gradient(0deg, rgba(230, 242, 255, 1) 0%, rgba(230, 242, 255, 0) 100%)',
-    },
+  heading: {
+    lineHeight: "52.2px",
+    pb: "20px",
+  },
+  bodyText: {
+    color: theme.palette.primary.dark,
+    lineHeight: "30px",
+    pb: "30px",
+  },
+  scrollContainer: {
+    position: "relative",
+    flexGrow: 1,
+    height: "600px",
+    overflow: "auto", // Ensure the scroll stays within bounds
+  },
+  blurOverlay: {
+    position: "sticky",
+    left: 0,
+    right: 0,
+    height: { md: "30px", xs: "20px" }, // Adjust height of the blur as needed
+    pointerEvents: "none",
+    zIndex: 3, // Ensure blur stays above the content
+  },
+  blurTop: {
+    top: 0,
+    background:
+      "linear-gradient(180deg, rgba(230, 242, 255, 1) 0%, rgba(230, 242, 255, 0) 100%)",
+  },
+  blurBottom: {
+    bottom: 0,
+    background:
+      "linear-gradient(0deg, rgba(230, 242, 255, 1) 0%, rgba(230, 242, 255, 0) 100%)",
+  },
 };
