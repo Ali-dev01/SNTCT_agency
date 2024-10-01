@@ -46,7 +46,7 @@ export default function HeroSection() {
       <Box pb="3rem" mx="auto" width={{ lg: "50%", md: "60%", sm: "80%" }}>
         <Typography variant="body1" sx={styles.bodyText}>
           Let us do all tech-savvy dirty works for you so that you can only do what you
-          love and grow. We're a team of experts always be there as a partner.
+          love and grow. We are a team of experts always be there as a partner.
         </Typography>
       </Box>
       <CustomButton text="Book a Meeting" variant="contained" showIcon />
