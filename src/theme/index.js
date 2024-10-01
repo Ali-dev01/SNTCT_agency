@@ -32,6 +32,9 @@ const theme = createTheme({
     h1: {
       fontSize: "60px",
       lineHeight: "normal",
+      "@media (max-width:960px)": {
+        fontSize: "45px",
+      },
     },
     h2: {
       fontSize: "45px",
@@ -40,6 +43,9 @@ const theme = createTheme({
     h3: {
       fontSize: "30px",
       lineHeight: "normal",
+      "@media (max-width:600px)": {
+        fontSize: "24px",
+      },
     },
     h4: {
       fontSize: "28px",
@@ -49,14 +55,24 @@ const theme = createTheme({
       fontSize: "24px",
       fontWeight: 700,
       lineHeight: "normal",
+      "@media (max-width:600px)": {
+        fontSize: "20px",
+      },
     },
     body1: {
       fontSize: "20px",
-      lineHeight: "normal",
+      lineHeight: "30px",
+      "@media (max-width:600px)": {
+        fontSize: "18px",
+        lineHeight: "25px",
+      },
     },
     body2: {
       fontSize: "18px",
       lineHeight: "normal",
+      "@media (max-width:600px)": {
+        fontSize: "16px",
+      },
     },
     caption: {
       fontSize: "16px",

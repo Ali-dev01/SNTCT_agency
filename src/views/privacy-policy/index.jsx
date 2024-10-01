@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
       <Box my={{ lg: 13, md: 10, xs: 6 }}>
         {privacyData.map((tc, i) => (
           <Box key={i} mb={5.5}>
-            <Typography variant="h3" color="#3E5F82" fontWeight={700}>
+            <Typography variant="h3" sx={styles.headingStyle}>
               {tc.title}
             </Typography>
             {tc.descriptions.map((desc, index) => (
@@ -35,3 +35,10 @@ const PrivacyPolicy = () => {
   );
 };
 export default PrivacyPolicy;
+
+const styles = {
+  headingStyle: {
+    color: "#3E5F82",
+    fontWeight: { xs: 600, md: 700 },
+  },
+};

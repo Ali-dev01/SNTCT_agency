@@ -1,13 +1,12 @@
-import Link from "next/link";
-import * as React from "react";
+import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import { Typography } from "@mui/material";
+import Link from "next/link";
 
-import { sidebarData } from "./data";
+import CustomButton from "@/components/CustomButton";
 import CloseIcon from "@/icons/CloseIcon";
 import SidebarLogo from "@/icons/SidebarLogo";
-import CustomButton from "@/components/CustomButton";
+import { sidebarData } from "./data";
 
 export default function Sidebar({ open, toggleDrawer }) {
   return (
@@ -32,9 +31,9 @@ export default function Sidebar({ open, toggleDrawer }) {
           </Box>
           <Box mt={6}>
             {sidebarData.map((item) => (
-              <Box key={item.link} mb={5}>
+              <Box key={item.link} mb={{ lg: 5, md: 4.5, xs: 3.5 }}>
                 <Link href={item.link}>
-                  <Typography variant="h5" fontWeight={700} color="#3E5F82">
+                  <Typography variant="h5" color="#3E5F82">
                     {item.title}
                   </Typography>
                 </Link>
@@ -67,7 +66,7 @@ export default function Sidebar({ open, toggleDrawer }) {
               </Box>
 
               <Box mt={7}>
-                <Typography variant="caption" color="#00336B" display='block' mb={2}>
+                <Typography variant="caption" color="#00336B" display="block" mb={2}>
                   Have any confusion?
                 </Typography>
                 <CustomButton text="Lets Talk" variant="contained" showIcon />
@@ -89,7 +88,7 @@ const styles = {
     boxShadow: "0px 6px 4px 0px #15120E0A",
   }),
   drawerStyle: {
-    width: "550px",
-    padding: "60px",
+    width: { md: "550px", sm: "500px", xs: "350px" },
+    padding: { lg: "60px", md: "50px", sm: "40px", xs: "30px" },
   },
 };

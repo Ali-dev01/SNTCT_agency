@@ -5,11 +5,6 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
 const headingTexts = ["We Design,", "Develop and Market", "Your Success"];
-const bodyTexts = [
-  "Let us do all tech-savvy dirty works for you so that you",
-  "can only do what you love and grow. We're a team of",
-  "experts always be there as a partner.",
-];
 
 export default function HeroSection() {
   const showImages = useMediaQuery("(min-width:1130px)");
@@ -48,12 +43,11 @@ export default function HeroSection() {
           />
         ))}
       </Box>
-      <Box pb="3rem">
-        {bodyTexts.map((text, index) => (
-          <Typography key={index} variant="body1" sx={styles.bodyText}>
-            {text}
-          </Typography>
-        ))}
+      <Box pb="3rem" mx="auto" width={{ lg: "50%", md: "60%", sm: "80%" }}>
+        <Typography variant="body1" sx={styles.bodyText}>
+          Let us do all tech-savvy dirty works for you so that you can only do what you
+          love and grow. We're a team of experts always be there as a partner.
+        </Typography>
       </Box>
       <CustomButton text="Book a Meeting" variant="contained" showIcon />
     </Box>
@@ -83,11 +77,7 @@ const styles = {
     top: "-6rem",
     zIndex: "-1",
   }),
-  heading: {
-    lineHeight: "69.6px",
-  },
   bodyText: {
     color: theme.palette.primary.dark,
-    lineHeight: "30px",
   },
 };

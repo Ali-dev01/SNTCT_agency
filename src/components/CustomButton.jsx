@@ -36,13 +36,13 @@ export default CustomButton;
 
 const styles = {
   buttonBase: (showIcon) => ({
-    p: "10px 24px",
-    pr: showIcon ? "14px" : "24px",
+    p: { xs: "7px 16px", md: "10px 24px" },
+    pr: showIcon ? "14px !important" : "24px",
     boxShadow: "none",
     textTransform: "none",
     borderRadius: "35px",
-    fontSize: "18px",
-    fontWeight: 700,
+    fontSize: { xs: "16px", md: "18px" },
+    fontWeight: { xs: 600, md: 700 },
     transition: "background 0.4s ease, transform 0.6s ease",
   }),
 
