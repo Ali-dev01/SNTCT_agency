@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import CustomButton from "@/components/CustomButton";
 import Logo from "@/icons/Logo";
+import Link from "next/link";
 import Sidebar from "../sidebar";
 
 const Header = () => {
@@ -20,7 +21,9 @@ const Header = () => {
       <Box sx={styles.headerStyle}>
         <Box sx={styles.headerContent}>
           <CustomButton text="Lets Talk" variant="contained" />
-          <Logo />
+          <Link href="/" style={{ display: "flex" }}>
+            <Logo />
+          </Link>
           <Box sx={{ cursor: "pointer", display: "flex" }} onClick={toggleDrawer(true)}>
             <MenuIcon />
           </Box>
