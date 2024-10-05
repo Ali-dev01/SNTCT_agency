@@ -20,6 +20,7 @@ export default function HeroSection() {
             width={0}
             height={0}
             sizes="100vw"
+            className="animate__animated animate__slideInLeft"
             style={styles.leftImage(lgResponsive)}
           />
           <Image
@@ -28,6 +29,7 @@ export default function HeroSection() {
             width={0}
             height={0}
             sizes="100vw"
+            className="animate__animated animate__slideInRight"
             style={styles.rightImage(lgResponsive)}
           />
         </>

@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import Footer from "@/layout/footer";
 import Header from "@/layout/header";
 import theme from "@/theme";
+import "animate.css";
 import "./globals.css";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
