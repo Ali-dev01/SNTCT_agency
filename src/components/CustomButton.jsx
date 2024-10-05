@@ -3,11 +3,12 @@ import DarkArrowUp from "@/icons/DarkArrowUp";
 import { Box, Button } from "@mui/material";
 
 const CustomButton = (props) => {
-  const { text, variant, showIcon } = props;
+  const { text, variant, showIcon, fullWidth } = props;
 
   return (
     <Button
       variant={variant}
+      fullWidth={fullWidth}
       sx={(theme) => ({
         ...styles.buttonBase(showIcon), // Base styles for all buttons
         ...(variant === "contained" && styles.containedButton(theme)),

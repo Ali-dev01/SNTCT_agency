@@ -1,7 +1,7 @@
 import FacebookIcon from "@/icons/facebookIcon";
 import InstagramIcon from "@/icons/InstagramIcon";
-import TwitterIcon from "@/icons/TwitterIcon";
 import MailIcon from "@/icons/MailIcon";
+import TwitterIcon from "@/icons/TwitterIcon";
 
 export const socialLinks = [
   { icon: <FacebookIcon />, link: "/" },
@@ -11,35 +11,31 @@ export const socialLinks = [
 ];
 
 export const aboutOutLinks = [
-    {
-        title:'About Us',
-        link: '/about-us'
-    },
-    {
-        title:'Our Services',
-        link: '/services'
-    },
-    {
-        title:'Our Portfolio',
-        link: '/'
-    },
-    {
-        title:'Testimonials',
-        link: '/'
-    },
-]
+  {
+    title: "About Us",
+    link: "/about-us",
+  },
+  {
+    title: "Our Services",
+    link: "/services",
+  },
+  {
+    title: "Testimonials",
+    link: "/",
+  },
+];
 
 export const usefullLinks = [
-    {
-        title:'Careers',
-        link: '/careers'
-    },
-    {
-        title:'Blog',
-        link: '/blog'
-    },
-    {
-        title:'FAQs',
-        link: '/FAQs'
-    },
-]
+  {
+    title: "Careers",
+    link: "/careers",
+  },
+  {
+    title: "Blog",
+    link: "/blog",
+  },
+  {
+    title: "FAQs",
+    link: "/FAQs",
+  },
+];

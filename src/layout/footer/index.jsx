@@ -3,16 +3,33 @@
 import InputIcon from "@/icons/InputIcon";
 import { Box, Container, InputAdornment, TextField, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
+import { keyframes } from "@mui/system";
 import Image from "next/image";
-import { aboutOutLinks, socialLinks, usefullLinks } from "./data";
 import Link from "next/link";
 
+import { aboutOutLinks, socialLinks, usefullLinks } from "./data";
+
 const Footer = () => {
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Adds smooth scrolling
+    });
+  };
+
   return (
-    <>
+    <Box sx={{ position: "relative" }}>
+      <Box sx={styles.scrollTop} onClick={handleScrollToTop}>
+        <Image
+          src="/images/footer/line-arrow-up.png"
+          alt="footer"
+          width={48}
+          height={115}
+        />
+      </Box>
       <Container maxWidth="lg">
         <Image
-          src="/images/footer-img.png"
+          src="/images/footer/footer-img.png"
           alt="footer"
           width={0}
           height={0}
@@ -126,15 +143,34 @@ const Footer = () => {
           </Box>
         </Box>
       </Container>
-    </>
+    </Box>
   );
 };
 export default Footer;
+
+const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+`;
 
 const styles = {
   footerContent: {
     mt: { md: "-65px", sm: "-30px", xs: "-5px" },
     pb: 4,
+  },
+  scrollTop: {
+    cursor: "pointer",
+    position: "absolute",
+    right: { md: "60px", sm: "40px", xs: "30px" },
+    top: { md: "210px", sm: "470px", xs: "660px" },
+    animation: `${bounce} 2s infinite`,
   },
   inputStyles: (theme) => ({
     "& .MuiFormControl-root": {

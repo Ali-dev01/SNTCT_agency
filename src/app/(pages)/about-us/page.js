@@ -1,4 +1,10 @@
+import AboutSection from "@/views/about";
+
 const AboutUs = () => {
-  return <div>AboutUs</div>;
+  return (
+    <>
+      <AboutSection />
+    </>
+  );
 };
 export default AboutUs;

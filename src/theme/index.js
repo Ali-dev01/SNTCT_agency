@@ -49,6 +49,7 @@ const theme = createTheme({
     },
     h4: {
       fontSize: "28px",
+      fontWeight: 700,
       lineHeight: "normal",
     },
     h5: {

@@ -1,20 +1,27 @@
-"use client"
-import React from "react";
+"use client";
+import AnimatedLogos from "@/components/AnimatedLogos";
+import { Box } from "@mui/material";
 import FaqSection from "../faq";
-import LogosScroller from "./animated-logos";
 import ExploreServices from "./explore-services";
 import Growth from "./growth";
 import HeroSection from "./hero-section";
 
 const HomeSection = () => {
   return (
-    <React.Fragment>
+    <>
       <HeroSection />
-      <LogosScroller />
+      <Box
+        sx={{
+          px: { md: "80px", sm: "40px", xs: "20px" },
+          py: { md: "40px", xs: "20px" },
+        }}
+      >
+        <AnimatedLogos />
+      </Box>
       <ExploreServices />
       <Growth />
       <FaqSection />
-    </React.Fragment>
+    </>
   );
 };
 export default HomeSection;

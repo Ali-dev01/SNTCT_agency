@@ -1,4 +1,10 @@
+import CareerSection from "@/views/careers";
+
 const Careers = () => {
-  return <div>Careers</div>;
+  return (
+    <>
+      <CareerSection />
+    </>
+  );
 };
 export default Careers;
