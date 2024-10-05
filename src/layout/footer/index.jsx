@@ -18,7 +18,7 @@ const Footer = () => {
   };
 
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box position="relative" minHeight="590px">
       <Box sx={styles.scrollTop} onClick={handleScrollToTop}>
         <Image
           src="/images/footer/line-arrow-up.png"

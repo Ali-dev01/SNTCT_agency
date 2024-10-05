@@ -1,9 +1,12 @@
 import { ThemeProvider } from "@mui/material";
+import { Poppins } from "next/font/google";
 
 import Footer from "@/layout/footer";
 import Header from "@/layout/header";
 import theme from "@/theme";
 import "./globals.css";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -14,11 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeProvider theme={theme}>
-        <body>
+        <body className={poppins.className}>
           <header>
             <Header />
           </header>
-          <main style={{ minHeight: "100vh" }}>{children}</main>
+          <main>{children}</main>
           <footer>
             <Footer />
           </footer>
