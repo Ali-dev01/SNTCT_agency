@@ -31,7 +31,11 @@ export default function Sidebar({ open, toggleDrawer }) {
           </Box>
           <Box mt={6}>
             {sidebarData.map((item) => (
-              <Box key={item.link} mb={{ lg: 5, md: 4.5, xs: 3.5 }}>
+              <Box
+                key={item.link}
+                mb={{ lg: 5, md: 4.5, xs: 3.5 }}
+                onClick={toggleDrawer(false)}
+              >
                 <Link href={item.link}>
                   <Typography variant="h5" color="#3E5F82">
                     {item.title}
