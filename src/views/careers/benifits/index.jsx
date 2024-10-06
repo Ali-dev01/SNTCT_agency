@@ -39,7 +39,7 @@ const Benifits = () => {
             ))}
           </Box>
         </Grid>
-        <Grid item size={{ xs: 12, md: 8 }}>
+        <Grid item size={{ xs: 12, md: 8 }} zIndex="1">
           <Box sx={{ ...styles.cardStyle, p: "40px", textAlign: "center" }}>
             <Typography variant="h1" sx={styles.letterStyle}>
               {benifitsData[activeBtn - 1].letter}

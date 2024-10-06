@@ -11,6 +11,20 @@ import { cardData } from "./data";
 const AboutSection = () => {
   return (
     <>
+      <Image
+        src="/images/about/right-bg-chip.png"
+        alt="chip"
+        width={375}
+        height={920}
+        style={styles.rightChip}
+      />
+      <Image
+        src="/images/about/left-bg-chip.png"
+        alt="chip"
+        width={375}
+        height={920}
+        style={styles.leftChip}
+      />
       <Box mt={7} textAlign="center">
         <Container maxWidth="lg">
           <GradientHeading text="At SNTCT, People Come" variant="h1" weight={700} />
@@ -115,5 +129,16 @@ const styles = {
     mt: 2.5,
     mx: "auto",
     width: { lg: "60%", md: "40%", xs: "100%" },
+  },
+  rightChip: {
+    position: "absolute",
+    top: "80%",
+    right: "0",
+  },
+  leftChip: {
+    zIndex: "-1",
+    position: "absolute",
+    top: "340%",
+    left: "0",
   },
 };

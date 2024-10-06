@@ -39,6 +39,7 @@ export default DetailCard;
 
 const styles = {
   cardStyle: {
+    zIndex: "1",
     background: "#fff",
     borderRadius: "24px",
     padding: { md: "40px 40px", xs: "30px 20px" },
@@ -47,11 +48,16 @@ const styles = {
     boxShadow: "0px 39px 23px 0px #00000005",
   },
   iconStyle: {
+    cursor: "pointer",
     width: "80px",
     height: "56px",
     background: "transparent",
     border: "1px solid #D6E2F5",
     borderRadius: "8px",
     padding: "16px",
+    transition: "all 0.5s ease",
+    "&:hover": {
+      background: "#DEEAF6",
+    },
   },
 };
