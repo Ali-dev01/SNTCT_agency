@@ -51,11 +51,12 @@ const styles = {
       padding: "5px 7px",
       "& ._scroller ": {
         "& .MuiTabs-flexContainer": {
+          justifyContent: 'space-between',
           "& .MuiButtonBase-root": {
             minHeight: "0",
             textTransform: "none",
             textWrap: "nowrap",
-            width: "188px",
+            minWidth: "188px",
             color: "#3E5F82",
             padding: "14px 18px",
           },
