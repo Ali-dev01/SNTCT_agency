@@ -11,40 +11,39 @@ import ServicesCards from "../components/ServicesCards";
 import VerticalTabs from "../components/VerticalTabs";
 import { cardsData, processData } from "./data";
 
-const SocialMedia = () => {
+const SEOSection = () => {
   return (
     <>
       <Container maxWidth="lg">
         <Box mt={7} textAlign="center">
           <MainHeading
-            heading="Struggling to Make Your Brand Heard Online? We’ve Got You Covered"
-            desc="Turn your social media from a mystery into your most powerful marketing tool with our expert guidance"
+            heading="Struggling to Get Found Online? We Can Help"
+            desc="Don’t let your business be lost in the noise. With our SEO expertise, we’ll put you right where your customers are looking."
           />
         </Box>
 
         <Box mt={15}>
           <RightGridSection
-            img="/images/services/social-media/social-media1.png"
-            title="What is Social Media Marketing?"
+            img="/images/services/seo/seo-img1.png"
+            title="What is SEO?"
             maxWidth="454px"
-            desc="Social Media Marketing: The Modern Word-of-Mouth
-            Think of social media marketing as the digital version of word-of-mouth. It’s about building a community around your brand, where your customers become your biggest advocates. We help you tell your story where your audience is already spending their time—on platforms like Facebook, Instagram, Twitter, and more."
+            desc="SEO: The Key to Unlocking Your Online Visibility Imagine having a store on a busy street, but no one can see your sign. SEO is like putting up a bright, eye-catching sign that leads customers straight to your door. It’s about making sure your website appears when people search for products or services like yours."
           />
         </Box>
 
         <Box mt={15}>
           <LeftGridSection
-            img="/images/services/social-media/social-media2.png"
-            title="Why Social Media Marketing Matters?"
-            maxWidth="430px"
-            desc="Many businesses struggle to make an impact on social media. It can feel overwhelming to keep up with trends, create content, and engage with followers. We’re here to change that. Our tailored strategies ensure your brand not only gets noticed but builds lasting connections with your audience."
+            img="/images/services/seo/seo-img2.png"
+            title="Why SEO Matters"
+            maxWidth="444px"
+            desc="Are You Invisible to Your Potential Customers? Many businesses struggle with being buried on page 10 of Google search results. Without proper SEO, you’re missing out on valuable traffic and potential customers. We’re here to change that, ensuring your business is seen by those who are actively searching for what you offer."
           />
         </Box>
 
         <Box mt={15}>
           <Box textAlign="center">
             <GradientHeading
-              text="Benefits built around you"
+              text="Our SEO Services"
               variant="h2"
               weight={700}
               sx={{ pb: "20px" }}
@@ -65,9 +64,9 @@ const SocialMedia = () => {
         <Box mt={15}>
           <RightGridSection
             img="/images/services/about-info.png"
-            title="Why Trust Us with Your Social Media?"
+            title="Why Choose Sntct for SEO?"
             maxWidth="712px"
-            desc="At Sntct, we understand that social media isn’t just about posting—it’s about building relationships. With our team of experts, we take the guesswork out of social media marketing, delivering strategies that drive engagement, increase brand loyalty, and ultimately grow your business."
+            desc="At Sntct, we understand the frustration of being invisible online. Our team of SEO experts is dedicated to making sure your business gets the attention it deserves. With a proven track record of helping businesses like yours rank higher and grow faster, we’re the partner you can trust to deliver real results."
           />
         </Box>
 
@@ -89,8 +88,8 @@ const SocialMedia = () => {
 
           <Box my={15}>
             <CustomBanner
-              title="Ready to Make Your Brand Stand Out?"
-              desc="Contact us today to take the first step towards social media success. Let’s start building a community around your brand."
+              title="Ready to Be Found?"
+              desc="Don’t let your competitors take all the attention. Contact us today, and let’s start building a stronger online presence for your business."
             />
           </Box>
         </Box>
@@ -98,4 +97,4 @@ const SocialMedia = () => {
     </>
   );
 };
-export default SocialMedia;
+export default SEOSection;

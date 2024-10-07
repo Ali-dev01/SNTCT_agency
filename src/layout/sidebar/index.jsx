@@ -41,6 +41,26 @@ export default function Sidebar({ open, toggleDrawer }) {
                     {item.title}
                   </Typography>
                 </Link>
+
+                {/* Check if subItems exist and map through them */}
+                {item.subItems && (
+                  <Box ml={2} mt={1}>
+                    {/* Optional margin for indentation */}
+                    {item.subItems.map((subItem) => (
+                      <Link
+                        href={subItem.link}
+                        key={subItem.link}
+                        style={{
+                          paddingBottom: "15px",
+                        }}
+                      >
+                        <Typography variant="body1" color="#3E5F82">
+                          {subItem.title}
+                        </Typography>
+                      </Link>
+                    ))}
+                  </Box>
+                )}
               </Box>
             ))}
 

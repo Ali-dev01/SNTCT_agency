@@ -5,7 +5,7 @@ export const sidebarData = [
   },
   {
     title: "Services",
-    link: "/social-media-marketing",
+    link: "#",
     subItems: [
       {
         title: "Social Media Marketing",
@@ -25,7 +25,7 @@ export const sidebarData = [
       },
       {
         title: "Graphic Design",
-        link: "/graphic-design",
+        link: "/graphics-designing",
       },
       {
         title: "Google Ads",

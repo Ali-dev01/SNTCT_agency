@@ -4,8 +4,10 @@ import { Box, Typography } from "@mui/material";
 const MainHeading = ({ heading, desc }) => {
   return (
     <>
-      <GradientHeading text={heading} variant="h1" weight={700} />
-      <Box mt={2} sx={{ mx: { lg: 14, md: 10, xs: 0 } }}>
+      <Box sx={{ mx: { lg: 10, md: 6, xs: 0 } }}>
+        <GradientHeading text={heading} variant="h1" weight={700} />
+      </Box>
+      <Box mt={2} sx={{ mx: { lg: 10, md: 6, xs: 0 } }}>
         <Typography variant="body1" color="#00336B">
           {desc}
         </Typography>

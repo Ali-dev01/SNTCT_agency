@@ -11,40 +11,39 @@ import ServicesCards from "../components/ServicesCards";
 import VerticalTabs from "../components/VerticalTabs";
 import { cardsData, processData } from "./data";
 
-const SocialMedia = () => {
+const GraphicsDesign = () => {
   return (
     <>
       <Container maxWidth="lg">
         <Box mt={7} textAlign="center">
           <MainHeading
-            heading="Struggling to Make Your Brand Heard Online? We’ve Got You Covered"
-            desc="Turn your social media from a mystery into your most powerful marketing tool with our expert guidance"
+            heading="Bring Your Ideas to Life with Beautiful Designs"
+            desc="From logos to stunning visuals, we create designs that speak to your audience and make your brand unforgettable. Let’s work together to create something you’ll love."
           />
         </Box>
 
         <Box mt={15}>
           <RightGridSection
-            img="/images/services/social-media/social-media1.png"
-            title="What is Social Media Marketing?"
-            maxWidth="454px"
-            desc="Social Media Marketing: The Modern Word-of-Mouth
-            Think of social media marketing as the digital version of word-of-mouth. It’s about building a community around your brand, where your customers become your biggest advocates. We help you tell your story where your audience is already spending their time—on platforms like Facebook, Instagram, Twitter, and more."
+            img="/images/services/graphics/graphics-img1.png"
+            title="What is Graphic Design?"
+            maxWidth="423px"
+            desc="Graphic design isn’t just about pretty pictures—it’s about creating visuals that tell your brand’s story. Whether it’s your logo, website, or marketing materials, great design builds trust and grabs attention. We make sure your brand stands out."
           />
         </Box>
 
         <Box mt={15}>
           <LeftGridSection
-            img="/images/services/social-media/social-media2.png"
-            title="Why Social Media Marketing Matters?"
-            maxWidth="430px"
-            desc="Many businesses struggle to make an impact on social media. It can feel overwhelming to keep up with trends, create content, and engage with followers. We’re here to change that. Our tailored strategies ensure your brand not only gets noticed but builds lasting connections with your audience."
+            img="/images/services/graphics/graphics-img2.png"
+            title="Why Does Good Design Matter?"
+            maxWidth="434px"
+            desc="A poorly designed logo or confusing website can drive customers away before you even have a chance to engage them. Inconsistent branding leads to a lack of trust and recognition. We’re here to change that, helping you create visuals that are not only beautiful but also impactful, ensuring your business leaves a lasting mark."
           />
         </Box>
 
         <Box mt={15}>
           <Box textAlign="center">
             <GradientHeading
-              text="Benefits built around you"
+              text="Design Services That Make You Stand Out"
               variant="h2"
               weight={700}
               sx={{ pb: "20px" }}
@@ -65,9 +64,10 @@ const SocialMedia = () => {
         <Box mt={15}>
           <RightGridSection
             img="/images/services/about-info.png"
-            title="Why Trust Us with Your Social Media?"
+            title="Why Choose Sntct for Graphic Design?"
             maxWidth="712px"
-            desc="At Sntct, we understand that social media isn’t just about posting—it’s about building relationships. With our team of experts, we take the guesswork out of social media marketing, delivering strategies that drive engagement, increase brand loyalty, and ultimately grow your business."
+            desc="Why Trust Us with Your Brand’s Visual Identity?
+            At Sntct, we know that great design isn’t just about aesthetics—it’s about communicating the essence of your brand. With our design expertise and dedication to crafting visuals that resonate, we’re committed to making your business stand out from the competition."
           />
         </Box>
 
@@ -89,8 +89,8 @@ const SocialMedia = () => {
 
           <Box my={15}>
             <CustomBanner
-              title="Ready to Make Your Brand Stand Out?"
-              desc="Contact us today to take the first step towards social media success. Let’s start building a community around your brand."
+              title="Ready to Bring Your Vision to Life?"
+              desc="Let’s start creating designs that captivate your audience and elevate your brand. Contact us today to get started."
             />
           </Box>
         </Box>
@@ -98,4 +98,4 @@ const SocialMedia = () => {
     </>
   );
 };
-export default SocialMedia;
+export default GraphicsDesign;

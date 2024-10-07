@@ -1,10 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
-const ServicesCards = ({ card }) => {
+const ServicesCards = ({ card, height }) => {
   return (
     <>
-      <Box sx={styles.cardStyle}>
+      <Box sx={styles.cardStyle(height)}>
         <Image src={card.icon} alt="icon" width={110} height={110} />
         <Typography variant="h5" color="#00336B" mt={-3} mb={1.5}>
           {card.title}
@@ -19,12 +19,12 @@ const ServicesCards = ({ card }) => {
 export default ServicesCards;
 
 const styles = {
-  cardStyle: {
+  cardStyle: (height) => ({
     textAlign: "center",
-    height: "313px",
+    height: height,
     background: "#fff",
     borderRadius: "40px",
     padding: "30px 18px",
     boxShadow: "0px 17px 17px 0px #00000008",
-  },
+  }),
 };
