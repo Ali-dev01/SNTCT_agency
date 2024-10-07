@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import CustomButton from "@/components/CustomButton";
 
-const CustomBanner = ({ title, desc }) => {
+const CustomBanner = ({ title, desc, btnText = `Lets's Talk`, homePage }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -27,7 +27,7 @@ const CustomBanner = ({ title, desc }) => {
         style={{
           width: "100%",
           maxWidth: "1060px",
-          height: "411px",
+          height: homePage ? "492px" : "411px",
           borderRadius: "60px",
           transition: "all 0.5s ease",
         }}
@@ -40,7 +40,7 @@ const CustomBanner = ({ title, desc }) => {
               {desc}
             </Typography>
           </Box>
-          <CustomButton variant="contained" text={`Lets's Talk`} showIcon />
+          <CustomButton variant="contained" text={btnText} showIcon />
         </Box>
         <Box sx={styles.bannerImg}>
           <Image

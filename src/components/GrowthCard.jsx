@@ -4,6 +4,7 @@ import Image from "next/image";
 import GradientHeading from "./GradientHeading";
 
 const GrowthCard = ({
+    whySntct = false,
     iconSrc,
     iconWidth,
     title,
@@ -14,7 +15,7 @@ const GrowthCard = ({
     mainImageHeight,
 }) => {
     return (
-        <Box sx={styles.cardContainer}>
+        <Box sx={styles.cardContainer(whySntct)}>
             <Box sx={styles.innerContainer}>
                 <Box>
                     <Box sx={styles.iconContainer}>
@@ -47,8 +48,8 @@ const GrowthCard = ({
                         src={mainImageSrc}
                         alt="growth-img"
                         layout="intrinsic"
-                        width={474}
-                        height={374}
+                        width={whySntct ? 538 : 474}
+                        height={whySntct ? 431 : 374}
                         objectFit="contain"
                     />
                 </Box>
@@ -60,11 +61,12 @@ const GrowthCard = ({
 export default GrowthCard;
 
 const styles = {
-    cardContainer: {
+    cardContainer: (whySntct) => ({
         borderRadius: "44px",
-        backgroundColor: "#fff",
-        padding: { md: "50px", xs: "25px" },
-    },
+        mt: whySntct ? 0 : "20px",
+        backgroundColor: whySntct ? "transparent" : "#fff",
+        padding: whySntct ? 0 : { md: "50px", xs: "25px" },
+    }),
     innerContainer: {
         display: "flex",
         gap: "19px",

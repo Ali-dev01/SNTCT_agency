@@ -1,6 +1,6 @@
-import CustomTabs from "@/components/CustomTabs";
 import GradientHeading from "@/components/GradientHeading";
 import GrowthCard from "@/components/GrowthCard";
+import NewCustomTabs from "@/components/NewCustomTabs";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import CommunityIcon from "@/icons/CommunityIcon";
 import ContentIcon from "@/icons/ContentIcon";
@@ -11,11 +11,11 @@ import theme from "@/theme";
 import { Box, Container, Typography } from "@mui/material";
 
 const tabsArray = [
-  { icon: <DecisionIcon />, label: "Decision Making" },
-  { icon: <ContentIcon />, label: "Content Creation" },
-  { icon: <CommunityIcon />, label: "Community Cultivation" },
-  { icon: <MarketingIcon />, label: "Marketing Campaigns" },
-  { icon: <IntegrationIcon />, label: "Integration" },
+  { icon: <DecisionIcon />, title: "Decision Making" },
+  { icon: <ContentIcon />, title: "Content Creation" },
+  { icon: <CommunityIcon />, title: "Community Cultivation" },
+  { icon: <MarketingIcon />, title: "Marketing Campaigns" },
+  { icon: <IntegrationIcon />, title: "Integration" },
 ];
 
 const growthCardsData = [
@@ -82,7 +82,7 @@ const growthCardsData = [
 ];
 export default function Growth() {
   return (
-    <Container sx={{ pt: { md: "80px", xs: "40px" } }}>
+    <Container maxWidth="lg" sx={{ pt: { md: "80px", xs: "40px" } }}>
       <Box sx={{ textAlign: "center", py: { md: "40px", xs: "20px" } }}>
         <GradientHeading
           text="Strategies for Sustainable Growth"
@@ -99,7 +99,7 @@ export default function Growth() {
         </Box>
       </Box>
       <Box>
-        <CustomTabs tabsArray={tabsArray}>
+        <NewCustomTabs tabsArray={tabsArray}>
           {growthCardsData.map((item) => (
             <GrowthCard
               key={item.title}
@@ -113,7 +113,7 @@ export default function Growth() {
               mainImageHeight={item.mainImageHeight}
             />
           ))}
-        </CustomTabs>
+        </NewCustomTabs>
       </Box>
     </Container>
   );
