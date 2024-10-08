@@ -23,3 +23,33 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3395ff #c7d7e9;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #c7d7e9;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #c7d7e9;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #3395ff;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #3395ff;
+}

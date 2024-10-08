@@ -21,7 +21,7 @@ export default function HeroSection() {
             height={0}
             sizes="100vw"
             className="animate__animated animate__slideInLeft"
-            style={styles.leftImage(lgResponsive)}
+            style={{ ...styles.leftImage(lgResponsive), animationDuration: "2s" }}
           />
           <Image
             src="/images/home-right-bg.png"
@@ -30,7 +30,7 @@ export default function HeroSection() {
             height={0}
             sizes="100vw"
             className="animate__animated animate__slideInRight"
-            style={styles.rightImage(lgResponsive)}
+            style={{ ...styles.rightImage(lgResponsive), animationDuration: "2s" }}
           />
         </>
       )}
