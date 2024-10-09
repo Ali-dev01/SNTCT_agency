@@ -150,8 +150,8 @@ const styles = {
     },
     calendlyWidget: {
         minWidth: '100%',
-        height: '700px', // adjust as per your design
         // height: '605px', // adjust as per your design
+        height: '700px', // adjust as per your design
         margin: 0, // Ensure no margin is applied
         padding: 0, // Ensure no padding is applied
     },
