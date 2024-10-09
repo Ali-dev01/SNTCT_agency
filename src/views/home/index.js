@@ -8,6 +8,7 @@ import ExploreBlogs from "./explore-blogs";
 import ExploreServices from "./explore-services";
 import Growth from "./growth";
 import HeroSection from "./hero-section";
+import TrustedUsers from "./trusted-users";
 import WhySntct from "./why-sntct";
 
 const HomeSection = () => {
@@ -24,6 +25,7 @@ const HomeSection = () => {
       </Box>
       <ExploreServices />
       <Growth />
+      <TrustedUsers />
       <WhySntct />
       <DigitalPartner />
       <ExploreBlogs />

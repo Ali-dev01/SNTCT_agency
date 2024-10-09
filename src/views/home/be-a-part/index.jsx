@@ -3,7 +3,7 @@ import { Box, Container } from '@mui/material'
 
 export default function BeAPart() {
     return (
-        <Box my={15}>
+        <Box sx={styles.mainBg}>
             <Container maxWidth="lg">
                 <CustomBanner
                     homePage
@@ -14,4 +14,14 @@ export default function BeAPart() {
             </Container>
         </Box>
     )
+}
+
+const styles = {
+    mainBg: {
+        backgroundImage: 'url(/images/be-part-bg.png)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'left',
+        backgroundSize: 'contain',
+        my: 15
+    },
 }

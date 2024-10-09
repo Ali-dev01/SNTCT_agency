@@ -82,44 +82,53 @@ const growthCardsData = [
 ];
 export default function Growth() {
   return (
-    <Container maxWidth="lg" sx={{ pt: { md: "80px", xs: "40px" } }}>
-      <Box sx={{ textAlign: "center", py: { md: "40px", xs: "20px" } }}>
-        <GradientHeading
-          text="Strategies for Sustainable Growth"
-          variant="h2"
-          weight={700}
-          sx={styles.heading}
-        />
-        <Typography variant="body1" sx={styles.bodyText}>
-          At our digital marketing agency, we offer a range of services to
-          <br /> help businesses grow and succeed online.
-        </Typography>
-        <Box>
-          <ArrowDownSection />
+    <Box sx={styles.mainBg}>
+      <Container maxWidth="lg" sx={{ pt: { md: "80px", xs: "40px" } }}>
+        <Box sx={{ textAlign: "center", py: { md: "40px", xs: "20px" } }}>
+          <GradientHeading
+            text="Strategies for Sustainable Growth"
+            variant="h2"
+            weight={700}
+            sx={styles.heading}
+          />
+          <Typography variant="body1" sx={styles.bodyText}>
+            At our digital marketing agency, we offer a range of services to
+            <br /> help businesses grow and succeed online.
+          </Typography>
+          <Box>
+            <ArrowDownSection />
+          </Box>
         </Box>
-      </Box>
-      <Box>
-        <NewCustomTabs tabsArray={tabsArray}>
-          {growthCardsData.map((item) => (
-            <GrowthCard
-              key={item.title}
-              iconSrc={item.iconSrc}
-              iconWidth={item.iconWidth}
-              title={item.title}
-              subtitle1={item.subtitle1}
-              subtitle2={item.subtitle2}
-              mainImageSrc={item.mainImageSrc}
-              mainImageWidth={item.mainImageWidth}
-              mainImageHeight={item.mainImageHeight}
-            />
-          ))}
-        </NewCustomTabs>
-      </Box>
-    </Container>
+        <Box>
+          <NewCustomTabs tabsArray={tabsArray}>
+            {growthCardsData.map((item) => (
+              <GrowthCard
+                key={item.title}
+                iconSrc={item.iconSrc}
+                iconWidth={item.iconWidth}
+                title={item.title}
+                subtitle1={item.subtitle1}
+                subtitle2={item.subtitle2}
+                mainImageSrc={item.mainImageSrc}
+                mainImageWidth={item.mainImageWidth}
+                mainImageHeight={item.mainImageHeight}
+              />
+            ))}
+          </NewCustomTabs>
+        </Box>
+      </Container>
+    </Box>
   );
 }
 
 const styles = {
+  mainBg: {
+    backgroundImage: 'url(/images/be-part-bg.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundPositionX: 'left',
+    backgroundPositionY: 'top',
+    backgroundSize: 'contain',
+  },
   heading: {
     lineHeight: "52.2px",
     pb: "20px",
