@@ -4,15 +4,19 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box, Collapse, Typography } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import CustomButton from "@/components/CustomButton";
 import CloseIcon from "@/icons/CloseIcon";
 import SidebarLogo from "@/icons/SidebarLogo";
+import { usePathname } from "next/navigation";
 import { sidebarData } from "./data";
 
 export default function Sidebar({ open, toggleDrawer }) {
   const [expandedItem, setExpandedItem] = useState(null);
+  const [currentPath, setCurrentPath] = useState("");
+
+  const path = usePathname();
 
   const handleToggle = (itemTitle) => {
     if (expandedItem === itemTitle) {
@@ -21,6 +25,16 @@ export default function Sidebar({ open, toggleDrawer }) {
       setExpandedItem(itemTitle);
     }
   };
+
+  useEffect(() => {
+    setCurrentPath(path);
+
+    sidebarData.forEach((item) => {
+      if (item.subItems?.some((subItem) => subItem.link === path)) {
+        setExpandedItem(item.title); // Expand the parent item
+      }
+    });
+  }, [path]);
 
   return (
     <>
@@ -59,7 +73,10 @@ export default function Sidebar({ open, toggleDrawer }) {
             <Box key={item.link} mb={{ lg: 4, md: 3.5, xs: 2.5 }}>
               <Box onClick={() => handleToggle(item.title)} sx={styles.navItem}>
                 <Link href={item.link} style={{ textDecoration: "none" }}>
-                  <Typography variant="h5" color="#3E5F82">
+                  <Typography
+                    variant="h5"
+                    color={item.link === currentPath ? "#3395FF" : "#3E5F82"}
+                  >
                     {item.title}
                   </Typography>
                 </Link>
@@ -81,7 +98,11 @@ export default function Sidebar({ open, toggleDrawer }) {
                   <Box mt={2} ml={2}>
                     {item.subItems?.map((subItem) => (
                       <Link href={subItem.link} key={subItem.link}>
-                        <Typography variant="body1" my={1.5} color="#3E5F82">
+                        <Typography
+                          variant="body1"
+                          mt={1.5}
+                          color={subItem.link === currentPath ? "#3395FF" : "#3E5F82"}
+                        >
                           {subItem.title}
                         </Typography>
                       </Link>
@@ -98,7 +119,11 @@ export default function Sidebar({ open, toggleDrawer }) {
             </Typography>
             <Box mt={2.5}>
               <Link href="/FAQs">
-                <Typography variant="h5" fontWeight={700} color="#3E5F82">
+                <Typography
+                  variant="h5"
+                  fontWeight={700}
+                  color={"/FAQs" === currentPath ? "#3395FF" : "#3E5F82"}
+                >
                   FAQ
                 </Typography>
               </Link>
@@ -109,7 +134,7 @@ export default function Sidebar({ open, toggleDrawer }) {
                 <Typography
                   variant="h5"
                   fontWeight={700}
-                  color="#3E5F82"
+                  color={"/contact-us" === currentPath ? "#3395FF" : "#3E5F82"}
                   sx={{ borderBottom: "1px solid #3E5F82", display: "inline" }}
                 >
                   Contact Us
