@@ -1,4 +1,10 @@
+import BlogSection from "@/views/blog-section";
+
 const Blog = () => {
-  return <div>Blog</div>;
+  return (
+    <>
+      <BlogSection />
+    </>
+  );
 };
 export default Blog;

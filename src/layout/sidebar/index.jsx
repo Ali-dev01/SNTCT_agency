@@ -72,7 +72,13 @@ export default function Sidebar({ open, toggleDrawer }) {
           {sidebarData.map((item) => (
             <Box key={item.link} mb={{ lg: 4, md: 3.5, xs: 2.5 }}>
               <Box onClick={() => handleToggle(item.title)} sx={styles.navItem}>
-                <Link href={item.link} style={{ textDecoration: "none" }}>
+                <Link
+                  href={item.link}
+                  style={{ textDecoration: "none" }}
+                  onClick={
+                    item.title === "Services" ? toggleDrawer(true) : toggleDrawer(false)
+                  }
+                >
                   <Typography
                     variant="h5"
                     color={item.link === currentPath ? "#3395FF" : "#3E5F82"}
@@ -97,7 +103,11 @@ export default function Sidebar({ open, toggleDrawer }) {
                 <Collapse in={expandedItem === item.title} timeout="auto" unmountOnExit>
                   <Box mt={2} ml={2}>
                     {item.subItems?.map((subItem) => (
-                      <Link href={subItem.link} key={subItem.link}>
+                      <Link
+                        href={subItem.link}
+                        key={subItem.link}
+                        onClick={toggleDrawer(false)}
+                      >
                         <Typography
                           variant="body1"
                           mt={1.5}
@@ -117,7 +127,7 @@ export default function Sidebar({ open, toggleDrawer }) {
             <Typography variant="caption" color="#00336B">
               Have a Question?
             </Typography>
-            <Box mt={2.5}>
+            <Box mt={2.5} onClick={toggleDrawer(false)}>
               <Link href="/FAQs">
                 <Typography
                   variant="h5"
@@ -129,7 +139,7 @@ export default function Sidebar({ open, toggleDrawer }) {
               </Link>
             </Box>
 
-            <Box mt={3}>
+            <Box mt={3} onClick={toggleDrawer(false)}>
               <Link href="/contact-us">
                 <Typography
                   variant="h5"

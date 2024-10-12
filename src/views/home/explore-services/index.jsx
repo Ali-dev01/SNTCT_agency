@@ -50,7 +50,6 @@ const services = [
     iconWidth: 116,
     mainImageSrc: "/images/google-ads.png",
   },
-
 ];
 
 export default function ExploreServices() {

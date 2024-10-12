@@ -1,5 +1,5 @@
-import { ThemeProvider } from "@mui/material";
-import { Poppins } from "next/font/google";
+import { CssBaseline, StyledEngineProvider, ThemeProvider } from "@mui/material";
+import localFont from "next/font/local";
 
 import Footer from "@/layout/footer";
 import Header from "@/layout/header";
@@ -7,7 +7,25 @@ import theme from "@/theme";
 import "animate.css";
 import "./globals.css";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+const ceraPro = localFont({
+  src: [
+    {
+      path: "../../public/fonts/cera-pro-regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/cera-pro-medium.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/cera-pro-bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -18,15 +36,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeProvider theme={theme}>
-        <body className={poppins.className}>
-          <header>
-            <Header />
-          </header>
-          <main>{children}</main>
-          <footer>
-            <Footer />
-          </footer>
-        </body>
+        <StyledEngineProvider injectFirst>
+          <CssBaseline />
+          <body className={ceraPro.className}>
+            <header>
+              <Header />
+            </header>
+            <main>{children}</main>
+            <footer>
+              <Footer />
+            </footer>
+          </body>
+        </StyledEngineProvider>
       </ThemeProvider>
     </html>
   );

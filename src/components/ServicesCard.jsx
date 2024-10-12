@@ -12,7 +12,6 @@ const ServicesCard = ({
   buttonAction = () => {},
   mainImageSrc,
 }) => {
-  console.log(iconWidth, "iconWidth");
   return (
     <Box sx={styles.container}>
       <Box sx={styles.contentWrapper}>

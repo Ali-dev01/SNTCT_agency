@@ -1,6 +1,6 @@
+import NewCustomTabs from "@/components/CustomTabs";
 import GradientHeading from "@/components/GradientHeading";
 import GrowthCard from "@/components/GrowthCard";
-import NewCustomTabs from "@/components/NewCustomTabs";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import CommunityIcon from "@/icons/CommunityIcon";
 import ContentIcon from "@/icons/ContentIcon";
@@ -123,11 +123,11 @@ export default function Growth() {
 
 const styles = {
   mainBg: {
-    backgroundImage: 'url(/images/be-part-bg.png)',
-    backgroundRepeat: 'no-repeat',
-    backgroundPositionX: 'left',
-    backgroundPositionY: 'top',
-    backgroundSize: 'contain',
+    backgroundImage: "url(/images/be-part-bg.png)",
+    backgroundRepeat: "no-repeat",
+    backgroundPositionX: "left",
+    backgroundPositionY: "top",
+    backgroundSize: "contain",
   },
   heading: {
     lineHeight: "52.2px",

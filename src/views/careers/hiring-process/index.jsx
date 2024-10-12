@@ -1,5 +1,5 @@
+import NewCustomTabs from "@/components/CustomTabs";
 import GradientHeading from "@/components/GradientHeading";
-import NewCustomTabs from "@/components/NewCustomTabs";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import { Box, Grid2 as Grid, Typography } from "@mui/material";
 import Image from "next/image";

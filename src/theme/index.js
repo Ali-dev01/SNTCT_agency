@@ -26,6 +26,7 @@ const theme = createTheme({
     },
   },
   typography: {
+    fontFamily: "inherit",
     fontWeightRegular: 400,
     fontWeightMedium: 600,
     fontWeightBold: 700,
