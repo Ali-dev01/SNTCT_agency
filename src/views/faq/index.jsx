@@ -37,7 +37,7 @@ const FaqSection = ({ homePage }) => {
                   width={0}
                   height={0}
                   sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
+                  style={{ width: "100%", maxWidth: "345px", height: "auto" }}
                 />
               </Box>
             )}
