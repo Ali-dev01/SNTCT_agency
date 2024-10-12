@@ -9,31 +9,12 @@ const CustomBanner = ({ title, desc, btnText = `Lets's Talk`, homePage }) => {
 
   return (
     <Box
-      position="relative"
-      borderRadius="60px"
+      sx={styles.bannerWraper(homePage)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Image
-        src={
-          isHovered
-            ? "/images/custom-banner/banner-bg2.png"
-            : "/images/custom-banner/banner-bg1.png"
-        }
-        alt="banner"
-        width={0}
-        height={0}
-        sizes="100vw"
-        style={{
-          width: "100%",
-          maxWidth: "1060px",
-          height: homePage ? "492px" : "411px",
-          borderRadius: "60px",
-          transition: "all 0.5s ease",
-        }}
-      />
-      <Box sx={styles.contentStyle}>
-        <Box sx={{ width: { md: "70%", xs: "100%" }, mt: 5 }}>
+      <Box>
+        <Box sx={{ width: { md: "70%", xs: "100%" } }}>
           <Box sx={{ mb: "40px", width: { lg: "90%", xs: "100%" } }}>
             <Typography sx={styles.heading}>{title}</Typography>
             <Typography variant="body2" color="#fff" lineHeight="27px" mt={2}>
@@ -50,14 +31,10 @@ const CustomBanner = ({ title, desc, btnText = `Lets's Talk`, homePage }) => {
                 : "/images/custom-banner/banner-img1.png"
             }
             alt="banner"
-            width={0}
-            height={0}
-            sizes="100vw"
+            width={325}
+            height={325}
             style={{
-              width: "100%",
-              height: "auto",
               transition: "all 0.3s ease",
-              maxWidth: isHovered ? "325px" : "364px",
               transform: isHovered ? "rotate(-14deg)" : "rotate(0deg)",
             }}
           />
@@ -69,26 +46,28 @@ const CustomBanner = ({ title, desc, btnText = `Lets's Talk`, homePage }) => {
 export default CustomBanner;
 
 const styles = {
-  contentStyle: {
-    position: "absolute",
-    padding: "25px 45px",
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    paddingRight: { md: "0", xs: "45px" },
-    zIndex: "1",
-    top: 0,
-  },
+  bannerWraper: (isHome) => ({
+    position: "relative",
+    background: "linear-gradient(90deg, #1938C8 0%, #0B9FE4 100%)",
+    padding: "35px 40px",
+    borderRadius: "60px",
+    height: isHome ? "472px" : "415px",
+    width: { lg: "92%", xs: "100%" },
+    "&:hover": {
+      background: "linear-gradient(90deg, #0B9FE4 0%, #1938C8 100%)",
+    },
+  }),
   heading: {
     color: "#fff",
-    fontWeight: { md: 700, xs: 500 },
+    fontWeight: 700,
     lineHeight: { md: "58px", xs: "45px" },
     fontSize: { md: "50px", sm: "40px", xs: "25px" },
   },
   bannerImg: {
-    display: { md: "block", xs: "none" },
-    width: { md: "30%", xs: "100%" },
+    position: "absolute",
+    right: "-80px",
+    top: "22px",
+    display: { lg: "block", xs: "none" },
     mt: { lg: 2.5, md: 1, xs: 0 },
-    textAlign: { md: "end", xs: "center" },
   },
 };
