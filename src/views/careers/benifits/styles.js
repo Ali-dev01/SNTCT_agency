@@ -51,7 +51,7 @@ export const styles = {
       padding: "2px", // border width
       background:
         index + 1 === active ? "linear-gradient(to right, #1938C8, #0B9FE4)" : "none",
-      "-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+      "-webkitMask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
       mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
       maskComposite: "destination-out",
       WebkitMaskComposite: "destination-out",

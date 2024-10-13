@@ -12,7 +12,6 @@ const GrowthCard = ({
   subtitle2,
   mainImageSrc,
   mainImageWidth,
-  mainImageHeight,
 }) => {
   return (
     <Box sx={styles.cardContainer(whySntct)}>
@@ -38,14 +37,14 @@ const GrowthCard = ({
             {subtitle2}
           </Typography>
         </Box>
-        <Box sx={styles.imageContainer(mainImageWidth, mainImageHeight)}>
+        <Box sx={styles.imageContainer(mainImageWidth)}>
           <Image
             src={mainImageSrc}
-            alt="growth-img"
-            layout="intrinsic"
-            width={whySntct ? 538 : 474}
-            height={whySntct ? 431 : 374}
-            objectFit="contain"
+            alt="go"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", maxWidth: mainImageWidth, height: "auto" }}
           />
         </Box>
       </Box>
@@ -88,13 +87,12 @@ const styles = {
     lineHeight: "30px",
     paddingBottom: "30px",
   },
-  imageContainer: (mainImageWidth, mainImageHeight) => ({
+  imageContainer: (mainImageWidth) => ({
     flexShrink: 0,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     width: { md: mainImageWidth, xs: "100%" },
     height: { md: "378px    ", xs: "auto" },
-    // height: { md: mainImageHeight, xs: "auto" },
   }),
 };

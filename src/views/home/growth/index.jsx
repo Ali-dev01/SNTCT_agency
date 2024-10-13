@@ -1,6 +1,5 @@
 import NewCustomTabs from "@/components/CustomTabs";
 import GradientHeading from "@/components/GradientHeading";
-import GrowthCard from "@/components/GrowthCard";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import CommunityIcon from "@/icons/CommunityIcon";
 import ContentIcon from "@/icons/ContentIcon";
@@ -8,7 +7,9 @@ import DecisionIcon from "@/icons/DecisionIcon";
 import IntegrationIcon from "@/icons/IntegrationIcon";
 import MarketingIcon from "@/icons/MarketingIcon";
 import theme from "@/theme";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Grid2 as Grid, Typography } from "@mui/material";
+import Image from "next/image";
+import { tabsData } from "./data";
 
 const tabsArray = [
   { icon: <DecisionIcon />, title: "Decision Making" },
@@ -18,68 +19,6 @@ const tabsArray = [
   { icon: <IntegrationIcon />, title: "Integration" },
 ];
 
-const growthCardsData = [
-  {
-    iconSrc: "/images/D.png",
-    title: "Data-Driven Decision Making – The Power of Analytics",
-    subtitle1:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you love and grow. We're a team of experts always be there",
-    subtitle2:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you",
-    iconWidth: 108,
-    mainImageSrc: "/images/decission-mail.png",
-    mainImageWidth: "474px",
-    mainImageHeight: "374px",
-  },
-  {
-    iconSrc: "/images/E.png",
-    title: "Engaging Content Creation – Captivate Your Audience",
-    subtitle1:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you love and grow. We're a team of experts always be there",
-    subtitle2:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you",
-    iconWidth: 89,
-    mainImageSrc: "/images/engagment-content.png",
-    mainImageWidth: "484px",
-    mainImageHeight: "225px",
-  },
-  {
-    iconSrc: "/images/B.png",
-    title: "Brand Community Cultivation – Building Loyalty",
-    subtitle1:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you love and grow. We're a team of experts always be there",
-    subtitle2:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you",
-    iconWidth: 97,
-    mainImageSrc: "/images/brand-community.png",
-    mainImageWidth: "312px",
-    mainImageHeight: "331px",
-  },
-  {
-    iconSrc: "/images/C.png",
-    title: "Customized Marketing Campaigns – Personalized for Impact",
-    subtitle1:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you love and grow. We're a team of experts always be there",
-    subtitle2:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you",
-    iconWidth: 112,
-    mainImageSrc: "/images/marketing-campaign.png",
-    mainImageWidth: "351px",
-    mainImageHeight: "378px",
-  },
-  {
-    iconSrc: "/images/I.png",
-    title: "Innovative Technological Integration – Future-Ready Solutions",
-    subtitle1:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you love and grow. We're a team of experts always be there ",
-    subtitle2:
-      "Let us do all tech-savvy dirty works for you so that you can only do what you",
-    iconWidth: 45,
-    mainImageSrc: "/images/integration.png",
-    mainImageWidth: "407px",
-    mainImageHeight: "302px",
-  },
-];
 export default function Growth() {
   return (
     <Box sx={styles.mainBg}>
@@ -101,18 +40,47 @@ export default function Growth() {
         </Box>
         <Box>
           <NewCustomTabs tabsArray={tabsArray}>
-            {growthCardsData.map((item) => (
-              <GrowthCard
-                key={item.title}
-                iconSrc={item.iconSrc}
-                iconWidth={item.iconWidth}
-                title={item.title}
-                subtitle1={item.subtitle1}
-                subtitle2={item.subtitle2}
-                mainImageSrc={item.mainImageSrc}
-                mainImageWidth={item.mainImageWidth}
-                mainImageHeight={item.mainImageHeight}
-              />
+            {tabsData.map((item, i) => (
+              <Box mt={2} key={i} sx={styles.tabCard}>
+                <Grid container spacing={{ xs: 6, md: 12 }}>
+                  <Grid item size={{ md: 6, xs: 12 }}>
+                    <Image src={item.letter} alt="W" width={item.width} height={102} />
+                    <GradientHeading
+                      text={item.title}
+                      variant="h2"
+                      weight={700}
+                      sx={{ mt: "-30px" }}
+                    />
+                    <Typography
+                      variant="body2"
+                      mt={2.5}
+                      color="#00336B"
+                      lineHeight="27px"
+                    >
+                      {item.desc}
+                    </Typography>
+                  </Grid>
+                  <Grid
+                    item
+                    size={{ md: 6, xs: 12 }}
+                    sx={{ display: "flex", justifyContent: "end" }}
+                  >
+                    <Image
+                      src={item.image}
+                      alt="go"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{
+                        width: "100%",
+                        maxWidth: item.maxWidth,
+                        maxHeight: item.maxHeight,
+                        height: "auto",
+                      }}
+                    />
+                  </Grid>
+                </Grid>
+              </Box>
             ))}
           </NewCustomTabs>
         </Box>
@@ -137,5 +105,10 @@ const styles = {
     color: theme.palette.primary.dark,
     lineHeight: "30px",
     pb: "30px",
+  },
+  tabCard: {
+    background: "#fff",
+    padding: { xs: "40px 30px", sm: "55px 50px" },
+    borderRadius: "44px",
   },
 };
