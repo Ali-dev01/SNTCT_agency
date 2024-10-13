@@ -6,7 +6,7 @@ export const tabsData = [
     desc: (
       <>
         Let us do all tech-savvy dirty works for you so that you can only do what you love
-        and grow. We're a team of experts always be there
+        and grow. We are a team of experts always be there
         <br /> Let us do all tech-savvy dirty works for you so that you can only do what
         you
       </>
@@ -22,7 +22,7 @@ export const tabsData = [
     desc: (
       <>
         Let us do all tech-savvy dirty works for you so that you can only do what you love
-        and grow. We're a team of experts always be there
+        and grow. We are a team of experts always be there
         <br />
         Let us do all tech-savvy dirty works for you so that you can only do what you
       </>
@@ -38,7 +38,7 @@ export const tabsData = [
     desc: (
       <>
         Let us do all tech-savvy dirty works for you so that you can only do what you love
-        and grow. We're a team of experts always be there
+        and grow. We are a team of experts always be there
         <br />
         Let us do all tech-savvy dirty works for you so that you can only do what you
       </>
@@ -54,7 +54,7 @@ export const tabsData = [
     desc: (
       <>
         Let us do all tech-savvy dirty works for you so that you can only do what you love
-        and grow. We're a team of experts always be there
+        and grow. We are a team of experts always be there
         <br />
         Let us do all tech-savvy dirty works for you so that you can only do what you
       </>
@@ -70,7 +70,7 @@ export const tabsData = [
     desc: (
       <>
         Let us do all tech-savvy dirty works for you so that you can only do what you love
-        and grow. We're a team of experts always be there
+        and grow. We are a team of experts always be there
         <br />
         Let us do all tech-savvy dirty works for you so that you can only do what you
       </>
