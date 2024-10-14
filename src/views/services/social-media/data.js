@@ -27,23 +27,27 @@ export const processData = [
     value: 1,
     desc: "Discovery and Planning – We start by understanding your brand and your goals",
     letter: "S",
+    img: "social-media/letter-s-bg.png",
   },
   {
     title: "Step 02",
     value: 2,
     desc: "Content Creation – We craft engaging posts and stories that speak to your audience.",
     letter: "N",
+    img: "social-media/letter-n-bg.png",
   },
   {
     title: "Step 03",
     value: 3,
     desc: "Execution and Management – We post, monitor, and manage your social media channels.",
     letter: "T",
+    img: "social-media/letter-t-bg.png",
   },
   {
     title: "Step 04",
     value: 4,
     desc: "Reporting and Optimization – We track results and continuously optimize to improve performance.",
     letter: "C",
+    img: "social-media/letter-c-bg.png",
   },
 ];

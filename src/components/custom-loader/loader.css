@@ -1,9 +1,17 @@
 /* From Uiverse.io by Z4drus */
 .container {
-  min-height: 85vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(3px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* WebKit-specific blur effect */
 }
 
 .loader {

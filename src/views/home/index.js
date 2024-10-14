@@ -22,7 +22,7 @@ const HomeSection = () => {
       {loading ? (
         <Loader />
       ) : (
-        <Box>
+        <>
           <HeroSection />
           <Box
             sx={{
@@ -40,7 +40,7 @@ const HomeSection = () => {
           <ExploreBlogs />
           <BeAPart />
           <FaqSection homePage />
-        </Box>
+        </>
       )}
     </>
   );

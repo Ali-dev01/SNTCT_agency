@@ -32,6 +32,7 @@ export const processData = [
       </>
     ),
     letter: "S",
+    img: "graphics/letter-s-bg.png",
   },
   {
     title: "Step 02",
@@ -43,6 +44,7 @@ export const processData = [
       </>
     ),
     letter: "N",
+    img: "graphics/letter-n-bg.png",
   },
   {
     title: "Step 03",
@@ -54,6 +56,7 @@ export const processData = [
       </>
     ),
     letter: "T",
+    img: "graphics/letter-t-bg.png",
   },
   {
     title: "Step 04",
@@ -65,5 +68,6 @@ export const processData = [
       </>
     ),
     letter: "C",
+    img: "graphics/letter-c-bg.png",
   },
 ];

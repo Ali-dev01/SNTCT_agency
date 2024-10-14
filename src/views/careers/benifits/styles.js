@@ -62,7 +62,7 @@ export const styles = {
   letterStyle: (img) => ({
     fontSize: "250px !important",
     fontWeight: 700,
-    color: "transparent",
+    color: "rgba(0, 100, 196, 0.6)",
     marginTop: "-70px",
     backgroundImage: `url("/images/careers/${img}")`,
     backgroundRepeat: "no-repeat",

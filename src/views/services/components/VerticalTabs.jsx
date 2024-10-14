@@ -1,5 +1,17 @@
-import { Box, Divider, Grid2 as Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid2 as Grid, keyframes, Typography } from "@mui/material";
 import { useState } from "react";
+
+const moveBackground = keyframes`
+  0% {
+    background-position: -220px 0;
+  }
+  50% {
+    background-position: 50px 0;
+  }
+  100% {
+    background-position: -220px 0;
+  }
+`;
 
 const VerticalTabs = ({ data }) => {
   const [activeBtn, setActiveBtn] = useState(1);
@@ -7,7 +19,7 @@ const VerticalTabs = ({ data }) => {
   return (
     <Grid container spacing={4}>
       <Grid item size={{ xs: 12, md: 4 }}>
-        <Box sx={{ ...styles.cardStyle, p: "25px 20px", textAlign: "center" }}>
+        <Box sx={{ ...styles.cardStyle, p: "35px 20px", textAlign: "center" }}>
           {data.map((item, i) => (
             <Typography
               key={item.value}
@@ -24,7 +36,7 @@ const VerticalTabs = ({ data }) => {
       </Grid>
       <Grid item size={{ xs: 12, md: 8 }}>
         <Box sx={{ ...styles.cardStyle, p: "40px", textAlign: "center" }}>
-          <Typography variant="h1" sx={styles.letterStyle}>
+          <Typography variant="h1" sx={styles.letterStyle(data[activeBtn - 1].img)}>
             {data[activeBtn - 1].letter}
           </Typography>
           <Divider />
@@ -42,7 +54,7 @@ const styles = {
   cardStyle: {
     background: "#fff",
     borderRadius: "40px",
-    minHeight: "330px",
+    minHeight: "390px",
     boxShadow: "0px 17px 17px 0px #00000008",
   },
   titleStyle: (active, data, index) => ({
@@ -81,10 +93,18 @@ const styles = {
     },
   }),
 
-  letterStyle: {
-    fontSize: "200px !important",
+  letterStyle: (img) => ({
+    fontSize: "250px !important",
     fontWeight: 700,
-    color: "#3395FF",
-    mt: "-40px",
-  },
+    color: "rgba(0, 100, 196, 0.6)",
+    marginTop: "-70px",
+    backgroundImage: `url("/images/services/${img}")`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+    "&:hover": {
+      animation: `${moveBackground} 4s ease-in-out infinite`,
+    },
+  }),
 };
