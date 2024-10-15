@@ -49,8 +49,8 @@ const styles = {
   bannerWraper: (isHome) => ({
     position: "relative",
     background: "linear-gradient(90deg, #1938C8 0%, #0B9FE4 100%)",
-    padding: "35px 40px",
-    borderRadius: "60px",
+    padding: { xs: '24px', sm: "35px 40px" },
+    borderRadius: { xs: "33px", sm: "60px" },
     height: isHome ? "472px" : "415px",
     width: { lg: "92%", xs: "100%" },
     "&:hover": {

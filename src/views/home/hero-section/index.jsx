@@ -9,31 +9,34 @@ const headingTexts = ["We Design,", "Develop and Market", "Your Success"];
 export default function HeroSection() {
   const showImages = useMediaQuery("(min-width:1130px)");
   const lgResponsive = useMediaQuery("(max-width:1320px)");
+  const mobileResponsive = useMediaQuery("(max-width:600px)");
 
   return (
     <Box sx={styles.container}>
-      {showImages && (
-        <>
-          <Image
-            src="/images/home-left-bg.png"
-            alt="home-left-bg"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="animate__animated animate__slideInLeft"
-            style={{ ...styles.leftImage(lgResponsive), animationDuration: "2s" }}
-          />
-          <Image
-            src="/images/home-right-bg.png"
-            alt="home-right-bg"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="animate__animated animate__slideInRight"
-            style={{ ...styles.rightImage(lgResponsive), animationDuration: "2s" }}
-          />
-        </>
-      )}
+      {/* {showImages && ( */}
+      <>
+        <Image
+          src="/images/home-left-bg.png"
+          alt="home-left-bg"
+          width={0}
+          height={0}
+          sizes="100vw"
+          layout="intrinsic"
+          className="animate__animated animate__slideInLeft"
+          style={{ ...styles.leftImage(lgResponsive, mobileResponsive), animationDuration: "2s" }}
+        />
+        <Image
+          src="/images/home-right-bg.png"
+          alt="home-right-bg"
+          width={0}
+          height={0}
+          sizes="100vw"
+          layout="intrinsic"
+          className="animate__animated animate__slideInRight"
+          style={{ ...styles.rightImage(lgResponsive, mobileResponsive), animationDuration: "2s" }}
+        />
+      </>
+      {/* )} */}
       <Box pb="20px">
         {headingTexts.map((text, index) => (
           <GradientHeading
@@ -59,23 +62,25 @@ export default function HeroSection() {
 const styles = {
   container: {
     textAlign: "center",
-    py: { xs: "2rem", sm: "3rem", md: "4rem" },
+    // py: { xs: "2rem", sm: "3rem", md: "4rem" },
+    py: "4rem",
     position: "relative",
     px: "10px",
   },
-  leftImage: (lgResponsive) => ({
+  leftImage: (lgResponsive, mobileResponsive) => ({
     height: "auto",
     position: "absolute",
     left: 0,
     bottom: "3rem",
     zIndex: "-1",
-    width: lgResponsive ? "278px" : "378px",
+    top: mobileResponsive ? "-3rem" : 0,
+    width: mobileResponsive ? '150px' : lgResponsive ? "278px" : "378px",
   }),
-  rightImage: (lgResponsive) => ({
+  rightImage: (lgResponsive, mobileResponsive) => ({
     height: "auto",
     position: "absolute",
-    right: 0,
-    width: lgResponsive ? "370px" : "570px",
+    right: mobileResponsive ? '-40px' : 0,
+    width: mobileResponsive ? '200px' : lgResponsive ? "370px" : "570px",
     top: "-6rem",
     zIndex: "-1",
   }),

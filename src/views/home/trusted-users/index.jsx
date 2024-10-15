@@ -1,8 +1,9 @@
 import GradientHeading from '@/components/GradientHeading';
 import ArrowDownSection from '@/icons/ArrowDownSection';
 import theme from '@/theme';
-import { Avatar, Box, Card, CardContent, Container, Typography } from '@mui/material';
+import { Avatar, Box, Card, CardContent, Container, Typography, useMediaQuery } from '@mui/material';
 import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 const styles = {
     mainBg: {
@@ -28,24 +29,17 @@ const styles = {
         gap: 4,
     },
     cardWrapper: (isCenter) => ({
-        width: isCenter ? 384 : 347,
+        width: { sm: isCenter ? 384 : 347, xs: 350 },
         transition: 'all 500ms',
         zIndex: isCenter ? 20 : 10,
         opacity: isCenter ? 1 : 0.5,
     }),
-    cardWrapperLeft: {
-        marginRight: '-64px',
-    },
-    cardWrapperRight: {
-        marginLeft: '-64px',
-    },
     card: (isCenter) => ({
         textAlign: 'center',
         transition: 'all 500ms',
         bgcolor: 'white',
         borderRadius: '24px',
         transform: isCenter ? 'scale(1.1)' : 'scale(0.9)',
-        // height: isCenter ? 384 : 300,
         height: 384,
         boxShadow: "0px 17px 17px 0px #00000008,0px 39px 23px 0px #00000005",
     }),
@@ -96,6 +90,7 @@ const styles = {
 
 export default function TestimonialCarousel() {
     const [activeIndex, setActiveIndex] = useState(1);
+    const isMobile = useMediaQuery('(max-width:600px)'); // To detect if the screen width is less than 800px
 
     const testimonials = [
         {
@@ -119,6 +114,10 @@ export default function TestimonialCarousel() {
     ];
 
     const getVisibleIndexes = () => {
+        if (isMobile) {
+            return [activeIndex]; // On mobile, only show the active card
+        }
+
         const visibleIndexes = [];
         const totalItems = testimonials.length;
         visibleIndexes.push((activeIndex - 1 + totalItems) % totalItems);
@@ -129,8 +128,15 @@ export default function TestimonialCarousel() {
 
     const visibleIndexes = getVisibleIndexes();
 
+    // Swipe handler for changing active card
+    const handlers = useSwipeable({
+        onSwipedLeft: () => setActiveIndex((prev) => (prev + 1) % testimonials.length),
+        onSwipedRight: () => setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length),
+        trackMouse: true, // Enables swipe on desktop via mouse drag
+    });
+
     return (
-        <Box sx={styles.mainBg}>
+        <Box sx={styles.mainBg} {...handlers}>
             <Box sx={{ textAlign: "center", pt: { md: "40px", xs: "20px" }, pb: { md: "60px", xs: "40px" } }}>
                 <GradientHeading
                     text="Hear from Those"
@@ -157,16 +163,12 @@ export default function TestimonialCarousel() {
                     <Box sx={styles.cardsContainer}>
                         {visibleIndexes.map((itemIndex, displayIndex) => {
                             const item = testimonials[itemIndex];
-                            const isCenter = displayIndex === 1;
+                            const isCenter = displayIndex === 1 || isMobile; // Center on mobile
 
                             return (
                                 <Box
                                     key={itemIndex}
-                                    sx={{
-                                        ...styles.cardWrapper(isCenter),
-                                        ...(displayIndex === 0 && styles.cardWrapperLeft),
-                                        ...(displayIndex === 2 && styles.cardWrapperRight),
-                                    }}
+                                    sx={styles.cardWrapper(isCenter)}
                                 >
                                     <Card sx={styles.card(isCenter)}>
                                         <CardContent sx={styles.cardContent}>

@@ -1,7 +1,8 @@
 import BlogCard from "@/components/BlogCard";
 import GradientHeading from "@/components/GradientHeading";
 import ArrowDownSection from "@/icons/ArrowDownSection";
-import { Box, Container, Grid2 as Grid } from "@mui/material";
+import theme from "@/theme";
+import { Box, Container, Grid2 as Grid, Typography } from "@mui/material";
 import { blogsData } from "./data";
 
 export default function ExploreBlogs() {
@@ -20,6 +21,10 @@ export default function ExploreBlogs() {
           weight={700}
           sx={styles.heading}
         />
+        <Typography variant="body1" sx={styles.bodyText}>
+          We design and develop user centered digital products,<br />
+          ecommerce and Web based best solutions.
+        </Typography>
         <Box sx={{ pt: "30px" }}>
           <ArrowDownSection />
         </Box>
@@ -39,5 +44,10 @@ export default function ExploreBlogs() {
 const styles = {
   heading: {
     lineHeight: "52.2px",
+  },
+  bodyText: {
+    color: theme.palette.primary.dark,
+    lineHeight: "30px",
+    pt: '12px'
   },
 };

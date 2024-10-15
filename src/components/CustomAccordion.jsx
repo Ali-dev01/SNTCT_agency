@@ -20,7 +20,7 @@ const CustomAccordion = ({ data }) => {
             id="panel1-header"
             sx={{
               color: "#3E5F82",
-              fontWeight: { xs: 600, md: 700 },
+              fontWeight: 700,
               fontSize: { xs: "16px", md: "20px" },
             }}
           >

@@ -28,7 +28,7 @@ export default function DigitalPartner() {
                 <Grid2 container spacing='10px'>
                     <Grid2 size={{ xs: 12, md: 4, lg: 3 }}>
                         <Box sx={styles.contactSection}>
-                            <Box>
+                            <Box sx={{ flexShrink: 0 }}>
                                 <Box sx={styles.contactItem}>
                                     <Box sx={styles.icon}>
                                         <EmailOutlined />
@@ -42,7 +42,7 @@ export default function DigitalPartner() {
                                     </Link>
                                 </Box>
                             </Box>
-                            <Box>
+                            <Box sx={{ flexShrink: 0 }}>
                                 <Box sx={styles.contactItem}>
                                     <Box sx={styles.icon}>
                                         <PhoneOutlined />
@@ -56,7 +56,7 @@ export default function DigitalPartner() {
                                     </Link>
                                 </Box>
                             </Box>
-                            <Box>
+                            <Box sx={{ flexShrink: 0 }}>
                                 <Box sx={styles.contactItem}>
                                     <Box sx={styles.icon}>
                                         <LocationOn />
@@ -98,7 +98,7 @@ export default function DigitalPartner() {
 
 const styles = {
     mainBg: {
-        backgroundImage: 'url(/images/digital-partner-bg.png)',
+        backgroundImage: { sm: 'url(/images/digital-partner-bg.png)', xs: 'none' },
         backgroundRepeat: 'no-repeat',
         backgroundPositionX: 'right',
         backgroundPositionY: 'top',
@@ -114,8 +114,10 @@ const styles = {
     },
     contactSection: {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: { sm: 'column', xs: 'row' },
         gap: '20px',
+        width: { xs: '100%', sm: 'auto' },
+        overflowX: { xs: 'auto', sm: 'hidden' }
     },
     contactItem: {
         display: 'flex',
