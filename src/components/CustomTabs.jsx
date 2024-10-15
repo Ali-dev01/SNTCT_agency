@@ -23,7 +23,7 @@ const NewCustomTabs = ({ tabsArray, children }) => {
         {tabsArray.map((tab, index) => (
           <Tab
             disableRipple
-            key={tab}
+            key={index}
             icon={<Box mr={1}>{tab.icon}</Box>}
             iconPosition="start"
             label={tab.title}
@@ -32,9 +32,7 @@ const NewCustomTabs = ({ tabsArray, children }) => {
         ))}
       </Tabs>
 
-      {tabChildren?.map(
-        (child, index) => value === index && <Box key={`child${value}`}>{child}</Box>
-      )}
+      {tabChildren?.map((child, i) => value === i && <Box key={i}>{child}</Box>)}
     </Box>
   );
 };

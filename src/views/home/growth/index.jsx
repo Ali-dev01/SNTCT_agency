@@ -40,8 +40,8 @@ export default function Growth() {
         </Box>
         <Box>
           <NewCustomTabs tabsArray={tabsArray}>
-            {tabsData.map((item, i) => (
-              <Box mt={2} key={i} sx={styles.tabCard}>
+            {tabsData.map((item) => (
+              <Box mt={2} key={item.letter} sx={styles.tabCard}>
                 <Grid container spacing={{ xs: 6, md: 12 }}>
                   <Grid item size={{ md: 6, xs: 12 }}>
                     <Image src={item.letter} alt="W" width={item.width} height={102} />
