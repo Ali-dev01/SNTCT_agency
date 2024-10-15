@@ -1,21 +1,21 @@
 export const cardsData = [
   {
-    icon: "/images/services/seo/seo-icon1.png",
+    icon: "/images/services/seo/seo-icon1.webp",
     title: "Keyword Research",
     desc: "We find the exact words and phrases your customers are using to search for your products or services.",
   },
   {
-    icon: "/images/services/seo/seo-icon2.png",
+    icon: "/images/services/seo/seo-icon2.webp",
     title: "On-Page Optimization",
     desc: "We optimize your website’s content and structure to make it more search-engine friendly.",
   },
   {
-    icon: "/images/services/seo/seo-icon3.png",
+    icon: "/images/services/seo/seo-icon3.webp",
     title: "Link Building",
     desc: "We build high-quality links to your site, which helps increase your website’s authority and ranking.",
   },
   {
-    icon: "/images/services/seo/seo-icon4.png",
+    icon: "/images/services/seo/seo-icon4.webp",
     title: "Content Creation",
     desc: "We create valuable content that attracts visitors and keeps them engaged.",
   },
@@ -32,7 +32,7 @@ export const processData = [
       </>
     ),
     letter: "S",
-    img: "seo/letter-s-bg.png",
+    img: "seo/letter-s-bg.webp",
   },
   {
     title: "Step 02",
@@ -44,7 +44,7 @@ export const processData = [
       </>
     ),
     letter: "N",
-    img: "seo/letter-n-bg.png",
+    img: "seo/letter-n-bg.webp",
   },
   {
     title: "Step 03",
@@ -56,7 +56,7 @@ export const processData = [
       </>
     ),
     letter: "T",
-    img: "seo/letter-t-bg.png",
+    img: "seo/letter-t-bg.webp",
   },
   {
     title: "Step 04",
@@ -68,6 +68,6 @@ export const processData = [
       </>
     ),
     letter: "C",
-    img: "seo/letter-c-bg.png",
+    img: "seo/letter-c-bg.webp",
   },
 ];

@@ -4,7 +4,7 @@ import LinkedinIcon from "@/icons/about/LinkedinIcon";
 
 export const cardData = [
   {
-    image: "/images/about/person-1.png",
+    image: "/images/about/person-1.webp",
     name: "Christopher",
     role: "CEO & Founder, SNTCT",
     desc: "SNTCT is one of the most powerful multi-vendor script available on",
@@ -24,7 +24,7 @@ export const cardData = [
     ],
   },
   {
-    image: "/images/about/person-2.png",
+    image: "/images/about/person-2.webp",
     name: "Marc Nieto",
     role: "CEO & Founder, SNTCT",
     desc: "SNTCT is one of the most powerful multi-vendor script available on",
@@ -44,7 +44,7 @@ export const cardData = [
     ],
   },
   {
-    image: "/images/about/person-3.png",
+    image: "/images/about/person-3.webp",
     name: "Kevin Levin",
     role: "CEO & Founder, SNTCT",
     desc: "SNTCT is one of the most powerful multi-vendor script available on",
@@ -64,7 +64,7 @@ export const cardData = [
     ],
   },
   {
-    image: "/images/about/person-4.png",
+    image: "/images/about/person-4.webp",
     name: "Sine Peter",
     role: "CEO & Founder, SNTCT",
     desc: "SNTCT is one of the most powerful multi-vendor script available on",
@@ -84,7 +84,7 @@ export const cardData = [
     ],
   },
   {
-    image: "/images/about/person-5.png",
+    image: "/images/about/person-5.webp",
     name: "Sara David",
     role: "CEO & Founder, SNTCT",
     desc: "SNTCT is one of the most powerful multi-vendor script available on",
@@ -104,7 +104,7 @@ export const cardData = [
     ],
   },
   {
-    image: "/images/about/person-6.png",
+    image: "/images/about/person-6.webp",
     name: "Angela Kris",
     role: "CEO & Founder, SNTCT",
     desc: "SNTCT is one of the most powerful multi-vendor script available on",

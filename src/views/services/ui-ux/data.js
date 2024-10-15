@@ -1,21 +1,21 @@
 export const cardsData = [
   {
-    icon: "/images/services/ui-design/ui-icon1.png",
+    icon: "/images/services/ui-design/ui-icon1.webp",
     title: "User Interface Design (UI)",
     desc: "Visually stunning, easy-to-use interfaces that your customers will love.",
   },
   {
-    icon: "/images/services/ui-design/ui-icon2.png",
+    icon: "/images/services/ui-design/ui-icon2.webp",
     title: "User Experience Design (UX)",
     desc: "Making every interaction smooth, logical, and enjoyable.",
   },
   {
-    icon: "/images/services/ui-design/ui-icon3.png",
+    icon: "/images/services/ui-design/ui-icon3.webp",
     title: "Prototyping & Wireframing:",
     desc: "Visual mockups to bring your ideas to life before development.",
   },
   {
-    icon: "/images/services/ui-design/ui-icon4.png",
+    icon: "/images/services/ui-design/ui-icon4.webp",
     title: "Mobile & Web Optimization",
     desc: "Ensuring your site or app works beautifully on any device.",
   },
@@ -32,7 +32,7 @@ export const processData = [
       </>
     ),
     letter: "S",
-    img: "ui-design/letter-s-bg.png",
+    img: "ui-design/letter-s-bg.webp",
   },
   {
     title: "Step 02",
@@ -44,7 +44,7 @@ export const processData = [
       </>
     ),
     letter: "N",
-    img: "ui-design/letter-n-bg.png",
+    img: "ui-design/letter-n-bg.webp",
   },
   {
     title: "Step 03",
@@ -56,7 +56,7 @@ export const processData = [
       </>
     ),
     letter: "T",
-    img: "ui-design/letter-t-bg.png",
+    img: "ui-design/letter-t-bg.webp",
   },
   {
     title: "Step 04",
@@ -67,6 +67,6 @@ export const processData = [
       </>
     ),
     letter: "C",
-    img: "ui-design/letter-c-bg.png",
+    img: "ui-design/letter-c-bg.webp",
   },
 ];

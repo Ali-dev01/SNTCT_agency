@@ -30,7 +30,7 @@ const GraphicsDesign = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/graphics/graphics-img1.png"
+              img="/images/services/graphics/graphics-img1.webp"
               title="What is Graphic Design?"
               maxWidth="423px"
               desc="Graphic design isn’t just about pretty pictures—it’s about creating visuals that tell your brand’s story. Whether it’s your logo, website, or marketing materials, great design builds trust and grabs attention. We make sure your brand stands out."
@@ -39,7 +39,7 @@ const GraphicsDesign = () => {
 
           <Box mt={15}>
             <LeftGridSection
-              img="/images/services/graphics/graphics-img2.png"
+              img="/images/services/graphics/graphics-img2.webp"
               title="Why Does Good Design Matter?"
               maxWidth="434px"
               desc="A poorly designed logo or confusing website can drive customers away before you even have a chance to engage them. Inconsistent branding leads to a lack of trust and recognition. We’re here to change that, helping you create visuals that are not only beautiful but also impactful, ensuring your business leaves a lasting mark."
@@ -69,7 +69,7 @@ const GraphicsDesign = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/about-info.png"
+              img="/images/services/about-info.webp"
               title="Why Choose Sntct for Graphic Design?"
               maxWidth="712px"
               desc="Why Trust Us with Your Brand’s Visual Identity?

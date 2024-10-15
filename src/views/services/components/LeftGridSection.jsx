@@ -6,7 +6,7 @@ const LeftGridSection = ({ img, title, desc, maxWidth }) => {
   return (
     <Grid container spacing={6}>
       <Grid item size={{ md: 6, xs: 12 }}>
-        <Image src="/images/services/W.png" alt="W" width={161} height={102} />
+        <Image src="/images/services/W.webp" alt="W" width={161} height={102} />
         <GradientHeading text={title} variant="h2" weight={700} sx={{ mt: "-30px" }} />
         <Typography variant="body2" mt={2.5} color="#00336B" lineHeight="27px">
           {desc}

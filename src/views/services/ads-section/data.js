@@ -9,7 +9,7 @@ export const processData = [
       </>
     ),
     letter: "S",
-    img: "google-ads/letter-s-bg.png",
+    img: "google-ads/letter-s-bg.webp",
   },
   {
     title: "Step 02",
@@ -21,7 +21,7 @@ export const processData = [
       </>
     ),
     letter: "N",
-    img: "google-ads/letter-n-bg.png",
+    img: "google-ads/letter-n-bg.webp",
   },
   {
     title: "Step 03",
@@ -33,7 +33,7 @@ export const processData = [
       </>
     ),
     letter: "T",
-    img: "google-ads/letter-t-bg.png",
+    img: "google-ads/letter-t-bg.webp",
   },
   {
     title: "Step 04",
@@ -45,6 +45,6 @@ export const processData = [
       </>
     ),
     letter: "C",
-    img: "google-ads/letter-c-bg.png",
+    img: "google-ads/letter-c-bg.webp",
   },
 ];

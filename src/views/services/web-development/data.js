@@ -1,21 +1,21 @@
 export const cardsData = [
   {
-    icon: "/images/services/web-dev/web-icon1.png",
+    icon: "/images/services/web-dev/web-icon1.webp",
     title: "Custom Website Development",
     desc: "We create custom websites tailored to your business goals—whether you're looking for a sleek, modern design or complex functionality, we’ve got you covered",
   },
   {
-    icon: "/images/services/web-dev/web-icon2.png",
+    icon: "/images/services/web-dev/web-icon2.webp",
     title: "E-Commerce Solutions",
     desc: "We build e-commerce platforms that make online shopping smooth, secure, and simple for your customers.",
   },
   {
-    icon: "/images/services/web-dev/web-icon3.png",
+    icon: "/images/services/web-dev/web-icon3.webp",
     title: "Mobile Optimization",
     desc: "Your customers are browsing on their phones—our websites are fully optimized for mobile, so you don’t lose out on mobile traffic.",
   },
   {
-    icon: "/images/services/web-dev/web-icon4.png",
+    icon: "/images/services/web-dev/web-icon4.webp",
     title: "Website Maintenance & Support",
     desc: "We don’t just build your site and leave—we provide ongoing support to ensure your website stays secure, fast, and up-to-date.",
   },
@@ -32,7 +32,7 @@ export const processData = [
       </>
     ),
     letter: "S",
-    img: "web-dev/letter-s-bg.png",
+    img: "web-dev/letter-s-bg.webp",
   },
   {
     title: "Step 02",
@@ -44,7 +44,7 @@ export const processData = [
       </>
     ),
     letter: "N",
-    img: "web-dev/letter-n-bg.png",
+    img: "web-dev/letter-n-bg.webp",
   },
   {
     title: "Step 03",
@@ -56,7 +56,7 @@ export const processData = [
       </>
     ),
     letter: "T",
-    img: "web-dev/letter-t-bg.png",
+    img: "web-dev/letter-t-bg.webp",
   },
   {
     title: "Step 04",
@@ -68,6 +68,6 @@ export const processData = [
       </>
     ),
     letter: "C",
-    img: "web-dev/letter-c-bg.png",
+    img: "web-dev/letter-c-bg.webp",
   },
 ];

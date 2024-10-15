@@ -20,14 +20,14 @@ const AboutSection = () => {
       ) : (
         <>
           <Image
-            src="/images/about/right-bg-chip.png"
+            src="/images/about/right-bg-chip.webp"
             alt="chip"
             width={375}
             height={920}
             style={styles.rightChip}
           />
           <Image
-            src="/images/about/left-bg-chip.png"
+            src="/images/about/left-bg-chip.webp"
             alt="chip"
             width={375}
             height={920}
@@ -55,7 +55,7 @@ const AboutSection = () => {
             <Container maxWidth="lg">
               <Grid container spacing={5}>
                 <Grid item size={{ xs: 12, md: 6 }}>
-                  <Image src="/images/about/W.png" alt="W" width={154} height={102} />
+                  <Image src="/images/about/W.webp" alt="W" width={154} height={102} />
                   <GradientHeading
                     text="Who We Are?"
                     variant="h2"
@@ -78,7 +78,7 @@ const AboutSection = () => {
                   sx={{ display: "flex", justifyContent: "center" }}
                 >
                   <Image
-                    src="/images/about/about-info.png"
+                    src="/images/about/about-info.webp"
                     alt="banner"
                     width={0}
                     height={0}

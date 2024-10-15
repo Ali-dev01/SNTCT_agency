@@ -30,7 +30,7 @@ const SEOSection = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/seo/seo-img1.png"
+              img="/images/services/seo/seo-img1.webp"
               title="What is SEO?"
               maxWidth="454px"
               desc="SEO: The Key to Unlocking Your Online Visibility Imagine having a store on a busy street, but no one can see your sign. SEO is like putting up a bright, eye-catching sign that leads customers straight to your door. It’s about making sure your website appears when people search for products or services like yours."
@@ -39,7 +39,7 @@ const SEOSection = () => {
 
           <Box mt={15}>
             <LeftGridSection
-              img="/images/services/seo/seo-img2.png"
+              img="/images/services/seo/seo-img2.webp"
               title="Why SEO Matters"
               maxWidth="444px"
               desc="Are You Invisible to Your Potential Customers? Many businesses struggle with being buried on page 10 of Google search results. Without proper SEO, you’re missing out on valuable traffic and potential customers. We’re here to change that, ensuring your business is seen by those who are actively searching for what you offer."
@@ -69,7 +69,7 @@ const SEOSection = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/about-info.png"
+              img="/images/services/about-info.webp"
               title="Why Choose Sntct for SEO?"
               maxWidth="712px"
               desc="At Sntct, we understand the frustration of being invisible online. Our team of SEO experts is dedicated to making sure your business gets the attention it deserves. With a proven track record of helping businesses like yours rank higher and grow faster, we’re the partner you can trust to deliver real results."

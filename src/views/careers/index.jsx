@@ -19,14 +19,14 @@ const CareerSection = () => {
       ) : (
         <>
           <Image
-            src="/images/about/right-bg-chip.png"
+            src="/images/about/right-bg-chip.webp"
             alt="chip"
             width={375}
             height={920}
             style={styles.rightChip}
           />
           <Image
-            src="/images/careers/left-bg-chip.png"
+            src="/images/careers/left-bg-chip.webp"
             alt="chip"
             width={375}
             height={920}

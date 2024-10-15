@@ -29,7 +29,7 @@ const AdsSection = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/google-ads/ads-img1.png"
+              img="/images/services/google-ads/ads-img1.webp"
               title="What is Google Ads?"
               maxWidth="510px"
               desc="Google Ads: Your Business’s Digital Billboard
@@ -39,7 +39,7 @@ const AdsSection = () => {
 
           <Box mt={15}>
             <LeftGridSection
-              img="/images/services/google-ads/ads-img2.png"
+              img="/images/services/google-ads/ads-img2.webp"
               title="Why Google Ads?"
               maxWidth="357px"
               desc="Struggling to Reach the Right Customers? If you’ve ever felt like your marketing efforts are falling flat, you’re not alone. Many businesses struggle to reach the right audience online. With Google Ads, we help you zero in on potential customers who are actively searching for what you offer, ensuring your marketing dollars aren’t wasted."
@@ -48,7 +48,7 @@ const AdsSection = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/about-info.png"
+              img="/images/services/about-info.webp"
               title="Why Choose Sntct?"
               maxWidth="712px"
               desc="Why Partner with Us? At Sntct, we understand that every dollar counts. That’s why we treat your business like it’s our own. With years of experience and a team dedicated to your success, you can trust us to deliver the results you need."

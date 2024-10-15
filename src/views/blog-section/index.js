@@ -31,7 +31,7 @@ const BlogSection = () => {
             <Grid container spacing={3}>
               <Grid item size={{ md: 7.5, xs: 12 }}>
                 <Image
-                  src="/images/blog/blog-main.png"
+                  src="/images/blog/blog-main.webp"
                   alt="blog"
                   width={0}
                   height={0}
