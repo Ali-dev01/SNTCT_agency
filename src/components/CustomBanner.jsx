@@ -51,7 +51,7 @@ const styles = {
     background: "linear-gradient(90deg, #1938C8 0%, #0B9FE4 100%)",
     padding: { xs: '24px', sm: "35px 40px" },
     borderRadius: { xs: "33px", sm: "60px" },
-    height: isHome ? "472px" : "415px",
+    height: { sm: isHome ? "472px" : "415px", xs: isHome ? "auto" : "415px" },
     width: { lg: "92%", xs: "100%" },
     "&:hover": {
       background: "linear-gradient(90deg, #0B9FE4 0%, #1938C8 100%)",
