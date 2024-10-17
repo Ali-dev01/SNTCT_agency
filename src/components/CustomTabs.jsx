@@ -32,7 +32,14 @@ const NewCustomTabs = ({ tabsArray, children }) => {
         ))}
       </Tabs>
 
-      {tabChildren?.map((child, i) => value === i && <Box key={i}>{child}</Box>)}
+      {tabChildren?.map(
+        (child, i) =>
+          value === i && (
+            <Box position="relative" key={i}>
+              {child}
+            </Box>
+          )
+      )}
     </Box>
   );
 };

@@ -24,13 +24,6 @@ const DetailCard = ({ card }) => {
             {card.desc}
           </Typography>
         </Box>
-        <Box mt={2} sx={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-          {card.socialLinks.map((link, i) => (
-            <Box key={i} sx={styles.iconStyle}>
-              {link.icon}
-            </Box>
-          ))}
-        </Box>
       </Box>
     </Box>
   );

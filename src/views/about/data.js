@@ -68,59 +68,17 @@ export const cardData = [
     name: "Sine Peter",
     role: "CEO & Founder, SNTCT",
     desc: "SNTCT is one of the most powerful multi-vendor script available on",
-    socialLinks: [
-      {
-        icon: <FacebookIcon />,
-        link: "/",
-      },
-      {
-        icon: <LinkedinIcon />,
-        link: "/",
-      },
-      {
-        icon: <InstagramIcon />,
-        link: "/",
-      },
-    ],
   },
   {
     image: "/images/about/person-5.webp",
     name: "Sara David",
     role: "CEO & Founder, SNTCT",
     desc: "SNTCT is one of the most powerful multi-vendor script available on",
-    socialLinks: [
-      {
-        icon: <FacebookIcon />,
-        link: "/",
-      },
-      {
-        icon: <LinkedinIcon />,
-        link: "/",
-      },
-      {
-        icon: <InstagramIcon />,
-        link: "/",
-      },
-    ],
   },
   {
     image: "/images/about/person-6.webp",
     name: "Angela Kris",
     role: "CEO & Founder, SNTCT",
     desc: "SNTCT is one of the most powerful multi-vendor script available on",
-    socialLinks: [
-      {
-        icon: <FacebookIcon />,
-        link: "/",
-      },
-      {
-        icon: <LinkedinIcon />,
-        link: "/",
-      },
-      {
-        icon: <InstagramIcon />,
-        link: "/",
-      },
-    ],
   },
 ];

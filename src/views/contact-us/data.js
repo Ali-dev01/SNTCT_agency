@@ -25,3 +25,30 @@ export const contactInfo = [
     link: "#",
   },
 ];
+
+export const options = [
+  {
+    label: "Social Media Marketing",
+    value: "1",
+  },
+  {
+    label: "Website Development",
+    value: "2",
+  },
+  {
+    label: "Search Engine Optimization",
+    value: "3",
+  },
+  {
+    label: "UI/UX Design",
+    value: "4",
+  },
+  {
+    label: "Graphics Design",
+    value: "5",
+  },
+  {
+    label: "Google Ads",
+    value: "6",
+  },
+];

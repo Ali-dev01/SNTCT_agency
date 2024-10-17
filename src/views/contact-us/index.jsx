@@ -2,11 +2,10 @@
 
 import GradientHeading from "@/components/GradientHeading";
 import {
+  Autocomplete,
   Box,
   Container,
   InputLabel,
-  MenuItem,
-  Select,
   TextField,
   Typography,
 } from "@mui/material";
@@ -16,7 +15,7 @@ import Link from "next/link";
 import Loader from "@/components/custom-loader/Loader";
 import CustomButton from "@/components/CustomButton";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
-import { contactInfo } from "./data";
+import { contactInfo, options } from "./data";
 
 const Contact = () => {
   const { loading } = useGetLoadingState();
@@ -97,20 +96,19 @@ const Contact = () => {
                       </Box>
                       <Box width="100%">
                         <InputLabel sx={styles.labelStyle}>Service</InputLabel>
-                        <Select
-                          fullWidth
-                          labelId="demo-simple-select-label"
-                          sx={styles.selectStyle}
-                          id="demo-simple-select"
-                          displayEmpty
-                          defaultValue=""
-                        >
-                          <MenuItem value="" disabled>
-                            Select a service
-                          </MenuItem>
-                          <MenuItem value={10}>Ten</MenuItem>
-                          <MenuItem value={20}>Twenty</MenuItem>
-                        </Select>
+                        <Autocomplete
+                          id="multiple-limit-tags"
+                          options={options}
+                          getOptionLabel={(option) => option.label}
+                          renderInput={(params) => (
+                            <TextField
+                              {...params}
+                              sx={styles.inputStyle}
+                              size="small"
+                              placeholder="Select a service"
+                            />
+                          )}
+                        />
                       </Box>
                     </Grid>
                     <Grid item size={{ xs: 12, lg: 6 }}>
@@ -166,6 +164,7 @@ const styles = {
   inputStyle: {
     "& .MuiInputBase-root": {
       height: "48px",
+      color: "#00336B",
       borderRadius: "6px",
     },
   },

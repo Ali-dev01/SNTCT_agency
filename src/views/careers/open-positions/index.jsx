@@ -2,7 +2,6 @@ import CustomButton from "@/components/CustomButton";
 import GradientHeading from "@/components/GradientHeading";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import ClockIcon from "@/icons/careers-page/ClockIcon";
-import LocationIcon from "@/icons/careers-page/LocationIcon";
 import SidebarLogo from "@/icons/SidebarLogo";
 import { Box, Button, Grid2 as Grid, Typography } from "@mui/material";
 
@@ -45,12 +44,9 @@ const OpenPositions = () => {
                     UI/UX Designer
                   </Typography>
                 </Box>
-                <Box mt={3} sx={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                <Box mt={3}>
                   <Button sx={styles.btnStyle} startIcon={<ClockIcon />}>
                     Full-time
-                  </Button>
-                  <Button sx={styles.btnStyle} startIcon={<LocationIcon />}>
-                    Karachi
                   </Button>
                 </Box>
                 <Box mt={3}>

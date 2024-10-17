@@ -43,7 +43,7 @@ const FaqSection = ({ homePage }) => {
             )}
             <Box
               py={{ lg: homePage ? 7 : 13, md: homePage ? 5 : 10, xs: 6 }}
-              sx={{ mx: { lg: 16, md: 10, xs: 0 } }}
+              sx={{ mx: { lg: 18, md: 10, xs: 0 } }}
             >
               <CustomAccordion data={accordionData} />
             </Box>

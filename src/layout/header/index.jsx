@@ -1,16 +1,20 @@
 "use client";
 
 import MenuIcon from "@/icons/MenuIcon";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { useState } from "react";
 
 import CustomButton from "@/components/CustomButton";
-import Logo from "@/icons/Logo";
+import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "../sidebar";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const theme = useTheme();
+
+  const isSm = useMediaQuery(theme.breakpoints.down("sm"));
 
   const toggleDrawer = (newOpen) => () => {
     setIsDrawerOpen(newOpen);
@@ -22,7 +26,12 @@ const Header = () => {
         <Box sx={styles.headerContent}>
           <CustomButton text="Lets Talk" variant="contained" />
           <Link href="/" style={{ display: "flex" }}>
-            <Logo />
+            <Image
+              src="/images/logo.png"
+              alt="logo"
+              width={isSm ? 100 : 140}
+              height={isSm ? 25 : 40}
+            />
           </Link>
           <Box sx={{ cursor: "pointer", display: "flex" }} onClick={toggleDrawer(true)}>
             <MenuIcon />
@@ -48,7 +57,7 @@ const styles = {
     zIndex: 2,
   },
   headerContent: {
-    p: "14px 16px",
+    p: { sm: "12px 14px", xs: "8px 10px" },
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",

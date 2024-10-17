@@ -45,7 +45,7 @@ const CareerSection = () => {
             <Box mt={{ xs: 10, md: 15 }}>
               <HiringProcess />
             </Box>
-            <Box my={{ xs: 10, md: 15 }}>
+            <Box my={{ xs: 10, md: 15 }} position="relative">
               <OpenPositions />
             </Box>
           </Container>
@@ -59,7 +59,7 @@ export default CareerSection;
 const styles = {
   rightChip: {
     position: "absolute",
-    top: "205%",
+    top: "425%",
     right: "0",
   },
   leftChip: {
