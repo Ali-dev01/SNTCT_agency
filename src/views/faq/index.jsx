@@ -8,10 +8,15 @@ import CustomAccordion from "@/components/CustomAccordion";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import Image from "next/image";
+import { useEffect } from "react";
 import { accordionData } from "./data";
 
 const FaqSection = ({ homePage }) => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       {loading ? (

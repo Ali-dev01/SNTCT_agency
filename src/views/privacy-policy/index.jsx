@@ -4,10 +4,15 @@ import Loader from "@/components/custom-loader/Loader";
 import GradientHeading from "@/components/GradientHeading";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import { Box, Container, Typography } from "@mui/material";
+import { useEffect } from "react";
 import { privacyData } from "./data";
 
 const PrivacyPolicy = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       {loading ? (

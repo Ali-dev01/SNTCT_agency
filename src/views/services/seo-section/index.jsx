@@ -5,6 +5,7 @@ import GradientHeading from "@/components/GradientHeading";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import { Box, Container, Grid2 as Grid } from "@mui/material";
+import { useEffect } from "react";
 import CustomBanner from "../../../components/CustomBanner";
 import LeftGridSection from "../components/LeftGridSection";
 import MainHeading from "../components/MainHeading";
@@ -15,6 +16,11 @@ import { cardsData, processData } from "./data";
 
 const SEOSection = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       {loading ? (

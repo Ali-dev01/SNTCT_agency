@@ -62,6 +62,7 @@ export default function ExploreServices() {
                 iconSrc={service.iconSrc}
                 iconWidth={service.iconWidth}
                 title={service.title}
+                link={service.link}
                 subtitle={service.subtitle}
                 mainImageSrc={service.mainImageSrc}
               />

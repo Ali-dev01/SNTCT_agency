@@ -1,6 +1,7 @@
 import theme from "@/theme";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 import CustomButton from "./CustomButton";
 import GradientHeading from "./GradientHeading";
 
@@ -8,6 +9,7 @@ const ServicesCard = ({
   iconSrc,
   iconWidth,
   title,
+  link,
   subtitle,
   buttonAction = () => {},
   mainImageSrc,
@@ -25,12 +27,14 @@ const ServicesCard = ({
             <Typography variant="h3" sx={styles.subtitle}>
               {subtitle}
             </Typography>
-            <CustomButton
-              text="Learn More"
-              variant="outlined"
-              showIcon
-              onClick={buttonAction}
-            />
+            <Link href={link}>
+              <CustomButton
+                text="Learn More"
+                variant="outlined"
+                showIcon
+                onClick={buttonAction}
+              />
+            </Link>
           </Box>
         </Box>
         <Box>

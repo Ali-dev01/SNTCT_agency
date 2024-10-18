@@ -4,6 +4,7 @@ import Loader from "@/components/custom-loader/Loader";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import { Box, Container } from "@mui/material";
 import Image from "next/image";
+import { useEffect } from "react";
 import Banner from "./banner";
 import Benifits from "./benifits";
 import HiringProcess from "./hiring-process";
@@ -12,6 +13,11 @@ import WhyJoinUs from "./why-join-us";
 
 const CareerSection = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       {loading ? (

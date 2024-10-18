@@ -2,6 +2,7 @@ export const services = [
   {
     iconSrc: "/images/S.png",
     title: "Social Media",
+    link: "/social-media-marketing",
     subtitle: "Marketing",
     iconWidth: 87,
     mainImageSrc: "/images/social-media.png",
@@ -9,6 +10,7 @@ export const services = [
   {
     iconSrc: "/images/W.png",
     title: "Website",
+    link: "/web-development",
     subtitle: "Development",
     iconWidth: 150,
     mainImageSrc: "/images/website-development.png",
@@ -16,6 +18,7 @@ export const services = [
   {
     iconSrc: "/images/S.png",
     title: "Search Engine",
+    link: "/search-engine-optimization",
     subtitle: "Optimization",
     iconWidth: 87,
     mainImageSrc: "/images/seo.png",
@@ -23,6 +26,7 @@ export const services = [
   {
     iconSrc: "/images/U.png",
     title: "UI/UX",
+    link: "/ui-ux-design",
     subtitle: "Design",
     iconWidth: 90,
     mainImageSrc: "/images/ui-ux-design.png",
@@ -30,6 +34,7 @@ export const services = [
   {
     iconSrc: "/images/G.png",
     title: "Graphic",
+    link: "/ui-ux-design",
     subtitle: "Design",
     iconWidth: 116,
     mainImageSrc: "/images/graphic-design.png",
@@ -37,6 +42,7 @@ export const services = [
   {
     iconSrc: "/images/G.png",
     title: "Google",
+    link: "/graphics-designing",
     subtitle: "Ads",
     iconWidth: 116,
     mainImageSrc: "/images/google-ads.png",

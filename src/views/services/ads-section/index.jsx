@@ -5,6 +5,7 @@ import GradientHeading from "@/components/GradientHeading";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import { Box, Container } from "@mui/material";
+import { useEffect } from "react";
 import CustomBanner from "../../../components/CustomBanner";
 import LeftGridSection from "../components/LeftGridSection";
 import MainHeading from "../components/MainHeading";
@@ -14,6 +15,11 @@ import { processData } from "./data";
 
 const AdsSection = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       {loading ? (

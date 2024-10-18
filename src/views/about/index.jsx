@@ -7,11 +7,16 @@ import useGetLoadingState from "@/hooks/useGetLoadingState";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import { Box, Container, Grid2 as Grid, Typography } from "@mui/material";
 import Image from "next/image";
+import { useEffect } from "react";
 import DetailCard from "./DetailCard";
 import { cardData } from "./data";
 
 const AboutSection = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>
