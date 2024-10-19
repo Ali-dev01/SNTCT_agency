@@ -30,7 +30,7 @@ const Header = () => {
               src="/images/logo.png"
               alt="logo"
               width={isSm ? 100 : 140}
-              height={isSm ? 25 : 40}
+              height={isSm ? 27 : 40}
             />
           </Link>
           <Box sx={{ cursor: "pointer", display: "flex" }} onClick={toggleDrawer(true)}>

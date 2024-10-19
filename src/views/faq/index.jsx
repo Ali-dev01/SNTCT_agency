@@ -62,9 +62,10 @@ export default FaqSection;
 
 const styles = {
   iconWrapper: {
+    pt: "5px",
     position: "absolute",
     top: 0,
-    left: 0,
+    left: "-5px",
     display: { md: "block", xs: "none" },
   },
 };

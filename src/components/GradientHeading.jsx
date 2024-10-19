@@ -16,7 +16,7 @@ export default GradientHeading;
 
 const styles = {
   headingStyle: {
-    background: "linear-gradient(to right, #1938C8 0%, #0B9FE4 70%)",
+    background: "linear-gradient(90deg, #1938C8 0%, #0B9FE4 80%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
   },

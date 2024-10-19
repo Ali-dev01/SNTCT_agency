@@ -34,7 +34,9 @@ const HomeSection = () => {
           </Box>
           <ExploreServices />
           <Growth />
-          <TrustedUsers />
+          <Box id="testimonials">
+            <TrustedUsers />
+          </Box>
           <WhySntct />
           <DigitalPartner />
           <ExploreBlogs />

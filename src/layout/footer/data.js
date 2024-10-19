@@ -21,7 +21,7 @@ export const aboutOutLinks = [
   },
   {
     title: "Testimonials",
-    link: "/",
+    link: "/#testimonials",
   },
 ];
 

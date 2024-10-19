@@ -194,6 +194,11 @@ const styles = {
     width: "40px",
     height: "40px",
     background: theme.palette.common.white,
+    transition: "0.6s",
     borderRadius: "100%",
+    "&:hover": {
+      background: "#C7D7E9",
+      transform: "scale(1.2)",
+    },
   }),
 };
