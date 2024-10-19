@@ -11,7 +11,7 @@ const useGetLoadingState = () => {
     if (document.readyState === "complete") {
       setTimeout(() => {
         setLoading(false);
-      }, 800);
+      }, 500);
     } else {
       window.addEventListener("load", handleLoad);
     }

@@ -4,6 +4,7 @@ import Loader from "@/components/custom-loader/Loader";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import { Box, Container } from "@mui/material";
 import Image from "next/image";
+import { useEffect } from "react";
 import Banner from "./banner";
 import Benifits from "./benifits";
 import HiringProcess from "./hiring-process";
@@ -12,6 +13,11 @@ import WhyJoinUs from "./why-join-us";
 
 const CareerSection = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       {loading ? (
@@ -19,14 +25,14 @@ const CareerSection = () => {
       ) : (
         <>
           <Image
-            src="/images/about/right-bg-chip.png"
+            src="/images/about/right-bg-chip.webp"
             alt="chip"
             width={375}
             height={920}
             style={styles.rightChip}
           />
           <Image
-            src="/images/careers/left-bg-chip.png"
+            src="/images/careers/left-bg-chip.webp"
             alt="chip"
             width={375}
             height={920}
@@ -45,7 +51,7 @@ const CareerSection = () => {
             <Box mt={{ xs: 10, md: 15 }}>
               <HiringProcess />
             </Box>
-            <Box my={{ xs: 10, md: 15 }}>
+            <Box my={{ xs: 10, md: 15 }} position="relative">
               <OpenPositions />
             </Box>
           </Container>
@@ -59,7 +65,7 @@ export default CareerSection;
 const styles = {
   rightChip: {
     position: "absolute",
-    top: "205%",
+    top: "425%",
     right: "0",
   },
   leftChip: {

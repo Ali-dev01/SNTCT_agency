@@ -50,7 +50,8 @@ const styles = {
   containedButton: (theme) => ({
     background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.primary.main})`,
     "&:hover": {
-      background: theme.palette.gradient.main,
+      background:
+        "linear-gradient(90deg, rgba(24,56,199,1) 0%, rgba(25,57,200,1) 1%, rgba(10,157,227,1) 100%)",
       boxShadow: "none",
       "& .MuiBox-root": {
         transform: "rotate(45deg)",

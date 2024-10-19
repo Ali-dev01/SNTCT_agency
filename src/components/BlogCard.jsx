@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 import GradientHeading from "./GradientHeading";
 
 export default function BlogCard({ blog }) {
@@ -16,7 +17,9 @@ export default function BlogCard({ blog }) {
       <Typography sx={{ color: "#3E5F82", fontWeight: 700, pt: "24px", pb: "16px" }}>
         {blog.timeSpan}
       </Typography>
-      <GradientHeading text={blog.title} variant="h5" weight={700} />
+      <Link href={blog.link}>
+        <GradientHeading text={blog.title} variant="h5" weight={700} />
+      </Link>
       <Typography sx={{ color: "#00336B", pt: "10px" }}>{blog.desc}</Typography>
     </Box>
   );

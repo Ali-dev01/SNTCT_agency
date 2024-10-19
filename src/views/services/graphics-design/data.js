@@ -1,21 +1,21 @@
 export const cardsData = [
   {
-    icon: "/images/services/graphics/graphics-icon1.png",
+    icon: "/images/services/graphics/graphics-icon1.webp",
     title: "Logo Design",
     desc: "Create a logo that tells your brand’s story.",
   },
   {
-    icon: "/images/services/graphics/graphics-icon2.png",
+    icon: "/images/services/graphics/graphics-icon2.webp",
     title: "Brand Identity",
     desc: "We’ll build a look that makes your business unforgettable.",
   },
   {
-    icon: "/images/services/graphics/graphics-icon3.png",
+    icon: "/images/services/graphics/graphics-icon3.webp",
     title: "Digital Design",
     desc: "From social media posts to website graphics, we’ll bring your online presence to life.",
   },
   {
-    icon: "/images/services/graphics/graphics-icon4.png",
+    icon: "/images/services/graphics/graphics-icon4.webp",
     title: "Custom Art & Illustrations",
     desc: "Add a unique touch to your brand with personalized illustrations.",
   },
@@ -32,7 +32,7 @@ export const processData = [
       </>
     ),
     letter: "S",
-    img: "graphics/letter-s-bg.png",
+    img: "graphics/letter-s-bg.webp",
   },
   {
     title: "Step 02",
@@ -44,7 +44,7 @@ export const processData = [
       </>
     ),
     letter: "N",
-    img: "graphics/letter-n-bg.png",
+    img: "graphics/letter-n-bg.webp",
   },
   {
     title: "Step 03",
@@ -56,7 +56,7 @@ export const processData = [
       </>
     ),
     letter: "T",
-    img: "graphics/letter-t-bg.png",
+    img: "graphics/letter-t-bg.webp",
   },
   {
     title: "Step 04",
@@ -68,6 +68,6 @@ export const processData = [
       </>
     ),
     letter: "C",
-    img: "graphics/letter-c-bg.png",
+    img: "graphics/letter-c-bg.webp",
   },
 ];

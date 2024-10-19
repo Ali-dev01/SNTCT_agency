@@ -5,6 +5,7 @@ import GradientHeading from "@/components/GradientHeading";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import { Box, Container, Grid2 as Grid } from "@mui/material";
+import { useEffect } from "react";
 import CustomBanner from "../../../components/CustomBanner";
 import LeftGridSection from "../components/LeftGridSection";
 import MainHeading from "../components/MainHeading";
@@ -15,6 +16,11 @@ import { cardsData, processData } from "./data";
 
 const WebsiteDevelopment = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+  
   return (
     <>
       {loading ? (
@@ -30,7 +36,7 @@ const WebsiteDevelopment = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/web-dev/web-dev1.png"
+              img="/images/services/web-dev/web-dev1.webp"
               title="What is Web Development?"
               maxWidth="485px"
               desc="Think of web development as the foundation of your online business. From how fast your site loads to how easy it is for visitors to navigate, every element impacts how customers experience your brand. We handle the technical side, so you can focus on what matters—your business."
@@ -39,7 +45,7 @@ const WebsiteDevelopment = () => {
 
           <Box mt={15}>
             <LeftGridSection
-              img="/images/services/web-dev/web-dev2.png"
+              img="/images/services/web-dev/web-dev2.webp"
               title="Why a Well-Built Website Matters?"
               maxWidth="442px"
               desc="Is Your Website Turning Away Customers? A slow or outdated website is like having a storefront that’s hard to find and unpleasant to visit. It can cause you to lose customers, frustrate users, and hurt your bottom line. At Sntct, we make sure your website is fast, easy to use, and optimized to convert visitors into loyal customers."
@@ -69,7 +75,7 @@ const WebsiteDevelopment = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/about-info.png"
+              img="/images/services/about-info.webp"
               title="Why Choose Sntct for Web Development?"
               maxWidth="712px"
               desc="At Sntct, we understand that your website is more than just an online presence—it’s a crucial part of your business. With a team of experienced developers and designers, we’ve built websites for businesses of all sizes, always with a focus on creating fast, user-friendly, and impactful websites that drive results."

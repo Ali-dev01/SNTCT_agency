@@ -5,52 +5,7 @@ import theme from "@/theme";
 import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2"; // New Grid2 system
 import { useEffect, useRef, useState } from "react";
-
-// Services data array
-const services = [
-  {
-    iconSrc: "/images/S.png",
-    title: "Social Media",
-    subtitle: "Marketing",
-    iconWidth: 87,
-    mainImageSrc: "/images/social-media.png",
-  },
-  {
-    iconSrc: "/images/W.png",
-    title: "Website",
-    subtitle: "Development",
-    iconWidth: 150,
-    mainImageSrc: "/images/website-development.png",
-  },
-  {
-    iconSrc: "/images/S.png",
-    title: "Search Engine",
-    subtitle: "Optimization",
-    iconWidth: 87,
-    mainImageSrc: "/images/seo.png",
-  },
-  {
-    iconSrc: "/images/U.png",
-    title: "UI/UX",
-    subtitle: "Design",
-    iconWidth: 90,
-    mainImageSrc: "/images/ui-ux-design.png",
-  },
-  {
-    iconSrc: "/images/G.png",
-    title: "Graphic",
-    subtitle: "Design",
-    iconWidth: 116,
-    mainImageSrc: "/images/graphic-design.png",
-  },
-  {
-    iconSrc: "/images/G.png",
-    title: "Google",
-    subtitle: "Ads",
-    iconWidth: 116,
-    mainImageSrc: "/images/google-ads.png",
-  },
-];
+import { services } from "./data";
 
 export default function ExploreServices() {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
@@ -101,12 +56,13 @@ export default function ExploreServices() {
       <Box ref={scrollContainerRef} sx={styles.scrollContainer}>
         <Box sx={{ ...styles.blurOverlay, ...styles.blurTop }} />
         <Grid container spacing={4}>
-          {services.map((service, index) => (
-            <Grid key={index} size={{ xs: 12, sm: 6 }}>
+          {services.map((service) => (
+            <Grid key={service.title} size={{ xs: 12, sm: 6 }}>
               <ServicesCard
                 iconSrc={service.iconSrc}
                 iconWidth={service.iconWidth}
                 title={service.title}
+                link={service.link}
                 subtitle={service.subtitle}
                 mainImageSrc={service.mainImageSrc}
               />

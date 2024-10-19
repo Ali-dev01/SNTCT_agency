@@ -5,6 +5,7 @@ import GradientHeading from "@/components/GradientHeading";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import { Box, Container, Grid2 as Grid } from "@mui/material";
+import { useEffect } from "react";
 import CustomBanner from "../../../components/CustomBanner";
 import LeftGridSection from "../components/LeftGridSection";
 import MainHeading from "../components/MainHeading";
@@ -15,6 +16,11 @@ import { cardsData, processData } from "./data";
 
 const SocialMedia = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       {loading ? (
@@ -30,7 +36,7 @@ const SocialMedia = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/social-media/social-media1.png"
+              img="/images/services/social-media/social-media1.webp"
               title="What is Social Media Marketing?"
               maxWidth="454px"
               desc="Social Media Marketing: The Modern Word-of-Mouth
@@ -40,7 +46,7 @@ const SocialMedia = () => {
 
           <Box mt={15}>
             <LeftGridSection
-              img="/images/services/social-media/social-media2.png"
+              img="/images/services/social-media/social-media2.webp"
               title="Why Social Media Marketing Matters?"
               maxWidth="430px"
               desc="Many businesses struggle to make an impact on social media. It can feel overwhelming to keep up with trends, create content, and engage with followers. We’re here to change that. Our tailored strategies ensure your brand not only gets noticed but builds lasting connections with your audience."
@@ -70,7 +76,7 @@ const SocialMedia = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/about-info.png"
+              img="/images/services/about-info.webp"
               title="Why Trust Us with Your Social Media?"
               maxWidth="712px"
               desc="At Sntct, we understand that social media isn’t just about posting—it’s about building relationships. With our team of experts, we take the guesswork out of social media marketing, delivering strategies that drive engagement, increase brand loyalty, and ultimately grow your business."

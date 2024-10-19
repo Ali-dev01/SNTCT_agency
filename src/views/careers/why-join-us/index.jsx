@@ -9,7 +9,7 @@ const WhyJoinUs = () => {
       <Grid container spacing={8.5}>
         <Grid item size={{ md: 6, xs: 12 }}>
           <Image
-            src="/images/careers/Union.png"
+            src="/images/careers/Union.webp"
             alt="go"
             width={0}
             height={0}
@@ -18,9 +18,9 @@ const WhyJoinUs = () => {
           />
         </Grid>
         <Grid item size={{ md: 6, xs: 12 }}>
-          <Image src="/images/careers/W.png" alt="W" width={161} height={102} />
+          <Image src="/images/careers/W.webp" alt="W" width={161} height={102} />
           <GradientHeading
-            text="Why join Sntct?"
+            text="Why join Sntct? "
             variant="h2"
             weight={700}
             sx={{ mt: "-30px" }}

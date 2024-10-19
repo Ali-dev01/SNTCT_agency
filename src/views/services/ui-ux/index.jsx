@@ -5,6 +5,7 @@ import GradientHeading from "@/components/GradientHeading";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import { Box, Container, Grid2 as Grid } from "@mui/material";
+import { useEffect } from "react";
 import CustomBanner from "../../../components/CustomBanner";
 import LeftGridSection from "../components/LeftGridSection";
 import MainHeading from "../components/MainHeading";
@@ -15,6 +16,11 @@ import { cardsData, processData } from "./data";
 
 const UiUxSection = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       {loading ? (
@@ -30,7 +36,7 @@ const UiUxSection = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/ui-design/ui-img1.png"
+              img="/images/services/ui-design/ui-img1.webp"
               title="What is UI/UX Design?"
               maxWidth="443px"
               desc="UI (User Interface) is how your website or app looks, while UX (User Experience) is how it feels to use. Together, they create an experience that leaves your audience satisfied and engaged. Good UI/UX design is all about making things easy, enjoyable, and intuitive for your users."
@@ -39,7 +45,7 @@ const UiUxSection = () => {
 
           <Box mt={15}>
             <LeftGridSection
-              img="/images/services/ui-design/ui-img2.png"
+              img="/images/services/ui-design/ui-img2.webp"
               title="Why Does UI/UX Design Matter?"
               maxWidth="398px"
               desc="Imagine visiting a website that’s hard to navigate or an app that’s confusing – frustrating, right? Great UI/UX design fixes that. It keeps users engaged, encourages them to stay longer, and helps them find exactly what they need without frustration. When your design works for your users, it works for your business."
@@ -69,7 +75,7 @@ const UiUxSection = () => {
 
           <Box mt={15}>
             <RightGridSection
-              img="/images/services/about-info.png"
+              img="/images/services/about-info.webp"
               title="Why Choose Sntct for UI/UX Design?"
               maxWidth="712px"
               desc="At Sntct, we don’t just design for looks – we design for how it makes people feel. We put ourselves in your users’ shoes, understanding their needs and frustrations, and crafting experiences that make things easier and more enjoyable. Our goal is simple: to create digital spaces that your users love to come back to."

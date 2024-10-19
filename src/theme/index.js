@@ -17,10 +17,6 @@ const theme = createTheme({
       light: "#C7D7E9",
       dark: "#3E5F82",
     },
-    gradient: {
-      main: "linear-gradient(90deg, rgba(24,56,199,1) 0%, rgba(25,57,200,1) 1%, rgba(10,157,227,1) 100%)",
-      light: "linear-gradient(90deg, rgba(80,128,199,1) 0%, rgba(112,207,255,1) 100%)",
-    },
     background: {
       default: "#f7fafc",
     },

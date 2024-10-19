@@ -8,10 +8,15 @@ import CustomAccordion from "@/components/CustomAccordion";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import ArrowDownSection from "@/icons/ArrowDownSection";
 import Image from "next/image";
+import { useEffect } from "react";
 import { accordionData } from "./data";
 
 const FaqSection = ({ homePage }) => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       {loading ? (
@@ -43,7 +48,7 @@ const FaqSection = ({ homePage }) => {
             )}
             <Box
               py={{ lg: homePage ? 7 : 13, md: homePage ? 5 : 10, xs: 6 }}
-              sx={{ mx: { lg: 16, md: 10, xs: 0 } }}
+              sx={{ mx: { lg: 18, md: 10, xs: 0 } }}
             >
               <CustomAccordion data={accordionData} />
             </Box>
