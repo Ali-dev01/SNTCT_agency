@@ -82,6 +82,7 @@ const BlogDetails = () => {
                   </Typography>
                   <Image
                     src={detail.img}
+                    alt="blog-img"
                     width={0}
                     height={0}
                     sizes="100vw"

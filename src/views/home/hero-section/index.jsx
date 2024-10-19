@@ -22,9 +22,11 @@ export default function HeroSection() {
           width={0}
           height={0}
           sizes="100vw"
-          layout="intrinsic"
           className="animate__animated animate__slideInLeft"
-          style={{ ...styles.leftImage(lgResponsive, mobileResponsive, mdResponsive), animationDuration: "2s" }}
+          style={{
+            ...styles.leftImage(lgResponsive, mobileResponsive, mdResponsive),
+            animationDuration: "2s",
+          }}
         />
         <Image
           src="/images/home-right-bg.png"
@@ -32,9 +34,11 @@ export default function HeroSection() {
           width={0}
           height={0}
           sizes="100vw"
-          layout="intrinsic"
           className="animate__animated animate__slideInRight"
-          style={{ ...styles.rightImage(lgResponsive, mobileResponsive, mdResponsive), animationDuration: "2s" }}
+          style={{
+            ...styles.rightImage(lgResponsive, mobileResponsive, mdResponsive),
+            animationDuration: "2s",
+          }}
         />
       </>
       {/* )} */}
@@ -74,14 +78,26 @@ const styles = {
     left: 0,
     bottom: "3rem",
     zIndex: "-1",
-    top: mobileResponsive ? "-3.1rem" : mdResponsive ? '-2rem' : 0,
-    width: mobileResponsive ? '130px' : mdResponsive ? '200px' : lgResponsive ? "278px" : "378px",
+    top: mobileResponsive ? "-3.1rem" : mdResponsive ? "-2rem" : 0,
+    width: mobileResponsive
+      ? "130px"
+      : mdResponsive
+      ? "200px"
+      : lgResponsive
+      ? "278px"
+      : "378px",
   }),
   rightImage: (lgResponsive, mobileResponsive, mdResponsive) => ({
     height: "auto",
     position: "absolute",
-    right: mobileResponsive ? '-40px' : mdResponsive ? '20px' : 0,
-    width: mobileResponsive ? '200px' : mdResponsive ? "300px" : lgResponsive ? "370px" : "570px",
+    right: mobileResponsive ? "-40px" : mdResponsive ? "20px" : 0,
+    width: mobileResponsive
+      ? "200px"
+      : mdResponsive
+      ? "300px"
+      : lgResponsive
+      ? "370px"
+      : "570px",
     top: "-6rem",
     zIndex: "-1",
   }),

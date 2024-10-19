@@ -36,6 +36,7 @@ const CareerSection = () => {
             alt="chip"
             width={375}
             height={920}
+            priority
             style={styles.leftChip}
           />
           <Container maxWidth="lg">
