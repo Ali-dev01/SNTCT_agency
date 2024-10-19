@@ -29,7 +29,7 @@ const BlogDetails = () => {
       ) : (
         <Container maxWidth="lg">
           <Box sx={styles.blogHeading}>
-            <Box sx={{ display: "flex", gap: { md: "60px", xs: "30px" } }}>
+            <Box sx={{ display: "flex", gap: { md: "60px", xs: "20px" } }}>
               <Box sx={styles.iconWraper}>
                 <Stack gap={2}>
                   {socialLinks.map((icon, i) => (
@@ -41,7 +41,10 @@ const BlogDetails = () => {
               </Box>
               <Box>
                 <GradientHeading text={blog.heading} variant="h1" weight={700} />
-                <Box mt={3} sx={{ display: "flex", gap: "16px", alignItems: "center" }}>
+                <Box
+                  mt={{ md: 3, xs: 1.5 }}
+                  sx={{ display: "flex", gap: "16px", alignItems: "center" }}
+                >
                   <Image src={blog.author.img} alt="author" width={50} height={50} />
                   <Stack gap={0.3}>
                     <Typography variant="body1" color="#00336B" fontWeight={700}>

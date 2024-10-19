@@ -4,6 +4,7 @@ import AnimatedLogos from "@/components/AnimatedLogos";
 import Loader from "@/components/custom-loader/Loader";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
 import { Box } from "@mui/material";
+import { useEffect } from "react";
 import FaqSection from "../faq";
 import BeAPart from "./be-a-part";
 import DigitalPartner from "./digital-partner";
@@ -16,6 +17,10 @@ import WhySntct from "./why-sntct";
 
 const HomeSection = () => {
   const { loading } = useGetLoadingState();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>
