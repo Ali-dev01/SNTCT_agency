@@ -18,7 +18,7 @@ const CustomButton = (props) => {
         showIcon && (
           <Box
             sx={(theme) => ({
-              ...styles.iconBase(theme),
+              ...styles.iconBase,
               ...(variant === "contained" && styles.containedIcon(theme)),
               ...(variant === "outlined" && styles.outlinedIcon(theme)),
             })}
@@ -44,11 +44,11 @@ const styles = {
     borderRadius: "35px",
     fontSize: { xs: "16px", md: "18px" },
     fontWeight: { xs: 600, md: 700 },
-    transition: "background 0.4s ease, transform 0.6s ease",
+    transition: "background 1s ease, transform 0.6s ease",
   }),
 
   containedButton: (theme) => ({
-    background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.primary.main})`,
+    background: `linear-gradient(to left, ${theme.palette.primary.main}, ${theme.palette.primary.main})`,
     "&:hover": {
       background:
         "linear-gradient(90deg, rgba(24,56,199,1) 0%, rgba(25,57,200,1) 1%, rgba(10,157,227,1) 100%)",
@@ -72,7 +72,7 @@ const styles = {
     },
   }),
 
-  iconBase: (theme) => ({
+  iconBase: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -81,7 +81,7 @@ const styles = {
     height: "34px",
     borderRadius: "100%",
     marginLeft: "20px",
-  }),
+  },
 
   containedIcon: (theme) => ({
     background: theme.palette.common.white,

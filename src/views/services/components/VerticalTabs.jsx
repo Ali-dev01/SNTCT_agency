@@ -1,4 +1,5 @@
 import { Box, Divider, Grid2 as Grid, keyframes, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const moveBackground = keyframes`
@@ -16,21 +17,32 @@ const moveBackground = keyframes`
 const VerticalTabs = ({ data }) => {
   const [activeBtn, setActiveBtn] = useState(1);
 
+  const transitionConfig = {
+    type: "spring",
+    stiffness: 300,
+    damping: 50,
+  };
+
   return (
     <Grid container spacing={4}>
       <Grid item size={{ xs: 12, md: 4 }}>
         <Box sx={{ ...styles.cardStyle, p: "35px 20px", textAlign: "center" }}>
           {data.map((item, i) => (
-            <Typography
+            <motion.div
               key={item.value}
-              variant="body2"
-              sx={styles.titleStyle(activeBtn, data, i)}
-              onClick={() => {
-                setActiveBtn(item.value);
-              }}
+              initial={{ opacity: 0, x: activeBtn === item.value ? -20 : 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: activeBtn === item.value ? -20 : 20 }}
+              transition={transitionConfig}
             >
-              {item.title}
-            </Typography>
+              <Typography
+                variant="body2"
+                sx={styles.titleStyle(activeBtn, data, i)}
+                onClick={() => setActiveBtn(item.value)}
+              >
+                {item.title}
+              </Typography>
+            </motion.div>
           ))}
         </Box>
       </Grid>

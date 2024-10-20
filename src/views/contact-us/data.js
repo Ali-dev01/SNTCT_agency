@@ -21,8 +21,6 @@ export const contactInfo = [
     icon: <LocationIcon />,
     title: "Location",
     desc: "House: A1154, Lane: 12Gulshan-e-Hadeed Karachi, Sindh",
-    linkTitle: "View on Google Map",
-    link: "#",
   },
 ];
 

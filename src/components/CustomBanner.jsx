@@ -48,13 +48,16 @@ export default CustomBanner;
 const styles = {
   bannerWraper: (isHome) => ({
     position: "relative",
-    background: "linear-gradient(90deg, #1938C8 0%, #0B9FE4 100%)",
-    padding: { xs: '24px', sm: "35px 40px" },
+    // background: "linear-gradient(to right, #1938C8 0%, #0B9FE4 100%)",
+    backgroundImage: "linear-gradient(to right, #1938C8 0%, #0B9FE4 55%, #1938C8 100%)",
+    backgroundSize: "190% auto",
+    padding: { xs: "24px", sm: "35px 40px" },
     borderRadius: { xs: "33px", sm: "60px" },
     height: { sm: isHome ? "472px" : "415px", xs: isHome ? "auto" : "415px" },
     width: { lg: "92%", xs: "100%" },
+    transition: "0.4s",
     "&:hover": {
-      background: "linear-gradient(90deg, #0B9FE4 0%, #1938C8 100%)",
+      backgroundPosition: "right center",
     },
   }),
   heading: {

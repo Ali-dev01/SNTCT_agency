@@ -58,16 +58,18 @@ const Contact = () => {
                       <Typography mt={3.2} mb={1.8} variant="body2" color="#00336B">
                         {data.desc}
                       </Typography>
-                      <Link
-                        href={data.link}
-                        style={{
-                          color: "#3395FF",
-                          fontWeight: 500,
-                          textDecoration: "underline",
-                        }}
-                      >
-                        {data.linkTitle}
-                      </Link>
+                      {data.linkTitle && (
+                        <Link
+                          href={data.link}
+                          style={{
+                            color: "#3395FF",
+                            fontWeight: 500,
+                            textDecoration: "underline",
+                          }}
+                        >
+                          {data.linkTitle}
+                        </Link>
+                      )}
                     </Box>
                   ))}
                 </Box>
