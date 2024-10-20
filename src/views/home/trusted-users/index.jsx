@@ -55,6 +55,7 @@ const styles = {
     width: 80,
     height: 80,
     mx: 'auto',
+    border: '4px solid #ABC2DB',
     mb: 2,
   },
   testimonialText: {
@@ -100,22 +101,22 @@ export default function TestimonialCarousel() {
 
   const testimonials = [
     {
-      name: "Peter",
-      role: "CEO, Sadapay",
-      content: "SNTCT is one of the most powerful multi-vendor script available on CodeCanyon. Support Team behavior is excellent and impressive.",
-      avatar: "/images/user-1.png",
+      name: "James Donovan",
+      role: "CEO",
+      content: "Working with SNTCT was a revelation. Their unique perspective on digital branding helped us stand out in the competitive eco-solutions market. They are more than a marketing agency; they are a partner in our mission.",
+      avatar: "/images/jamesCEO.jpg",
     },
     {
-      name: "Christopher",
-      role: "CEO, Stripe",
-      content: "SNTCT is one of the most powerful multi-vendor script available on CodeCanyon. Support Team behavior is excellent and impressive. Good Luck :-3 Guuys! You deserve much respect. :-)",
-      avatar: "/images/user-1.png",
+      name: "Ahmed Al-Khalidi",
+      role: "CDO",
+      content: "The team at SNTCT is exceptional. They tailored a digital strategy that aligned perfectly with our real estate market needs, enhancing both our reach and customer relations. Their dedication to our success was evident in every campaign.",
+      avatar: "/images/ahmadCDO.jpg",
     },
     {
-      name: "Jake",
-      role: "CEO, Paypal",
-      content: "SNTCT is one of the most powerful multi-vendor script available on CodeCanyon. Support Team behavior is excellent and impressive.",
-      avatar: "/images/user-1.png",
+      name: "Carlos Rodiguez",
+      role: "CTO",
+      content: "As a legal firm, trust is everything. SNTCT delivered not just innovative marketing solutions but also demonstrated a deep understanding of our need for professionalism and integrity in our digital presence.",
+      avatar: "/images/carlosCTO.jpg",
     },
   ];
 
