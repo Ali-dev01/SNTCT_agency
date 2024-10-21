@@ -48,11 +48,28 @@ const styles = {
   }),
 
   containedButton: (theme) => ({
-    background: `linear-gradient(to left, ${theme.palette.primary.main}, ${theme.palette.primary.main})`,
-    "&:hover": {
+    position: "relative",
+    background: "#3395ff",
+    transition: "color 0.4s ease",
+    zIndex: "1",
+    overflow: "hidden",
+    "&::before": {
+      content: `""`,
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: 0,
+      height: "100%",
       background:
         "linear-gradient(90deg, rgba(24,56,199,1) 0%, rgba(25,57,200,1) 1%, rgba(10,157,227,1) 100%)",
+      zIndex: "-1",
+      transition: "width 0.4s ease",
+    },
+    "&:hover": {
       boxShadow: "none",
+    },
+    "&:hover::before": {
+      width: "100%",
       "& .MuiBox-root": {
         transform: "rotate(45deg)",
       },

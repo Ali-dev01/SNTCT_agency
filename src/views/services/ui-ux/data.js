@@ -1,21 +1,26 @@
+import PrototypingIcon from "@/icons/services/PrototypingIcon";
+import UiIcon from "@/icons/services/UiIcon";
+import UxIcon from "@/icons/services/UxIcon";
+import WebOptimizationIcon from "@/icons/services/WebOptimizationIcon";
+
 export const cardsData = [
   {
-    icon: "/images/services/ui-design/ui-icon1.webp",
+    icon: <UiIcon />,
     title: "User Interface Design (UI)",
     desc: "Visually stunning, easy-to-use interfaces that your customers will love.",
   },
   {
-    icon: "/images/services/ui-design/ui-icon2.webp",
+    icon: <UxIcon />,
     title: "User Experience Design (UX)",
     desc: "Making every interaction smooth, logical, and enjoyable.",
   },
   {
-    icon: "/images/services/ui-design/ui-icon3.webp",
+    icon: <PrototypingIcon />,
     title: "Prototyping & Wireframing:",
     desc: "Visual mockups to bring your ideas to life before development.",
   },
   {
-    icon: "/images/services/ui-design/ui-icon4.webp",
+    icon: <WebOptimizationIcon />,
     title: "Mobile & Web Optimization",
     desc: "Ensuring your site or app works beautifully on any device.",
   },

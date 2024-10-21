@@ -68,7 +68,7 @@ const SocialMedia = () => {
             <Grid container spacing={3}>
               {cardsData.map((card, i) => (
                 <Grid key={i} item size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
-                  <ServicesCards card={card} height="313px" />
+                  <ServicesCards card={card} height="345px" />
                 </Grid>
               ))}
             </Grid>

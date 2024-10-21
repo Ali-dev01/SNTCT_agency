@@ -1,21 +1,26 @@
+import BrandIcon from "@/icons/services/BrandIcon";
+import CustomArtIcon from "@/icons/services/CustomArtIcon";
+import DigitalIcon from "@/icons/services/DigitalIcon";
+import SpinerIcon from "@/icons/services/SpinerIcon";
+
 export const cardsData = [
   {
-    icon: "/images/services/graphics/graphics-icon1.webp",
+    icon: <SpinerIcon />,
     title: "Logo Design",
     desc: "Create a logo that tells your brand’s story.",
   },
   {
-    icon: "/images/services/graphics/graphics-icon2.webp",
+    icon: <BrandIcon />,
     title: "Brand Identity",
     desc: "We’ll build a look that makes your business unforgettable.",
   },
   {
-    icon: "/images/services/graphics/graphics-icon3.webp",
+    icon: <DigitalIcon />,
     title: "Digital Design",
     desc: "From social media posts to website graphics, we’ll bring your online presence to life.",
   },
   {
-    icon: "/images/services/graphics/graphics-icon4.webp",
+    icon: <CustomArtIcon />,
     title: "Custom Art & Illustrations",
     desc: "Add a unique touch to your brand with personalized illustrations.",
   },

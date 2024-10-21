@@ -1,21 +1,26 @@
+import AttachmentIcon from "@/icons/services/AttachmentIcon";
+import NotebookIcon from "@/icons/services/NotebookIcon";
+import OptimizationIcon from "@/icons/services/OptimizationIcon";
+import SearchIcon from "@/icons/services/SearchIcon";
+
 export const cardsData = [
   {
-    icon: "/images/services/seo/seo-icon1.webp",
+    icon: <SearchIcon />,
     title: "Keyword Research",
     desc: "We find the exact words and phrases your customers are using to search for your products or services.",
   },
   {
-    icon: "/images/services/seo/seo-icon2.webp",
+    icon: <OptimizationIcon />,
     title: "On-Page Optimization",
     desc: "We optimize your website’s content and structure to make it more search-engine friendly.",
   },
   {
-    icon: "/images/services/seo/seo-icon3.webp",
+    icon: <AttachmentIcon />,
     title: "Link Building",
     desc: "We build high-quality links to your site, which helps increase your website’s authority and ranking.",
   },
   {
-    icon: "/images/services/seo/seo-icon4.webp",
+    icon: <NotebookIcon />,
     title: "Content Creation",
     desc: "We create valuable content that attracts visitors and keeps them engaged.",
   },

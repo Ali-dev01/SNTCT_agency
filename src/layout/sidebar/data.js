@@ -8,16 +8,12 @@ export const sidebarData = [
     link: "#",
     subItems: [
       {
-        title: "Social Media Marketing",
-        link: "/social-media-marketing",
-      },
-      {
-        title: "Website Development",
-        link: "/web-development",
-      },
-      {
         title: "SEO",
         link: "/search-engine-optimization",
+      },
+      {
+        title: "Google Ads",
+        link: "/google-ads",
       },
       {
         title: "UI/UX Design",
@@ -28,8 +24,12 @@ export const sidebarData = [
         link: "/graphics-designing",
       },
       {
-        title: "Google Ads",
-        link: "/google-ads",
+        title: "Website Development",
+        link: "/web-development",
+      },
+      {
+        title: "Social Media Marketing",
+        link: "/social-media-marketing",
       },
     ],
   },

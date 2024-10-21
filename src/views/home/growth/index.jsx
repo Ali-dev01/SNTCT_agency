@@ -63,7 +63,11 @@ export default function Growth() {
                   <Grid
                     item
                     size={{ md: 6, xs: 12 }}
-                    sx={{ display: "flex", justifyContent: "end" }}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                   >
                     <Image
                       src={item.image}

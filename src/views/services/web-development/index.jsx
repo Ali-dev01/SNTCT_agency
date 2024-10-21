@@ -20,7 +20,7 @@ const WebsiteDevelopment = () => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-  
+
   return (
     <>
       {loading ? (
@@ -67,7 +67,7 @@ const WebsiteDevelopment = () => {
             <Grid container spacing={3}>
               {cardsData.map((card, i) => (
                 <Grid key={i} item size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
-                  <ServicesCards card={card} height="370px" />
+                  <ServicesCards card={card} height="400px" />
                 </Grid>
               ))}
             </Grid>

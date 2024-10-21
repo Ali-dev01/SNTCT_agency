@@ -1,21 +1,26 @@
+import CartIcon from "@/icons/services/CartIcon";
+import FrameIcon from "@/icons/services/FrameIcon";
+import MobileIcon from "@/icons/services/MobileIcon";
+import SettingIcon from "@/icons/services/SettingIcon";
+
 export const cardsData = [
   {
-    icon: "/images/services/web-dev/web-icon1.webp",
+    icon: <FrameIcon />,
     title: "Custom Website Development",
     desc: "We create custom websites tailored to your business goals—whether you're looking for a sleek, modern design or complex functionality, we’ve got you covered",
   },
   {
-    icon: "/images/services/web-dev/web-icon2.webp",
+    icon: <CartIcon />,
     title: "E-Commerce Solutions",
     desc: "We build e-commerce platforms that make online shopping smooth, secure, and simple for your customers.",
   },
   {
-    icon: "/images/services/web-dev/web-icon3.webp",
+    icon: <MobileIcon />,
     title: "Mobile Optimization",
     desc: "Your customers are browsing on their phones—our websites are fully optimized for mobile, so you don’t lose out on mobile traffic.",
   },
   {
-    icon: "/images/services/web-dev/web-icon4.webp",
+    icon: <SettingIcon />,
     title: "Website Maintenance & Support",
     desc: "We don’t just build your site and leave—we provide ongoing support to ensure your website stays secure, fast, and up-to-date.",
   },

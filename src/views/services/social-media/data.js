@@ -1,21 +1,26 @@
+import GroupIcon from "@/icons/services/GroupIcon";
+import PlanIcon from "@/icons/services/PlanIcon";
+import RocketIcon from "@/icons/services/RocketIcon";
+import WebOptimizationIcon from "@/icons/services/WebOptimizationIcon";
+
 export const cardsData = [
   {
-    icon: "/images/services/social-media/service-icon1.webp",
+    icon: <PlanIcon />,
     title: "Content Strategy",
     desc: "We help you plan content that resonates with your audience and aligns with your brand’s voice.",
   },
   {
-    icon: "/images/services/social-media/service-icon2.webp",
+    icon: <WebOptimizationIcon />,
     title: "Content Creation",
     desc: "From eye-catching graphics to engaging videos, we create content that stands out.",
   },
   {
-    icon: "/images/services/social-media/service-icon3.webp",
+    icon: <GroupIcon />,
     title: "Community Management",
     desc: "We manage your social media interactions, ensuring your audience feels heard and valued.",
   },
   {
-    icon: "/images/services/social-media/service-icon4.webp",
+    icon: <RocketIcon />,
     title: "Paid Social Advertising",
     desc: "Boost your reach with targeted ads that deliver measurable results.",
   },

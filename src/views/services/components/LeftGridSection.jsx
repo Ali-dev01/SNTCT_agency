@@ -12,7 +12,11 @@ const LeftGridSection = ({ img, title, desc, maxWidth }) => {
           {desc}
         </Typography>
       </Grid>
-      <Grid item size={{ md: 6, xs: 12 }}>
+      <Grid
+        item
+        size={{ md: 6, xs: 12 }}
+        sx={{ display: "flex", justifyContent: { md: "end", xs: "center" } }}
+      >
         <Image
           src={img}
           alt="img"
