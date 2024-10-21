@@ -67,12 +67,12 @@ const styles = {
     },
     "&:hover": {
       boxShadow: "none",
-    },
-    "&:hover::before": {
-      width: "100%",
       "& .MuiBox-root": {
         transform: "rotate(45deg)",
       },
+    },
+    "&:hover::before": {
+      width: "100%",
     },
   }),
 
