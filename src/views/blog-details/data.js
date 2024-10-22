@@ -207,6 +207,98 @@ export const blogsDetail = [
       },
     ],
   },
+  {
+    title: "mobile-first-web-design",
+    heading: "Why Mobile-First Web Design is Critical for Your Business",
+    mainImg: "/images/blog/details/main.webp",
+    author: {
+      name: "Sabrina Lucky",
+      img: "/images/blog/details/author.png",
+      timeStamp: (
+        <>
+          23 Nov 2023 <b>• 10min read</b>
+        </>
+      ),
+    },
+    blogDetails: [
+      {
+        img: "/images/blog/details/detail-1.webp",
+        title: "Introduction",
+        desc: "Mobile-first design is no longer an option; it’s a necessity. With over 60% of global web traffic coming from mobile devices, your website needs to offer a seamless mobile experience. Here’s why mobile-first web design is critical for your business.",
+      },
+      {
+        img: "/images/blog/details/detail-2.webp",
+        title: "The Rise of Mobile Users",
+        desc: "More people are browsing, shopping, and interacting with websites on their phones than ever before. A website that isn’t optimized for mobile users risks losing a significant portion of its audience. Mobile-first design ensures that your website looks and functions perfectly, regardless of the screen size",
+      },
+      {
+        img: "/images/blog/details/detail-3.webp",
+        title: "Faster Loading Times on Mobile",
+        desc: "Speed is everything on mobile devices. Users expect websites to load in under three seconds, and if yours doesn’t, they’ll likely leave. Mobile-first design prioritizes faster load times, ensuring that your website performs well across all devices.",
+      },
+      {
+        img: "/images/blog/details/detail-4.webp",
+        title: "Improved User Experience and Engagement",
+        desc: "Mobile-first design isn’t just about appearance; it’s about usability. A mobile-optimized website is easier to navigate, which leads to better engagement. Features like simplified menus, touch-friendly buttons, and fast-loading images keep users on your site longer.",
+      },
+      {
+        img: "/images/blog/details/detail-5.webp",
+        title: "SEO and Mobile Optimization",
+        desc: "Google uses mobile-first indexing, which means the mobile version of your website is what’s primarily used to determine search rankings. A mobile-friendly website isn’t just good for users; it’s essential for SEO. Without it, your site may struggle to rank in search results.",
+      },
+      {
+        img: "/images/blog/details/detail-1.webp",
+        title: "Conclusion",
+        desc: "Mobile-first design ensures your website is ready for today’s users and tomorrow’s technology. By prioritizing mobile usability and performance, you’ll improve user engagement and SEO, giving your business the competitive edge it needs.",
+      },
+    ],
+  },
+  {
+    title: "social-media-advertising",
+    heading: "How to Leverage Social Media Advertising for Better ROI",
+    mainImg: "/images/blog/details/main.webp",
+    author: {
+      name: "Sabrina Lucky",
+      img: "/images/blog/details/author.png",
+      timeStamp: (
+        <>
+          23 Nov 2023 <b>• 10min read</b>
+        </>
+      ),
+    },
+    blogDetails: [
+      {
+        img: "/images/blog/details/detail-1.webp",
+        title: "Introduction",
+        desc: "Social media advertising is one of the most effective ways to reach your audience and drive conversions. But to get the best return on investment (ROI), you need to have the right strategy in place.",
+      },
+      {
+        img: "/images/blog/details/detail-2.webp",
+        title: "Choosing the Right Platforms",
+        desc: "Not all social media platforms are created equal. To maximize your ROI, it’s essential to choose the platforms where your target audience spends the most time. For B2B companies, LinkedIn might be the best option, while Instagram or Facebook could be more effective for B2C brands.",
+      },
+      {
+        img: "/images/blog/details/detail-3.webp",
+        title: "Targeting Your Audience",
+        desc: "One of the biggest advantages of social media advertising is its targeting capabilities. You can reach specific demographics, interests, and behaviors. This ensures your ads are seen by people who are most likely to engage with your business, increasing the chances of conversion.",
+      },
+      {
+        img: "/images/blog/details/detail-4.webp",
+        title: "Creating Engaging Ads",
+        desc: "The content of your ads is just as important as where they appear. To capture attention, your ads need to be visually appealing and offer value to the user. Whether it’s a limited-time discount or a helpful resource, make sure your ad copy and visuals align with your audience’s needs.",
+      },
+      {
+        img: "/images/blog/details/detail-5.webp",
+        title: "Tracking Performance and Adjusting",
+        desc: "The beauty of social media advertising is that you can track everything. From clicks to conversions, you can measure your ad performance in real-time. This allows you to make adjustments, optimize your campaign, and ultimately improve your ROI.",
+      },
+      {
+        img: "/images/blog/details/detail-1.webp",
+        title: "Conclusion",
+        desc: "Social media advertising can offer an excellent return on investment when done correctly. By choosing the",
+      },
+    ],
+  },
 ];
 
 export const relatedBlogs = [

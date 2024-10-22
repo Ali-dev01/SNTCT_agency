@@ -1,6 +1,6 @@
 import GradientHeading from "@/components/GradientHeading";
 import ArrowDownSection from "@/icons/ArrowDownSection";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { useState } from "react";
 import { benifitsData } from "./data";
@@ -8,6 +8,10 @@ import { styles } from "./styles";
 
 const Benifits = () => {
   const [activeBtn, setActiveBtn] = useState(1);
+
+  const handleChange = (event, newValue) => {
+    setActiveBtn(newValue);
+  };
 
   return (
     <>
@@ -24,23 +28,31 @@ const Benifits = () => {
       </Box>
 
       <Grid container spacing={4}>
-        <Grid item size={{ xs: 12, md: 4 }}>
-          <Box sx={{ ...styles.cardStyle, p: "25px 20px", textAlign: "center" }}>
-            {benifitsData.map((item, i) => (
-              <Typography
-                key={item.value}
-                variant="body2"
-                sx={styles.titleStyle(activeBtn, i)}
-                onClick={() => {
-                  setActiveBtn(item.value);
-                }}
-              >
-                {item.title}
-              </Typography>
-            ))}
+        <Grid item size={{ md: 4, xs: 12 }}>
+          <Box
+            sx={{
+              ...styles.cardStyle,
+              p: "25px 20px",
+            }}
+          >
+            <Tabs
+              value={activeBtn}
+              onChange={handleChange}
+              orientation="vertical"
+              aria-label="basic tabs example"
+            >
+              {benifitsData.map((item, i) => (
+                <Tab
+                  key={item.value}
+                  disableRipple
+                  label={item.title}
+                  value={item.value}
+                />
+              ))}
+            </Tabs>
           </Box>
         </Grid>
-        <Grid item size={{ xs: 12, md: 8 }} zIndex="1">
+        <Grid item size={{ md: 8, xs: 12 }}>
           <Box sx={{ ...styles.cardStyle, p: "40px", textAlign: "center" }}>
             <Typography
               variant="h1"
