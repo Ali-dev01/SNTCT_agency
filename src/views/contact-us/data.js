@@ -14,13 +14,19 @@ export const contactInfo = [
     icon: <ContactPhone />,
     title: "Phone",
     desc: "Hate contact forms?",
-    linkTitle: "+971 000 0000",
+    linkTitle: "‎+44-7793467120‎",
     link: "#",
   },
   {
     icon: <LocationIcon />,
     title: "Location",
-    desc: "House: A1154, Lane: 12Gulshan-e-Hadeed Karachi, Sindh",
+    desc: (
+      <>
+        Unit 3 K34 Premier House, Rolfe Street, Smethwick, West Midlands, United Kingdom,
+        <br />
+        B66 2AA
+      </>
+    ),
   },
 ];
 

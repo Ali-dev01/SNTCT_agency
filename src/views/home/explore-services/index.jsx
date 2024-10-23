@@ -55,15 +55,16 @@ export default function ExploreServices() {
       </Box>
       <Box ref={scrollContainerRef} sx={styles.scrollContainer}>
         <Box sx={{ ...styles.blurOverlay, ...styles.blurTop }} />
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
           {services.map((service) => (
-            <Grid key={service.title} size={{ xs: 12, sm: 6 }}>
+            <Grid key={service.title} size={{ xs: 12, md: 6 }}>
               <ServicesCard
                 iconSrc={service.iconSrc}
                 iconWidth={service.iconWidth}
                 title={service.title}
                 link={service.link}
                 subtitle={service.subtitle}
+                maxWidth={service.maxWidth}
                 mainImageSrc={service.mainImageSrc}
               />
             </Grid>

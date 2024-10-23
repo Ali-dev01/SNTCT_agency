@@ -11,6 +11,7 @@ const ServicesCard = ({
   title,
   link,
   subtitle,
+  maxWidth,
   buttonAction = () => {},
   mainImageSrc,
 }) => {
@@ -38,7 +39,17 @@ const ServicesCard = ({
           </Box>
         </Box>
         <Box>
-          <Image src={mainImageSrc} alt="service-main-image" width={241} height={207} />
+          <Image
+            src={mainImageSrc}
+            alt="service-main-image"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{
+              width: maxWidth,
+              height: "auto",
+            }}
+          />
         </Box>
       </Box>
     </Box>

@@ -8,10 +8,9 @@ const DetailCard = ({ card }) => {
         <Image
           src={card.image}
           alt="person"
-          width={0}
-          height={0}
-          sizes="100vw"
-          style={{ width: "100%", maxWidth: "180px", height: "auto" }}
+          width={160}
+          height={160}
+          style={{ borderRadius: "100%" }}
         />
         <Typography variant="h4" mt={2} mb={1} color="#00336B">
           {card.name}

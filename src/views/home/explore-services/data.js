@@ -5,7 +5,8 @@ export const services = [
     link: "/social-media-marketing",
     subtitle: "Marketing",
     iconWidth: 87,
-    mainImageSrc: "/images/social-media.png",
+    maxWidth: "242px",
+    mainImageSrc: "/images/home/service-1.webp",
   },
   {
     iconSrc: "/images/W.png",
@@ -13,7 +14,8 @@ export const services = [
     link: "/web-development",
     subtitle: "Development",
     iconWidth: 150,
-    mainImageSrc: "/images/website-development.png",
+    maxWidth: "240px",
+    mainImageSrc: "/images/home/service-2.webp",
   },
   {
     iconSrc: "/images/S.png",
@@ -21,7 +23,8 @@ export const services = [
     link: "/search-engine-optimization",
     subtitle: "Optimization",
     iconWidth: 87,
-    mainImageSrc: "/images/seo.png",
+    maxWidth: "228px",
+    mainImageSrc: "/images/home/service-3.webp",
   },
   {
     iconSrc: "/images/U.png",
@@ -29,7 +32,8 @@ export const services = [
     link: "/ui-ux-design",
     subtitle: "Design",
     iconWidth: 90,
-    mainImageSrc: "/images/ui-ux-design.png",
+    maxWidth: "252px",
+    mainImageSrc: "/images/home/service-4.webp",
   },
   {
     iconSrc: "/images/G.png",
@@ -37,7 +41,8 @@ export const services = [
     link: "/ui-ux-design",
     subtitle: "Design",
     iconWidth: 116,
-    mainImageSrc: "/images/graphic-design.png",
+    maxWidth: "214px",
+    mainImageSrc: "/images/home/service-5.webp",
   },
   {
     iconSrc: "/images/G.png",
@@ -45,6 +50,7 @@ export const services = [
     link: "/graphics-designing",
     subtitle: "Ads",
     iconWidth: 116,
-    mainImageSrc: "/images/google-ads.png",
+    maxWidth: "270px",
+    mainImageSrc: "/images/home/service-6.webp",
   },
 ];

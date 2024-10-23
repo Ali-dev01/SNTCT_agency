@@ -33,15 +33,19 @@ const OpenPositions = () => {
 
       <Box mt={3}>
         <Grid container spacing={4}>
-          {[1, 2, 3].map((card) => (
-            <Grid key={card} item size={{ xs: 12, sm: 6, md: 4 }}>
+          {[
+            "Motion Graphics Designer",
+            "(CRO) Specialist",
+            "Brand Identity Designer",
+          ].map((item) => (
+            <Grid key={item} item size={{ xs: 12, sm: 6, md: 4 }}>
               <Box sx={styles.cardStyle}>
-                <Box sx={{ display: "flex", gap: "20px" }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "20px" }}>
                   <Box sx={styles.logoStyle}>
                     <SidebarLogo />
                   </Box>
                   <Typography variant="h5" color="#3E5F82" mt={3.5}>
-                    UI/UX Designer
+                    {item}
                   </Typography>
                 </Box>
                 <Box mt={3}>
@@ -66,6 +70,7 @@ const styles = {
   logoStyle: (theme) => ({
     display: "flex",
     background: theme.palette.primary.light,
+    height: "72px",
     padding: "13px 19px",
     borderRadius: "12px",
     boxShadow: "0px 6px 4px 0px #15120E0A",
