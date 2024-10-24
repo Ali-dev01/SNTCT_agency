@@ -61,7 +61,7 @@ const Footer = () => {
                 </Box>
                 <Box mt={6} sx={{ display: "flex", gap: "24px" }}>
                   {socialLinks.map((item, i) => (
-                    <Link href={item.link} key={i}>
+                    <Link target="_blank" href={item.link} key={i}>
                       <Box sx={styles.iconStyle}>{item.icon}</Box>
                     </Link>
                   ))}

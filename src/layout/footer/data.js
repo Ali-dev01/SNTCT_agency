@@ -4,10 +4,10 @@ import MailIcon from "@/icons/MailIcon";
 import TwitterIcon from "@/icons/TwitterIcon";
 
 export const socialLinks = [
-  { icon: <FacebookIcon />, link: "/" },
-  { icon: <InstagramIcon />, link: "/" },
-  { icon: <TwitterIcon />, link: "/" },
-  { icon: <MailIcon />, link: "/" },
+  { icon: <FacebookIcon />, link: "https://www.facebook.com/sntctofficial" },
+  { icon: <InstagramIcon />, link: "https://www.instagram.com/sntctofficial/" },
+  { icon: <TwitterIcon />, link: "https://www.twitter.com/sntctofficial" },
+  { icon: <MailIcon />, link: "/info@sntct.com" },
 ];
 
 export const aboutOutLinks = [
@@ -17,7 +17,7 @@ export const aboutOutLinks = [
   },
   {
     title: "Our Services",
-    link: "/services",
+    link: "/#services",
   },
   {
     title: "Testimonials",

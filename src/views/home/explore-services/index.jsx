@@ -89,7 +89,6 @@ const styles = {
   scrollContainer: {
     position: "relative",
     flexGrow: 1,
-    // height: "600px",
     overflow: "auto", // Ensure the scroll stays within bounds
   },
   blurOverlay: {

@@ -37,7 +37,9 @@ const HomeSection = () => {
           >
             <AnimatedLogos />
           </Box>
-          <ExploreServices />
+          <Box id="services">
+            <ExploreServices />
+          </Box>
           <Growth />
           <Box id="testimonials">
             <TrustedUsers />
