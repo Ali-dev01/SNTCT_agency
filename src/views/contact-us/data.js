@@ -8,7 +8,7 @@ export const contactInfo = [
     title: "Email",
     desc: "Hate contact forms?",
     linkTitle: "info@sntct.com",
-    link: "#",
+    link: `https://mail.google.com/mail/?view=cm&fs=1&to=info@sntct.com`,
   },
   {
     icon: <ContactPhone />,

@@ -85,7 +85,7 @@ const styles = {
       fontWeight: 700,
       p: "18px 16px",
       fontSize: "16px",
-      my: "6px",
+      my: "15px",
       color: "#3E5F82",
       zIndex: 1,
     },

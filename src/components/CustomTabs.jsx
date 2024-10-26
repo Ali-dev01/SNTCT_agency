@@ -15,6 +15,7 @@ const NewCustomTabs = ({ tabsArray, children }) => {
       <Tabs
         value={value}
         variant="scrollable"
+        allowScrollButtonsMobile
         onChange={handleChange}
         aria-label="basic tabs example"
         sx={styles.tabsStyles}

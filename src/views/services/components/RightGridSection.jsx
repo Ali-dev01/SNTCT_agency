@@ -4,7 +4,13 @@ import Image from "next/image";
 
 const RightGridSection = ({ img, title, desc, maxWidth }) => {
   return (
-    <Grid container spacing={6}>
+    <Grid
+      container
+      spacing={6}
+      sx={{
+        flexDirection: { xs: "column-reverse", md: "row" },
+      }}
+    >
       <Grid
         item
         size={{ md: 6, xs: 12 }}

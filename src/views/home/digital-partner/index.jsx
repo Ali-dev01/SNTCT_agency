@@ -120,7 +120,6 @@ export default function DigitalPartner() {
                   hideTimezone: true, // Hides the timezone heading
                 }}
               />
-              {/* <InlineWidget url="https://calendly.com/sntct-info/30min?hide_event_type_details=1&primary_color=006edc" styles={styles.calendlyWidget} /> */}
             </Box>
           </Grid2>
         </Grid2>
@@ -172,6 +171,7 @@ const styles = {
   contactLink: {
     color: theme.palette.primary.main,
     textDecoration: "underline",
+    fontFamily: "roboto",
     fontWeight: 500,
   },
   contactText: {

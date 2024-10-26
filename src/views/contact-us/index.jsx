@@ -61,9 +61,11 @@ const Contact = () => {
                       {data.linkTitle && (
                         <Link
                           href={data.link}
+                          target={data.title === "Email" ? "_blank" : "_self"}
                           style={{
                             color: "#3395FF",
                             fontWeight: 500,
+                            fontFamily: "roboto",
                             textDecoration: "underline",
                           }}
                         >
