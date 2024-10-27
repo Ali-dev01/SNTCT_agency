@@ -156,7 +156,11 @@ export default function Sidebar({ open, toggleDrawer }) {
               <Typography variant="caption" color="#00336B" display="block" mb={2}>
                 Have any confusion?
               </Typography>
-              <CustomButton text="Lets Talk" variant="contained" showIcon />
+              <Box onClick={toggleDrawer(false)}>
+                <Link href="/contact-us">
+                  <CustomButton link="/contact-us" variant="contained" showIcon />
+                </Link>
+              </Box>
             </Box>
           </Box>
         </Box>

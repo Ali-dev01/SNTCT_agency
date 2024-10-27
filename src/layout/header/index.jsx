@@ -49,7 +49,9 @@ const Header = () => {
       <Box sx={{ ...styles.wrapper, ...(showNavbar ? styles.show : styles.hide) }}>
         <Box sx={styles.headerStyle}>
           <Box sx={styles.headerContent}>
-            <CustomButton text="Lets Talk" variant="contained" />
+            <Link href="/contact-us">
+              <CustomButton text="Lets Talk" variant="contained" />
+            </Link>
             <Link href="/" style={{ display: "flex" }}>
               <Image
                 src="/images/logo.png"

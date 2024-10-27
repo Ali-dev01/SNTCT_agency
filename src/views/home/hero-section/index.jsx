@@ -3,11 +3,11 @@ import GradientHeading from "@/components/GradientHeading";
 import theme from "@/theme";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 const headingTexts = ["We Design,", "Develop and Market", "Your Success"];
 
 export default function HeroSection() {
-  const showImages = useMediaQuery("(min-width:1130px)");
   const lgResponsive = useMediaQuery("(max-width:1320px)");
   const mobileResponsive = useMediaQuery("(max-width:600px)");
   const mdResponsive = useMediaQuery("(max-width:900px)");
@@ -59,7 +59,9 @@ export default function HeroSection() {
           love and grow. We are a team of experts always be there as a partner.
         </Typography>
       </Box>
-      <CustomButton text="Book a Meeting" variant="contained" showIcon />
+      <Link href="/contact-us">
+        <CustomButton text="Book a Meeting" variant="contained" showIcon />
+      </Link>
     </Box>
   );
 }

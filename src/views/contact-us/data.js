@@ -33,26 +33,26 @@ export const contactInfo = [
 export const options = [
   {
     label: "Social Media Marketing",
-    value: "1",
+    value: "social media marketing",
   },
   {
     label: "Website Development",
-    value: "2",
+    value: "website development",
   },
   {
     label: "Search Engine Optimization",
-    value: "3",
+    value: "search engine optimization",
   },
   {
     label: "UI/UX Design",
-    value: "4",
+    value: "UI/UX design",
   },
   {
     label: "Graphics Design",
-    value: "5",
+    value: "graphics design",
   },
   {
     label: "Google Ads",
-    value: "6",
+    value: "google ads",
   },
 ];

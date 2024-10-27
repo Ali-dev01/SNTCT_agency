@@ -15,10 +15,39 @@ import Link from "next/link";
 import Loader from "@/components/custom-loader/Loader";
 import CustomButton from "@/components/CustomButton";
 import useGetLoadingState from "@/hooks/useGetLoadingState";
+import { useState } from "react";
 import { contactInfo, options } from "./data";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState({ name: "", email: "" });
+
   const { loading } = useGetLoadingState();
+
+  // Regular expression for basic email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const handleSubmit = () => {
+    if (name.trim().length < 3) {
+      setError((prevError) => ({
+        ...prevError,
+        name: "Minimum 3 Charactar required",
+      }));
+    }
+    if (!emailRegex.test(email)) {
+      setError((prevError) => ({
+        ...prevError,
+        email: "Enter valid email",
+      }));
+    } else {
+      window.open(
+        "https://calendly.com/sntct-info/30min?hide_gdpr_banner=1&hide_event_type_details=1&primary_color=006edc&text_color=000000",
+        "_blank"
+      );
+    }
+  };
+
   return (
     <>
       {loading ? (
@@ -87,7 +116,17 @@ const Contact = () => {
                           variant="outlined"
                           fullWidth
                           placeholder="Your name"
+                          value={name}
+                          onChange={(e) => {
+                            setError({ ...error, name: "" });
+                            setName(e.target.value);
+                          }}
                         />
+                        {error.name && (
+                          <Typography fontSize="12px" color="#ff3333">
+                            {error.name}
+                          </Typography>
+                        )}
                       </Box>
                       <Box mb={3} width="100%">
                         <InputLabel sx={styles.labelStyle}>Email</InputLabel>
@@ -96,7 +135,17 @@ const Contact = () => {
                           variant="outlined"
                           fullWidth
                           placeholder="Your email"
+                          value={email}
+                          onChange={(e) => {
+                            setError({ ...name, email: "" });
+                            setEmail(e.target.value);
+                          }}
                         />
+                        {error.email && (
+                          <Typography fontSize="12px" color="#ff3333">
+                            {error.email}
+                          </Typography>
+                        )}
                       </Box>
                       <Box width="100%">
                         <InputLabel sx={styles.labelStyle}>Service</InputLabel>
@@ -129,7 +178,7 @@ const Contact = () => {
                       </Box>
                     </Grid>
                   </Grid>
-                  <Box textAlign="center" mt={4}>
+                  <Box textAlign="center" mt={4} onClick={handleSubmit}>
                     <CustomButton text="Submit Now" variant="contained" showIcon />
                   </Box>
                 </Box>
