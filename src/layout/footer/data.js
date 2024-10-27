@@ -7,7 +7,10 @@ export const socialLinks = [
   { icon: <FacebookIcon />, link: "https://www.facebook.com/sntctofficial" },
   { icon: <InstagramIcon />, link: "https://www.instagram.com/sntctofficial/" },
   { icon: <TwitterIcon />, link: "https://www.twitter.com/sntctofficial" },
-  { icon: <MailIcon />, link: "/info@sntct.com" },
+  {
+    icon: <MailIcon />,
+    link: `https://mail.google.com/mail/?view=cm&fs=1&to=info@sntct.com`,
+  },
 ];
 
 export const aboutOutLinks = [

@@ -80,14 +80,26 @@ const BlogDetails = () => {
                   <Typography variant="body1" color="#00336B" mt="16px" mb="30px">
                     {detail.desc}
                   </Typography>
-                  <Image
-                    src={detail.img}
-                    alt="blog-img"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "auto" }}
-                  />
+                  {detail.img && (
+                    <Box
+                      sx={{
+                        position: "relative",
+                        width: "100%",
+                        borderRadius: "40px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Image
+                        src={detail.img}
+                        alt="blog-img"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: "100%", height: "auto", borderRadius: "40px" }}
+                      />
+                      <Box sx={styles.overlay} />
+                    </Box>
+                  )}
                 </Box>
               ))}
             </Box>
@@ -132,5 +144,14 @@ const styles = {
   blogDetails: {
     mx: { md: 20, xs: 0 },
     mt: "40px",
+  },
+  overlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0, 100, 150, 0.5)", // Light blue with 50% opacity
+    borderRadius: "40px",
   },
 };
