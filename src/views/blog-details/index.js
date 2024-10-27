@@ -97,7 +97,8 @@ const BlogDetails = () => {
                         sizes="100vw"
                         style={{ width: "100%", height: "auto", borderRadius: "40px" }}
                       />
-                      <Box sx={styles.overlay} />
+                      {(blog.title !== "graphics-designing" ||
+                        detail.title === "Introduction") && <Box sx={styles.overlay} />}
                     </Box>
                   )}
                 </Box>
@@ -151,7 +152,7 @@ const styles = {
     left: 0,
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(0, 100, 150, 0.5)", // Light blue with 50% opacity
+    backgroundColor: "rgba(0, 100, 150, 0.4)", // Light blue with 50% opacity
     borderRadius: "40px",
   },
 };
