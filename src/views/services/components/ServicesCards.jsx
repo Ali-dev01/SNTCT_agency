@@ -21,6 +21,9 @@ export default ServicesCards;
 
 const styles = {
   cardStyle: (height) => ({
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: { xs: "center", md: "start" },
     textAlign: "center",
     height: height,
     background: "#fff",

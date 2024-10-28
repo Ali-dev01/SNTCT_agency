@@ -23,7 +23,7 @@ const CustomBanner = ({ title, desc, btnText = `Lets's Talk`, homePage }) => {
           </Box>
           <CustomButton variant="contained" text={btnText} showIcon />
         </Box>
-        <Box sx={styles.bannerImg}>
+        <Box sx={styles.bannerImg(homePage)}>
           <Image
             src={
               isHovered
@@ -48,12 +48,14 @@ export default CustomBanner;
 const styles = {
   bannerWraper: (isHome) => ({
     position: "relative",
-    // background: "linear-gradient(to right, #1938C8 0%, #0B9FE4 100%)",
+    py: { sm: "50px", xs: "24px" },
+    pl: { sm: "60px", xs: "28px" },
+    pr: { lg: 0, sm: "60px", xs: "28px" },
     backgroundImage: "linear-gradient(to right, #1938C8 0%, #0B9FE4 55%, #1938C8 100%)",
     backgroundSize: "190% auto",
-    padding: { xs: "24px", sm: "35px 40px" },
+    // padding: { xs: "24px", sm: "35px 40px" },
     borderRadius: { xs: "33px", sm: "60px" },
-    height: { sm: isHome ? "472px" : "415px", xs: isHome ? "auto" : "415px" },
+    height: { sm: isHome ? "492px" : "400px", xs: "auto" },
     width: { lg: "92%", xs: "100%" },
     transition: "0.4s",
     "&:hover": {
@@ -66,11 +68,11 @@ const styles = {
     lineHeight: { md: "58px", xs: "45px" },
     fontSize: { md: "50px", sm: "40px", xs: "25px" },
   },
-  bannerImg: {
+  bannerImg: (isHome) => ({
     position: "absolute",
     right: "-80px",
-    top: "22px",
+    top: isHome ? "60px" : "15px",
     display: { lg: "block", xs: "none" },
     mt: { lg: 2.5, md: 1, xs: 0 },
-  },
+  }),
 };

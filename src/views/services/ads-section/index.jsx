@@ -79,8 +79,12 @@ const AdsSection = () => {
 
             <Box my={15}>
               <CustomBanner
-                title="Ready to See Real Results?"
-                desc="Don’t waste another dollar on ads that don’t work. Contact us today, and let’s start building a campaign that drives real growth for your business. "
+                title={
+                  <>
+                    Ready to See Real <br /> Results?
+                  </>
+                }
+                desc="Don’t waste another dollar on ads that don’t work. Contact us today, and let’s start building a campaign that drives real growth for your business."
               />
             </Box>
           </Box>

@@ -100,7 +100,11 @@ const SEOSection = () => {
 
             <Box my={15}>
               <CustomBanner
-                title="Ready to Be Found?"
+                title={
+                  <>
+                    Ready to Be <br /> Found?
+                  </>
+                }
                 desc="Don’t let your competitors take all the attention. Contact us today, and let’s start building a stronger online presence for your business."
               />
             </Box>

@@ -100,7 +100,11 @@ const WebsiteDevelopment = () => {
 
             <Box my={15}>
               <CustomBanner
-                title="Let’s Build Your Website Together"
+                title={
+                  <>
+                    Let’s Build Your Website <br /> Together
+                  </>
+                }
                 desc="Ready to create a website that works for your business? Contact us today for a free consultation!"
               />
             </Box>

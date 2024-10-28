@@ -101,7 +101,11 @@ const SocialMedia = () => {
 
             <Box my={15}>
               <CustomBanner
-                title="Ready to Make Your Brand Stand Out?"
+                title={
+                  <>
+                    Ready to Make Your Brand <br /> Stand Out?
+                  </>
+                }
                 desc="Contact us today to take the first step towards social media success. Let’s start building a community around your brand."
               />
             </Box>
