@@ -58,17 +58,19 @@ export const blogsData = [
     timeSpan: "27 Sep 2024 • 8 min read",
   },
   {
-    img: "/images/blog/blog1.webp",
+    img: "/images/blog/blog5.webp",
     title: `What's New In SNTCT 2.10?`,
     link: "/blog/mobile-first-web-design",
     desc: "We are excited to announce the release of zCart version 2.11.0, packed with new features, enhancements...",
     timeSpan: "04 Oct 2024 • 7 min read",
+    overlay: true,
   },
   {
-    img: "/images/blog/blog2.webp",
+    img: "/images/blog/blog6.webp",
     title: `What's New In SNTCT 2.10?`,
     link: "/blog/social-media-advertising",
     desc: "We are excited to announce the release of zCart version 2.11.0, packed with new features, enhancements...",
     timeSpan: "17 Oct 2024 • 9 min read",
+    overlay: true,
   },
 ];

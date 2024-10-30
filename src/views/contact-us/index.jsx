@@ -25,6 +25,10 @@ const Contact = () => {
 
   const { loading } = useGetLoadingState();
 
+  const calendlyUrl = `https://calendly.com/sntct-info/30min?hide_gdpr_banner=1&hide_event_type_details=1&primary_color=006edc&text_color=000000&name=${encodeURIComponent(
+    name
+  )}&email=${encodeURIComponent(email)}`;
+
   // Regular expression for basic email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -41,10 +45,7 @@ const Contact = () => {
         email: "Enter valid email",
       }));
     } else {
-      window.open(
-        "https://calendly.com/sntct-info/30min?hide_gdpr_banner=1&hide_event_type_details=1&primary_color=006edc&text_color=000000",
-        "_blank"
-      );
+      window.open(calendlyUrl, "_blank");
     }
   };
 

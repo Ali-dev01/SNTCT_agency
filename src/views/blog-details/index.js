@@ -151,8 +151,9 @@ const styles = {
     top: 0,
     left: 0,
     width: "100%",
-    height: "100%",
-    backgroundColor: "rgba(0, 100, 150, 0.4)", // Light blue with 50% opacity
+    height: "98.5%",
+    background:
+      "linear-gradient(266deg, rgba(123, 211, 248, 0.4) 0%, rgba(77, 124, 194, 0.4) 100%)",
     borderRadius: "40px",
   },
 };
