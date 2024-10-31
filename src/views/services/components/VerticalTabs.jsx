@@ -91,8 +91,8 @@ const styles = {
     },
     "& .Mui-selected": {
       background: "linear-gradient(to right, #1938C8 0%, #0B9FE4 100%)",
-      "-webkit-background-clip": "text",
-      "-webkit-text-fill-color": "transparent",
+      webkitBackgroundClip: "text",
+      webkitTextFillColor: "transparent",
     },
   },
 

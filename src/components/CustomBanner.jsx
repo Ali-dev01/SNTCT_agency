@@ -15,7 +15,7 @@ const CustomBanner = ({ title, desc, btnText = `Lets's Talk`, homePage }) => {
     >
       <Box>
         <Box sx={{ width: { md: "70%", xs: "100%" } }}>
-          <Box sx={{ mb: "40px", width: { lg: "90%", xs: "100%" } }}>
+          <Box sx={{ mb: { md: "40px", xs: "20px" }, width: { lg: "90%", xs: "100%" } }}>
             <Typography sx={styles.heading}>{title}</Typography>
             <Typography variant="body2" color="#fff" lineHeight="27px" mt={2}>
               {desc}
@@ -65,7 +65,7 @@ const styles = {
   heading: {
     color: "#fff",
     fontWeight: 700,
-    lineHeight: { md: "58px", xs: "45px" },
+    lineHeight: { md: "58px", xs: "30px" },
     fontSize: { md: "50px", sm: "40px", xs: "25px" },
   },
   bannerImg: (isHome) => ({

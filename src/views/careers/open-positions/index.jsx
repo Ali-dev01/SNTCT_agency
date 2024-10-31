@@ -35,7 +35,9 @@ const OpenPositions = () => {
         <Grid container spacing={4}>
           {[
             "Motion Graphics Designer",
-            "(CRO) Specialist",
+            <>
+              (CRO) <br /> Specialist
+            </>,
             "Brand Identity Designer",
           ].map((item) => (
             <Grid key={item} item size={{ xs: 12, sm: 6, md: 4 }}>
@@ -44,7 +46,7 @@ const OpenPositions = () => {
                   <Box sx={styles.logoStyle}>
                     <SidebarLogo />
                   </Box>
-                  <Typography variant="h5" color="#3E5F82" mt={3.5}>
+                  <Typography variant="h5" color="#3E5F82" mt={0.5}>
                     {item}
                   </Typography>
                 </Box>

@@ -1,124 +1,23 @@
-import GradientHeading from '@/components/GradientHeading';
-import ArrowDownSection from '@/icons/ArrowDownSection';
-import theme from '@/theme';
-import { Avatar, Box, Card, CardContent, Container, Typography, useMediaQuery } from '@mui/material';
-import { useState } from 'react';
-import { useSwipeable } from 'react-swipeable';
-
-const styles = {
-  mainBg: {
-    mt: { md: "80px", xs: "40px" },
-    backgroundImage: 'url(/images/trusted-users-bg.png)',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundSize: 'contain',
-  },
-  heading: {
-    lineHeight: "52.2px",
-  },
-  bodyText: {
-    color: theme.palette.primary.dark,
-    lineHeight: "30px",
-    pt: "20px",
-    pb: "30px",
-  },
-  cardsContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'relative', // Enable stacking
-    height: '384px',
-  },
-  cardWrapper: (isCenter, isLeft, isRight, smalldevice) => ({
-    width: { sm: 384, xs: smalldevice ? 280 : 350 },
-    transition: 'transform 500ms ease-in-out, opacity 500ms ease-in-out', // Smooth transition
-    zIndex: isCenter ? 20 : (isLeft || isRight) ? 15 : 10,
-    opacity: isCenter ? 1 : 0.5,
-    position: 'absolute', // For overlapping cards
-    transform: isCenter
-      ? 'translateX(0) scale(1.1)'
-      : isLeft
-        ? 'translateX(-90%) scale(0.9)'
-        : 'translateX(90%) scale(0.9)', // Move inactive cards to left/right
-  }),
-  card: {
-    textAlign: 'center',
-    bgcolor: 'white',
-    borderRadius: '24px',
-    height: 384,
-    boxShadow: "0px 17px 17px 0px #00000008,0px 39px 23px 0px #00000005",
-  },
-  cardContent: {
-    pt: 8,
-  },
-  avatar: {
-    width: 80,
-    height: 80,
-    mx: 'auto',
-    border: '4px solid #ABC2DB',
-    mb: 2,
-  },
-  testimonialText: {
-    color: theme.palette.primary.dark,
-    mb: 2,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    display: '-webkit-box',
-    WebkitLineClamp: 4,
-    WebkitBoxOrient: 'vertical',
-  },
-  name: {
-    fontWeight: 600,
-    fontSize: '1.125rem',
-    color: theme.palette.secondary.dark,
-  },
-  role: {
-    color: theme.palette.secondary.dark,
-    fontSize: '0.875rem',
-  },
-  dotsContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    mt: '65px',
-    gap: 1,
-  },
-  dot: (isActive) => ({
-    width: isActive ? 16 : 8,
-    height: 8,
-    borderRadius: 4,
-    bgcolor: isActive ? theme.palette.primary.main : '#B6D9FF',
-    transition: 'all 500ms',
-    p: 0,
-    border: 'none',
-    cursor: 'pointer',
-  }),
-};
+import GradientHeading from "@/components/GradientHeading";
+import ArrowDownSection from "@/icons/ArrowDownSection";
+import {
+  Avatar,
+  Box,
+  Card,
+  CardContent,
+  Container,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
+import { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
+import { testimonials } from "./data";
+import { styles } from "./styles";
 
 export default function TestimonialCarousel() {
   const [activeIndex, setActiveIndex] = useState(1);
-  const isMobile = useMediaQuery('(max-width:600px)');
-  const smalldevice = useMediaQuery('(max-width:400px)');
-
-  const testimonials = [
-    {
-      name: "James Donovan",
-      role: "CEO",
-      content: "Working with SNTCT was a revelation. Their unique perspective on digital branding helped us stand out in the competitive eco-solutions market. They are more than a marketing agency; they are a partner in our mission.",
-      avatar: "/images/jamesCEO.jpg",
-    },
-    {
-      name: "Ahmed Al-Khalidi",
-      role: "CDO",
-      content: "The team at SNTCT is exceptional. They tailored a digital strategy that aligned perfectly with our real estate market needs, enhancing both our reach and customer relations. Their dedication to our success was evident in every campaign.",
-      avatar: "/images/ahmadCDO.jpg",
-    },
-    {
-      name: "Carlos Rodiguez",
-      role: "CTO",
-      content: "As a legal firm, trust is everything. SNTCT delivered not just innovative marketing solutions but also demonstrated a deep understanding of our need for professionalism and integrity in our digital presence.",
-      avatar: "/images/carlosCTO.jpg",
-    },
-  ];
+  const isMobile = useMediaQuery("(max-width:600px)");
+  const smalldevice = useMediaQuery("(max-width:400px)");
 
   const getVisibleIndexes = () => {
     const totalItems = testimonials.length;
@@ -135,17 +34,43 @@ export default function TestimonialCarousel() {
   // Swipe handler for changing active card
   const handlers = useSwipeable({
     onSwipedLeft: () => setActiveIndex((prev) => (prev + 1) % testimonials.length),
-    onSwipedRight: () => setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length),
+    onSwipedRight: () =>
+      setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length),
     trackMouse: true,
   });
 
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 2000);
+
+    return () => clearInterval(slideInterval); // Clean up the interval on component unmount
+  }, [testimonials.length, 2000]);
+
   return (
     <Box sx={styles.mainBg} {...handlers}>
-      <Box sx={{ textAlign: "center", pt: { md: "40px", xs: "20px" }, pb: { md: "60px", xs: "40px" } }}>
-        <GradientHeading text="Hear from Those" variant="h2" weight={700} sx={styles.heading} />
-        <GradientHeading text="Who Trusted Us" variant="h2" weight={700} sx={styles.heading} />
+      <Box
+        sx={{
+          textAlign: "center",
+          pt: { md: "40px", xs: "20px" },
+          pb: { md: "60px", xs: "40px" },
+        }}
+      >
+        <GradientHeading
+          text="Hear from Those"
+          variant="h2"
+          weight={700}
+          sx={styles.heading}
+        />
+        <GradientHeading
+          text="Who Trusted Us"
+          variant="h2"
+          weight={700}
+          sx={styles.heading}
+        />
         <Typography variant="body1" sx={styles.bodyText}>
-          Our client’s success speaks for itself. Discover how we’ve helped<br />
+          Our client’s success speaks for itself. Discover how we’ve helped
+          <br />
           businesses like yours grow, thrive, and achieve their goals.
         </Typography>
         <Box>
@@ -162,7 +87,10 @@ export default function TestimonialCarousel() {
               const isRight = displayIndex === 2;
 
               return (
-                <Box key={itemIndex} sx={styles.cardWrapper(isCenter, isLeft, isRight, smalldevice)}>
+                <Box
+                  key={itemIndex}
+                  sx={styles.cardWrapper(isCenter, isLeft, isRight, smalldevice)}
+                >
                   <Card sx={styles.card}>
                     <CardContent sx={styles.cardContent}>
                       <Avatar src={item.avatar} alt={item.name} sx={styles.avatar} />

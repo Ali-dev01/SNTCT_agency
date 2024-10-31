@@ -158,7 +158,12 @@ export default function Sidebar({ open, toggleDrawer }) {
               </Typography>
               <Box onClick={toggleDrawer(false)}>
                 <Link href="/contact-us">
-                  <CustomButton link="/contact-us" variant="contained" showIcon />
+                  <CustomButton
+                    text="Lets Talk"
+                    link="/contact-us"
+                    variant="contained"
+                    showIcon
+                  />
                 </Link>
               </Box>
             </Box>
