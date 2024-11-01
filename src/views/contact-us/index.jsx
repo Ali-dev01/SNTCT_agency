@@ -21,30 +21,37 @@ import { contactInfo, options } from "./data";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [error, setError] = useState({ name: "", email: "" });
+  const [phoneNo, setPhoneNo] = useState("");
+  const [error, setError] = useState({ name: "", email: "", phoneNo: "" });
 
   const { loading } = useGetLoadingState();
 
   const calendlyUrl = `https://calendly.com/sntct-info/30min?hide_gdpr_banner=1&hide_event_type_details=1&primary_color=006edc&text_color=000000&name=${encodeURIComponent(
     name
-  )}&email=${encodeURIComponent(email)}`;
+  )}&email=${encodeURIComponent(email)}&a1=${encodeURIComponent(phoneNo)}`;
 
   // Regular expression for basic email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handleSubmit = () => {
+    const newErrors = {};
+
     if (name.trim().length < 3) {
-      setError((prevError) => ({
-        ...prevError,
-        name: "Minimum 3 Charactar required",
-      }));
+      newErrors.name = "Minimum 3 characters required";
+    }
+    if (phoneNo.trim().length < 8) {
+      newErrors.phoneNo = "Minimum 8 numbers required";
     }
     if (!emailRegex.test(email)) {
-      setError((prevError) => ({
-        ...prevError,
-        email: "Enter valid email",
-      }));
+      newErrors.email = "Enter a valid email";
+    }
+
+    // Set errors if any exist
+    if (Object.keys(newErrors).length > 0) {
+      setError(newErrors);
     } else {
+      // Clear errors and open Calendly URL if no validation issues
+      setError({});
       window.open(calendlyUrl, "_blank");
     }
   };
@@ -110,7 +117,7 @@ const Contact = () => {
                 <Box sx={styles.cardStyle}>
                   <Grid container spacing={5}>
                     <Grid item size={{ xs: 12, lg: 6 }}>
-                      <Box mb={3} width="100%">
+                      <Box mb={2} width="100%">
                         <InputLabel sx={styles.labelStyle}>Full Name</InputLabel>
                         <TextField
                           sx={styles.inputStyle}
@@ -129,7 +136,27 @@ const Contact = () => {
                           </Typography>
                         )}
                       </Box>
-                      <Box mb={3} width="100%">
+                      <Box mb={2} width="100%">
+                        <InputLabel sx={styles.labelStyle}>Contact Number</InputLabel>
+                        <TextField
+                          sx={styles.inputStyle}
+                          variant="outlined"
+                          fullWidth
+                          type="number"
+                          placeholder="Your phone no"
+                          value={phoneNo}
+                          onChange={(e) => {
+                            setError({ ...error, phoneNo: "" });
+                            setPhoneNo(e.target.value);
+                          }}
+                        />
+                        {error.phoneNo && (
+                          <Typography fontSize="12px" color="#ff3333">
+                            {error.phoneNo}
+                          </Typography>
+                        )}
+                      </Box>
+                      <Box mb={2} width="100%">
                         <InputLabel sx={styles.labelStyle}>Email</InputLabel>
                         <TextField
                           sx={styles.inputStyle}
@@ -172,15 +199,20 @@ const Contact = () => {
                           variant="outlined"
                           multiline
                           sx={{ "& .MuiInputBase-root": { borderRadius: "6px" } }}
-                          rows={7}
+                          rows={9}
                           fullWidth
                           placeholder="Write what you want... "
                         />
                       </Box>
                     </Grid>
                   </Grid>
-                  <Box textAlign="center" mt={4} onClick={handleSubmit}>
-                    <CustomButton text="Submit Now" variant="contained" showIcon />
+                  <Box textAlign="center" mt={4}>
+                    <CustomButton
+                      text="Submit Now"
+                      variant="contained"
+                      showIcon
+                      onClick={handleSubmit}
+                    />
                   </Box>
                 </Box>
               </Grid>
@@ -217,9 +249,10 @@ const styles = {
   },
   inputStyle: {
     "& .MuiInputBase-root": {
-      height: "48px",
+      height: "43px",
       color: "#00336B",
       borderRadius: "6px",
+      fontFamily: "roboto",
     },
   },
   selectStyle: {
