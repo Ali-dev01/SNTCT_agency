@@ -3,8 +3,9 @@ import Image from "next/image";
 import { useState } from "react";
 
 import CustomButton from "@/components/CustomButton";
+import Link from "next/link";
 
-const CustomBanner = ({ title, desc, btnText = `Lets's Talk`, homePage }) => {
+const CustomBanner = ({ title, desc, link, btnText = `Lets's Talk`, homePage }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -21,7 +22,9 @@ const CustomBanner = ({ title, desc, btnText = `Lets's Talk`, homePage }) => {
               {desc}
             </Typography>
           </Box>
-          <CustomButton variant="contained" text={btnText} showIcon />
+          <Link href={link}>
+            <CustomButton variant="contained" text={btnText} showIcon />
+          </Link>
         </Box>
         <Box sx={styles.bannerImg(homePage)}>
           <Image

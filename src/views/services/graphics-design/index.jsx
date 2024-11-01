@@ -106,6 +106,7 @@ const GraphicsDesign = () => {
                     Ready to Bring Your <br /> Vision to Life?
                   </>
                 }
+                link="/contact-us"
                 desc="Let’s start creating designs that captivate your audience and elevate your brand. Contact us today to get started."
               />
             </Box>

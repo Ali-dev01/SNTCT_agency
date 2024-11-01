@@ -84,6 +84,7 @@ const AdsSection = () => {
                     Ready to See Real <br /> Results?
                   </>
                 }
+                link="/contact-us"
                 desc="Don’t waste another dollar on ads that don’t work. Contact us today, and let’s start building a campaign that drives real growth for your business."
               />
             </Box>

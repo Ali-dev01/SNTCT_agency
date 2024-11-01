@@ -105,6 +105,7 @@ const SEOSection = () => {
                     Ready to Be <br /> Found?
                   </>
                 }
+                link="/contact-us"
                 desc="Don’t let your competitors take all the attention. Contact us today, and let’s start building a stronger online presence for your business."
               />
             </Box>

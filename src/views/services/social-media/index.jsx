@@ -106,6 +106,7 @@ const SocialMedia = () => {
                     Ready to Make Your Brand <br /> Stand Out?
                   </>
                 }
+                link="/contact-us"
                 desc="Contact us today to take the first step towards social media success. Let’s start building a community around your brand."
               />
             </Box>
