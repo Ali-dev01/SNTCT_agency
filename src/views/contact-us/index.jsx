@@ -254,6 +254,13 @@ const styles = {
       borderRadius: "6px",
       fontFamily: "roboto",
     },
+    "& input[type=number]": {
+      MozAppearance: "textfield",
+      "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
+        WebkitAppearance: "none",
+        margin: 0,
+      },
+    },
   },
   selectStyle: {
     "&.MuiInputBase-root": {
